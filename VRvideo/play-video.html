@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <!--编码格式-->
+    <meta http-equiv="Content-Type" content="text/html"  charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--s-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--SEO抓取-->
+    <meta name="keywords" content="虚拟现实,VR,VR技术,资源">
+    <meta name="description" content="国内最大的虚拟现实平台,VR技术交流，资源分享">
+    <!--标题-->
+    <title>《天眼特工》——视频专区</title>
+
+    <!-- 导入js文件-->
+    <script src="../js/jquery-3.1.0.min.js"></script>
+    <script src="../Bootstrap/js/bootstrap.js"></script>
+    <!--<script src="js/bootstrap-hover-dropdown.min.js"></script>-->
+
+    <!-- 首页框架引入 -->
+    <script src="../js/stickUp.js"></script>
+    <script type="text/javascript" src="../js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="../js/custom.js"></script>
+   	<!-- 固定在顶部插件JS引入 -->
+    <script type="text/javascript">
+        //initiating jQuery
+        jQuery(function($) {
+            $(document).ready( function() {
+                //enabling stickUp on the '.navbar-wrapper' class
+                $('.navbar-wrapper').stickUp();
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(function(){
+
+            $("#searchSelected").click(function(){
+                $("#searchTab").show();
+                $(this).addClass("searchOpen");
+            });
+
+            $("#searchTab li").hover(function(){
+                $(this).addClass("selected");
+            },function(){
+                $(this).removeClass("selected");
+            });
+
+            $("#searchTab li").click(function(){
+                $("#searchSelected").html($(this).html());
+                $("#searchTab").hide();
+                $("#searchSelected").removeClass("searchOpen");
+            });
+
+        });
+    </script>
+
+    <!--导入css文件-->
+    <link href="../Bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+
+    <!-- 首页框架引入 -->
+    <link href="../css/stickup.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../templates/images/style.css" />
+    <link rel="stylesheet" type="text/css" href="../templates/css/style.css" />
+
+    <!-- 视频播放器的导入样式 *****************************-->
+    <link rel="stylesheet" href="css/fz-video.css">
+	<link rel="stylesheet" href="font/iconfont.css">
+	<!-- 视频播放器的导入样式 /////////////////////////////-->
+
+	<!-- 视频分享 *****************************************-->
+	<link rel="stylesheet" href="css/share.css">
+	<!-- 视频分享 /////////////////////////////////////////-->
+
+	<!-- 评论部分 *****************************************-->
+	<!-- 评星级 -->
+	<link type="text/css" rel="stylesheet" href="css/star.css">
+	<!-- 发表评论与评论显示 -->
+	<link  rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" type="text/css" href="css/sinaFaceAndEffec.css" />
+	<!-- 评论部分 /////////////////////////////-->
+
+	<!-- 全局css样式 **************************************************-->
+    <link href="css/layout-play.css" rel="stylesheet" type="text/css">
+   	<!-- 全局css样式 //////////////////////////////////////////////////-->
+</head>
+<body>
+    <!-- head部分 *********************************************************************************-->
+<!--     <nav class="navbar navbar-default">
+    <div class="container-fluid">
+        Brand and toggle get grouped for better mobile display
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">VR视频</a>
+        </div>
+
+        Collect the nav links, forms, and other content for toggling
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="#">首页</a></li>
+                <li class=" dropdown dropdown-hover">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">导航</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">虚拟VR</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">极限</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">美女</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">惊悚</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">创意</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">原创</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">搜索</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">登录</a></li>
+                <li><a href="#">注册</a></li>
+                <li class="dropdown dropdown-hover">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">上传<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">上传视频</a></li>
+                        <li><a href="#">视频管理</a></li>
+                        <li><a href="#">我的空间</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>/.navbar-collapse
+    </div>/.container-fluid
+</nav> -->
+		<!--最顶部导航-->
+    <div class="row" style="margin: 0px;padding:0px;">
+        <div class="col-md-12" style="margin: 0px;padding:0px;">
+            <div class="header" id="header_top" style=" display: block; background-color: rgb(34, 34, 34);">
+                <div class="header-main clearfix" style="width: 1170px; margin:0 auto;padding-right: 0px;">
+                    <ul class="header-left  clearfix" >
+                        <li>
+                            <a href="" class="sel" style="font-size:12px;">VR虚拟社区，因为专注所以专业</a>
+                        </li>
+                        <li class="hidden-xs">
+                            <a href="#" title="新手入门" target="_blank" style="font-size:12px;">新手入门</a>
+                        </li>
+                        <li style="position:relative" class="app-hover hidden-xs">
+                            <a href="#" class="" target="_blank" title="VR社区" style="font-size:12px;">VR社区</a>
+                            <!-- hover出现的div -->
+                            <div class="hover-content"><i></i>
+                                <img class="logo-img" src="../images/icon.png" alt="logo">
+                                <h1>VR社区</h1>
+                                <p>未来科技等你来</p>
+                                <img class="erweima" src="../images/erweima.png" alt="二维码">
+                                <p class="is">-Android客户端- </p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!--登录注册-->
+                    <!--<div id="header-right" class="" style="border:  #ff0000 solid 1px;">-->
+                    <div class="common">
+                        <div class="login fr" style="margin-top: -32px;">
+                            <div class="loginmenu">
+                                <a title="登录或注册"></a>
+                            </div>
+                            <ul>
+                                <li class="openlogin">
+                                    <a href="#" onclick="return false;">登录</a>
+                                </li>
+                                <li class="reg">
+                                    <a href="#" onclick="return false;">注册</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <!--</div>-->
+                    <div class="clear"></div>
+                    <div class="loginmask"></div>
+                    <div id="loginalert">
+                        <div class="pd20 loginpd"style="padding-bottom: 10px;">
+                            <h3> <i class="closealert fr"></i>
+                                <div class="clear"></div>
+                            </h3>
+                            <div class="loginwrap">
+                                <div class="loginh">
+                                    <div class="fl">会员登录</div>
+                                    <div class="fr">
+                                        还没有账号
+                                        <a id="sigup_now" href="#" onclick="return false;">立即注册</a>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <h3>
+                                    <span>邮箱登录</span>
+                                    <span class="login_warning">用户名或密码错误</span>
+                                    <div class="clear"></div>
+                                </h3>
+                                <div class="clear"></div>
+                                <form action="" method="post" id="login_form">
+                                    <div class="logininput">
+                                        <input type="text" name="username" id="username" class="loginusername"required oninvalid="setCustomValidity('用户名不能为空');" oninput="setCustomValidity('');"   placeholder="邮箱/用户名" />
+                                        <input type="text" class="loginuserpasswordt" value="密码" />
+                                        <input type="password" name="password" class="loginuserpasswordp " id="password" required oninvalid="setCustomValidity('密码不能为空');"oninput="setCustomValidity('');" placeholder="密码"  style="display:none" />
+                                    </div>
+                                    <div class="loginbtn">
+                                        <div class="loginsubmit fl">
+                                            <input type="submit" value="登录" onclick="login();" />
+                                            <div class="loginsubmiting">
+                                                <div class="loginsubmiting_inner"></div>
+                                            </div>
+                                        </div>
+                                        <div class="logcheckbox fl">
+                                            <input id="bcdl" type="checkbox" checked="true" />
+                                            保持登录
+                                        </div>
+                                        <div class="fr">
+                                            <a href="#">忘记密码?</a>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="thirdlogin">
+                            <div class="pd50">
+                                <h4>用第三方帐号直接登录</h4>
+                                <ul>
+                                    <li id="sinal">
+                                        <a href="#">微博账号登录</a>
+                                    </li>
+                                    <li id="qql">
+                                        <a href="#">QQ账号登录</a>
+                                    </li>
+                                    <div class="clear"></div>
+                                </ul>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="reg_setp">
+                        <div class="back_setp">返回</div>
+                        <div class="blogo"></div>
+                        <div id="setp_quicklogin" style="z-index: 100;">
+                            <div class="content2">
+                                <!-- 头部文字 -->
+                                <h2>欢迎注册</h2>
+                                <form style="border: #ff0000 solid;margin-bottom: 30px;height: 400px;">
+                                    <!-- 注册使用的几个输入框和注册按钮 -->
+                                    <input type="text" name="userid" value="用户名" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '用户名';}">
+                                    <input type="tel" name="usrtel" value="电话" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '电话';}">
+                                    <input type="email" name="email" value="电子邮件" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '电子邮件';}">
+                                    <input type="password" name="psw" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value ='password' ;}">
+                                    <input type="password" name="psw" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'password';}">
+                                    <input type="submit" class="register" value="注册">
+                                </form>
+                            </div>
+                            <ul class="quicklogin_socical">
+                                <li class="quicklogin_socical_weibo">
+                                    <a href="#">微博帐号注册</a>
+                                </li>
+                                <li class="quicklogin_socical_qq">
+                                    <a href="#">QQ帐号注册</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--导航条-->
+    <div class="navbar-wrapper" style="width:100%;background-color:#fff;">
+        <div class="header-main1 " style="width: 1170px;margin:0 auto;">
+            <div class="hd_logo">
+                <h2>
+                    <a href="#" title="VR虚拟社区-最大VR技术论坛,海量VR资源,VR视频教程,vrcommu.com">
+                        <img src="../images/logo2.png" alt="VR虚拟社区" border="0"  class="img-responsive" />
+                    </a>
+                </h2>
+            </div>
+            <!-- 导航 -->
+            <div class="nav1" id="hd" >
+                <ul >
+                    <li  >
+                        <a href="../index.html" hidefocus="true" title="首页" style=" padding-left: 10px;width: 38px;padding: 0px;" >
+                            首页
+                            <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        </a>
+                    </li>
+                    <li >
+                        <a href="../VR_news/index.html" hidefocus="true" title="VR社区论坛"  >
+                            VR资讯
+                        </a>
+                    </li>
+
+                    <li >
+                        <a href="../VR_Game/game.html" hidefocus="true"  >VR游戏</a>
+                    </li>
+
+                    <li class="a">
+                        <a href="../VRvideo/vr-video.html" hidefocus="true"  >VR视频</a>
+                    </li>
+                    <li >
+                        <a href="../VR_Shequ/shequ.html" hidefocus="true"  >VR社区</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!--搜索框-->
+            <div class="sousuo">
+                <form method="get" name="" action="#" target="_blank" style="width:300px;height:60px;margin:0px auto 0 auto;float: right;margin-right:0;">
+                    <div id="searchTxt" class="searchTxt"  onMouseOver="this.className='searchTxt searchTxtHover';" onMouseOut="this.className='searchTxt';" style="margin-left:26px;">
+                        <div class="searchMenu" >
+                            <div class="searchSelected" id="searchSelected" >视频</div>
+
+                            <div style="display:none;margin-top: -2px;" class="searchTab" id="searchTab" >
+                                <ul>
+                                    <li class="">全站</li>
+                                    <li>资讯</li>
+                                    <li>视频</li>
+                                    <li>游戏</li>
+                                    <li>资源</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <input name="w" type="text" />
+                    </div>
+                    <div class="searchButton">
+                        <button id="searchButton" type="submit">搜索</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!-- head部分 /////////////////////////////////////////////////////////////////////////////////-->
+	
+
+
+	<!-- 视频播放器部分 ***************************************************************************-->
+	<div class="container bg-play-video">
+		<div class="row play-video">
+			<!-- 视频播放器 -->
+			<div class="col-md-9">	
+
+					<div id="testBox">
+					</div>		
+			</div>
+			<!-- 相关视频与隐藏条 -->
+			<div class="col-md-3">
+				<!-- 隐藏条 -->
+				<div class="col-md-1">
+					<span class="glyphicon glyphicon-menu-right"></span>
+				</div>
+				<!-- 相关视频 -->
+				<div class="col-md-11 xg-play">
+					<div class="xg-title-play">
+						相关视频
+					</div>
+					<!-- 单位相关视频块 -->
+					<a href="">
+						<div class="item-xg-play">
+							<!-- 相关视频图片 -->
+							<div class="col-md-5">
+								<img src="images/remen/remen2.jpg" alt="">
+							</div>
+							<!-- 相关视频内容 -->
+							<div class="col-md-7">
+								<span>舞梦天使</span>
+								<span>
+									宅男小杰终日以网游为伴，酷爱YY。一日，小杰在宿舍打游戏，遭遇了离奇事件！身边的VR眼镜似乎在召唤他，并且里面的美女能够感知到他的存在，频频和他互动。小杰惊奇的同时喜欢上了其中一个女孩，数次试图接近她，却被傲娇拒绝，这更激发了宅男爱的小宇宙。欲罢不能的小杰终于受到心爱女孩的邀请，进入女孩所在时空，这时的小杰发现了惊人真相！这些女孩是谁？小杰能否梦想成真？欲知详情，请关注我们的3D立体VR电影《舞梦天使》！带你走进梦幻时空……
+								</span>
+								<span class="glyphicon glyphicon-expand"></span>
+								<span>3.3万</span>
+							</div>
+						</div>
+					</a>
+					<!-- 单位相关视频块 -->
+					<a href="">
+						<div class="item-xg-play">
+							<!-- 相关视频图片 -->
+							<div class="col-md-5">
+								<img src="images/remen/remen3.jpg" alt="">
+							</div>
+							<!-- 相关视频内容 -->
+							<div class="col-md-7">
+								<span>《Help》完整版</span>
+								<span>
+									外星人突然袭击地球，不仅使交通和通讯等瘫痪，更使人类面临生命危险。英勇的人类英雄是时候和外星人来一场生死之战了！VR界大片鼻祖，还不快来膜拜膜拜！
+								</span>
+								<span class="glyphicon glyphicon-expand"></span>
+								<span>5.3万</span>
+							</div>
+						</div>
+					</a>
+					<!-- 单位相关视频块 -->
+					<a href="">
+						<div class="item-xg-play">
+							<!-- 相关视频图片 -->
+							<div class="col-md-5">
+								<img src="images/remen/remen4.jpg" alt="">
+							</div>
+							<!-- 相关视频内容 -->
+							<div class="col-md-7">
+								<span>凶案现场指第九个死者</span>
+								<span>
+									性感女主播身穿红衣惨死在房内，凶手是谁？已有九名红衣女子接连被杀，谁会是下一个受害者？弥漫着暧昧气息的粉红色房间、倒在血泊中的红衣女主播、墙上消失的照片、桌子上留有唇印的水杯……神探邀你一起走进凶案现场，寻找死亡背后的恐怖真相。凶案现场之第九个死者正片今天正式和大家见面了，快随着神探一起来到凶案现场进行360度侦查吧！ VR视频是最新的一种虚拟现实视频体验，要达到最好的体验效果，需要佩戴VR眼镜进行观看。
+								</span>
+								<span class="glyphicon glyphicon-expand"></span>
+								<span>2.3万</span>
+							</div>
+						</div>
+					</a>
+					<!-- 单位相关视频块 -->
+					<a href="">
+						<div class="item-xg-play">
+							<!-- 相关视频图片 -->
+							<div class="col-md-5">
+								<img src="images/remen/remen5.jpg" alt="">
+							</div>
+							<!-- 相关视频内容 -->
+							<div class="col-md-7">
+								<span>萌兔智斗外星人</span>
+								<span>
+									一只萌萌的兔子碰到了两个愚蠢的外星人，瞬间把外星人KO掉！保护地球，从兔子做起！萌萌的小兔子一定会受到小朋友们的喜欢！
+								</span>
+								<span class="glyphicon glyphicon-expand"></span>
+								<span>3.1万</span>
+							</div>
+						</div>
+					</a>
+					<!-- 单位相关视频块 -->
+					<a href="">
+						<div class="item-xg-play">
+							<!-- 相关视频图片 -->
+							<div class="col-md-5">
+								<img src="images/remen/remen6.jpg" alt="">
+							</div>
+							<!-- 相关视频内容 -->
+							<div class="col-md-7">
+								<span>霍建华，演绎今天的男人</span>
+								<span>
+									有人叫他“老干部”，有人称他为“霍BOSS”更多的时候，他是许多人心中的男神。然而，“我也是个演员”，他这样告诉世界。《ELLEMEN睿士》5月特别制作，看霍建华一人分饰三角，演绎今天的男人。
+								</span>
+								<span class="glyphicon glyphicon-expand"></span>
+								<span>2.8万</span>
+							</div>
+						</div>
+					</a>
+
+				</div>
+			</div>
+		</div>
+		<!-- 视频播放器底部栏目 -->
+		<div class="row play-foot">
+			<!-- 分享按钮 -->
+			<div class="col-md-6">
+				<div class="share-platform" >
+					<div class="share-platform-l"><span class="glyphicon glyphicon-share"></span></div>
+					<div class="share-platform-r">
+						<div class="bdsharebuttonbox">
+							<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+							<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+							<a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+							<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+						</div>
+					</div>
+				</div>
+			</div><!-- 分享按钮 -->
+			<div class="col-md-3 play-foot-right">
+				<a href=""><span class="glyphicon glyphicon-star"></span><span>收藏</span></a>
+				<a href=""><span class="glyphicon glyphicon-phone"></span><span>手机看</span></a>
+			</div>
+			<div class="play-foot-app col-md-3">
+				<span>VR社区手机版</span><input type="button" value="立即下载">
+			</div>
+		</div><!-- 视频播放器底部栏目 -->
+	</div>
+	<!-- 视频播放器部分 //////////////////////////////////////////////////////////////////////////-->
+
+	
+
+	<!-- 评论部分 与大家都在看视频区********************************************************************************-->
+	<div class="container">
+		<div class="row bg-pinglun">
+			<!-- 评论部分 -->
+			<div class="col-md-9 pinglun">
+				<span>评论</span>
+			  	<!-- 发表评论与评论显示 -->
+				<div id="content" style="width: 100%; height: auto;">
+					<div class="wrap">
+						<div class="comment">
+							<div class="content1">
+								<div class="cont-box">
+									<textarea class="text" placeholder="我来说两句"></textarea>
+								</div>
+								<div class="tools-box">
+									<div class="operator-box-btn">
+										<span class="face-icon"  >☺</span>
+										<span class="img-icon">▧</span>
+										<!-- 评星级 -->
+									  	<div class="demo">
+									    	<div id="function-demo1" class="target-demo"></div>
+									    	<!-- 可以显示有星星的数值，暂时在样式中先隐藏掉了 -->
+									    	<div id="function-hint1" class="hint"></div>
+									  	</div>
+									</div>
+									<div class="submit-btn"><input type="button" onClick="out()"value="发表评论" /></div>
+								</div>
+							</div>
+						</div>
+						<!-- 评论的内容，初始设置为两条 -->
+						<div id="info-show">
+							<ul>
+								<li>
+									<div class="head-face">
+										<a href=""><img src="images/pinglun/2.jpg" / ></a>
+									</div>
+									<div class="reply-cont">
+										<a href=""><p class="username">王思聪</p></a>
+										<p class="comment-body">这个平台非常有前景！</p>
+										<p class="comment-footer">2016年8月5日　回复　点赞11.4万　转发231</p>
+									</div>
+								</li>
+								<li>
+									<div class="head-face">
+										<a href=""><img src="images/pinglun/3.jpg" / ></a>
+									</div>
+									<div class="reply-cont">
+										<a href=""><p class="username">马云</p></a>
+										<p class="comment-body">板凳</p>
+										<p class="comment-footer">2016年8月6日　回复　点赞9.8万　转发153</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 视频区域 -->
+			<div class="col-md-3">
+				<div class="col-md-1"></div>
+				<div class="col-md-11 dj-play">
+					<div class="dj-title-play">
+						大家都在看
+					</div>
+					<!-- 单位视频块 -->
+					<a href="">
+						<div class="item-dj-play">
+							<!-- 视频图片 -->
+							<div class="col-md-5">
+								<img src="images/remen/remen2.jpg" alt="">
+							</div>
+							<!-- 视频内容 -->
+							<div class="col-md-7">
+								<span>舞梦天使</span>
+								<span>
+									宅男小杰终日以网游为伴，酷爱YY。一日，小杰在宿舍打游戏，遭遇了离奇事件！身边的VR眼镜似乎在召唤他，并且里面的美女能够感知到他的存在，频频和他互动。小杰惊奇的同时喜欢上了其中一个女孩，数次试图接近她，却被傲娇拒绝，这更激发了宅男爱的小宇宙。欲罢不能的小杰终于受到心爱女孩的邀请，进入女孩所在时空，这时的小杰发现了惊人真相！这些女孩是谁？小杰能否梦想成真？欲知详情，请关注我们的3D立体VR电影《舞梦天使》！带你走进梦幻时空……
+								</span>
+								<span class="glyphicon glyphicon-expand"></span>
+								<span>3.3万</span>
+							</div>
+						</div>
+					</a><!-- 单位视频块 -->
+					<!-- 单位视频块 -->
+					<a href="">
+						<div class="item-dj-play">
+							<!-- 视频图片 -->
+							<div class="col-md-5">
+								<img src="images/meinv/meinv1.jpg" alt="">
+							</div>
+							<!-- 视频内容 -->
+							<div class="col-md-7">
+								<span>《加油！美少女》主题曲</span>
+								<span>
+									《加油！美少女》主题曲VR MV - 幻维数码作品,VR视频是最新的一种虚拟现实视频体验，要达到最好的体验效果，需要佩戴VR眼镜进行观看。
+								</span>
+								<span class="glyphicon glyphicon-expand"></span>
+								<span>5.6万</span>
+							</div>
+						</div>
+					</a><!-- 单位视频块 -->
+					<!-- 单位视频块 -->
+					<a href="">
+						<div class="item-dj-play">
+							<!-- 视频图片 -->
+							<div class="col-md-5">
+								<img src="images/meinv/meinv2.jpg" alt="">
+							</div>
+							<!-- 视频内容 -->
+							<div class="col-md-7">
+								<span>跟着美女清凉一夏</span>
+								<span>
+									看美女吃冰淇淋是什么感觉？美女的樱桃小口在冰凉的冰淇淋上一点一点地舔着，看着都叫人心动。观看VR版美女视频，看美女的S身型，在这个炎热的夏天，VR看美女吃冰淇淋都觉得清爽无比。
+								</span>
+								<span class="glyphicon glyphicon-expand"></span>
+								<span>5.8万</span>
+							</div>
+						</div>
+					</a><!-- 单位视频块 -->
+					<!-- 单位视频块 -->
+					<a href="">
+						<div class="item-dj-play">
+							<!-- 视频图片 -->
+							<div class="col-md-5">
+								<img src="images/jixian/jixian1.jpg" alt="">
+							</div>
+							<!-- 视频内容 -->
+							<div class="col-md-7">
+								<span>高空跳伞</span>
+								<span>
+									世界上最迷人的极限运动之一应该算是高空跳伞了，背上装着跳伞的小背囊，从高空中一跃而下，风声在耳边呼啸而过，自由地在蓝天白云中做着翻转运动，刺激又令人着迷。
+								</span>
+								<span class="glyphicon glyphicon-expand"></span>
+								<span>3.6万</span>
+							</div>
+						</div>
+					</a><!-- 单位视频块 -->
+					<!-- 单位视频块 -->
+					<a href="">
+						<div class="item-dj-play">
+							<!-- 视频图片 -->
+							<div class="col-md-5">
+								<img src="images/jixian/jixian2.jpg" alt="">
+							</div>
+							<!-- 视频内容 -->
+							<div class="col-md-7">
+								<span>挑战滑雪高度</span>
+								<span>
+									高空滑雪是一项让很多胆子大的挑战者都要去尝试的极限运动，将高台挑战和滑雪相结合在一起，人类已经不能阻止挑战者的脚步了！
+								</span>
+								<span class="glyphicon glyphicon-expand"></span>
+								<span>6.3万</span>
+							</div>
+						</div>
+					</a><!-- 单位视频块 -->
+				</div>
+			</div><!-- 视频区域 -->
+		</div>
+	</div>
+	<!-- 评论部分 ////////////////////////////////////////////////////////////////////////////////-->
+
+
+
+	<!-- foot区域 -->
+    <div class="row" style="margin: 0;padding: 0;">
+        <div class="col-md-12"style="padding: 0;margin: 0;">
+
+            <!--友情链接-->
+            <div class="row"style="background-color: #222;margin: 0;padding-left: 90px;padding-right:90px;height: 50px;line-height: 50px;overflow: hidden;">
+                <div class="link">
+                    <p class="p2">
+                        友情链接：
+                        <a target="_blank"  href="http://www.vrrb.cn">VR日报</a>
+                        |
+                        <a target="_blank"  href="http://www.yaojievr.com/">妖界VR</a>
+                        |
+                        <a target="_blank"  href="http://www.591vr.com/">VR应用</a>
+                        |
+                        <a target="_blank"  href="http://www.vrwanjia.cn/">VR玩家网</a>
+                        |
+                        <a target="_blank"  href="http://www.vr.cn/">VR虚拟现实</a>
+                        |
+                        <a target="_blank"  href="http://vrtoutiao.com">VR头条</a>
+                        |
+                        <a target="_blank"  href="http://www.cnvrnews.com">中文VR资讯网</a>
+                        |
+                        <a target="_blank"  href="http://www.utovr.com/">VR视频</a>
+                        |
+                        <a target="_blank"  href="http://www.17ivr.com/">一起爱VR</a>
+                        |
+                        <a target="_blank"  href="http://www.vrdaren.com/">VR达人网</a>
+                        |
+                        <a target="_blank"  href="http://vr.sina.com.cn/">新浪VR</a>
+                        |
+                        <a target="_blank"  href="http://ivr.baidu.com/">百度VR</a>
+                        |
+                        <a target="_blank"  href="http://vr.baike.com/">虚拟现实</a>
+                        |
+                        <a target="_blank"  href="http://www.vryxw.com/">VR游戏网</a>
+                        |
+                        <a target="_blank"  href="http://vrguancha.net/">VR观察网</a>
+                        |
+                        <a target="_blank"  href="http://vrguancha.net/">申请友链请联系QQ12345678</a>
+                        |
+                    </p>
+                </div>
+            </div>
+            <div class="footer">
+                <a href="#" target="_blank">客户端</a>
+                <a href="#" target="_blank">媒体报道</a>
+                <a href="#" target="_blank">合作推广</a>
+                <a href="#" target="_blank">关于我们</a>
+                <a href="#" target="_blank">加入我们</a>
+                <a href="#" target="_blank">团队blog</a>
+                <a href="#" target="_blank">VR社区名人堂</a>
+                <a href="#">更多友情链接</a>
+                <br/>
+                <a>Copyright &copy; 2016 VR虚拟社区 All Rights Reserved</a>
+                <br/>
+                <a>VR虚拟社区 版权所有 鄂ICP备16001230号</a>
+            </div>
+        </div>
+    </div>
+    <!-- foot区域 -->
+
+
+
+	<!--返回顶部-->
+    <a class="to-top" style="cursor: pointer;"><img src="../images/top.gif" /></a>
+
+
+
+    <!-- <div style="height: 300px;background-color: #ccc;color:red;font-size: 30px;line-height: 300px;text-align: center;">footer区域</div> -->
+
+
+
+	<!-- js代码区域 ***************************************************************************************-->
+	<!-- 视频播放器的导入样式 *******************************-->
+	<script src="js/fz-video.js"></script>
+	<script>
+	 	var FZ_VIDEO = new createVideo(
+	 		"testBox",	//容器的id
+	 		{
+				//url         : 'http://171.15.197.89/xdispatch/o8t28neoq.bkt.clouddn.com/test.mp4',  //视频地址
+	 			url 		: 'video/tianyan.mp4', 	//视频地址
+	 			autoplay	: true			//是否自动播放
+	 		}
+	 	);
+	</script>
+	<!-- 视频播放器的导入样式 ///////////////////////////////-->
+
+
+	<!-- 视频分享 *************************************************************-->
+	<script>
+		window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"分享到新浪微博","bdMini":"1","bdMiniList":["bdxc","tqf","douban","bdhome","sqq","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"1","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+	</script>
+	<script src="js/ZeroClipboard.js"></script>
+	<script>
+		var g_url = window.location.href;
+		$('.share-copy-c input').val(g_url);
+		var clip = new ZeroClipboard( document.getElementById("btnCopy"));
+	</script>
+	<!-- 视频分享 /////////////////////////////////////////////////////////////////////////-->
+
+
+	<!-- 评论部分 *************************************************************************-->
+	<!-- 评星级 -->
+	<script type="text/javascript" src="js/jquery.raty.min.js"></script>
+	<script type="text/javascript">
+	    $(function() {
+	      $.fn.raty.defaults.path = 'images/star1'; 
+		  
+		  $('#function-demo1').raty({
+		  	number: 5,//多少个星星设置
+			score: 0,//初始值是设置
+			targetType: 'number',//类型选择，number是数字值，hint，是设置的数组值
+	        path      : 'images/star',
+	        cancelOff : 'cancel-off-big.png',
+	        cancelOn  : 'cancel-on-big.png',
+	        size      : 24,
+	        starHalf  : 'star-half-big.png',
+	        starOff   : 'star-off-big.png',
+	        starOn    : 'star-on-big.png',
+	        target    : '#function-hint1',
+	        cancel    : false,
+	        targetKeep: true,
+	        precision : false,//是否包含小数
+	        /*click: function(score, evt) {
+	          alert('ID: ' + $(this).attr('id') + "\nscore: " + score + "\nevent: " + evt.type);
+	        }*/
+	      });    
+	    });
+	</script>
+
+	<!-- 发表评论与评论展示 -->
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/sinaFaceAndEffec.js"></script>
+	<script type="text/javascript">
+		// 绑定表情
+		$('.face-icon').SinaEmotion($('.text'));
+		// 测试本地解析
+		function out() {
+			var inputText = $('.text').val();
+			$('#info-show ul').append(reply(AnalyticEmotion(inputText)));
+		}
+		
+		var html;
+		function reply(content){
+			html  = '<li>';
+			html += '<div class="head-face">';
+			html += '<a href=""><img src="images/pinglun/1.jpg" / ></a>';
+			html += '</div>';
+			html += '<div class="reply-cont">';
+			html += '<a href=""><p class="username">紫罗兰</p></a>';
+			html += '<p class="comment-body">'+content+'</p>';
+			html += '<p class="comment-footer">2016年10月5日　回复　点赞0　转发0</p>';
+			html += '</div>';
+			html += '</li>';
+			return html; 
+		}
+	</script>
+	<!-- 评论部分 ///////////////////////////////////////////////////////////////////////////////////////////-->
+    
+
+
+    <!-- 返回顶部 -->
+    <script src="../js/jquery.toTop.min.js"></script>
+    <script>
+        jQuery(function($){
+            // Plugin activation (basic)
+            // $('.to-top').toTop();
+
+            // Plugin activation with options
+            $('.to-top').toTop({
+                //options with default values
+                autohide: true,  //boolean 'true' or 'false'
+                offset: 420,     //numeric value (as pixels) for scrolling length from top to hide automatically
+                speed: 500,      //numeric value (as mili-seconds) for duration
+                right: 30,      //numeric value (as pixels) for position from right
+                bottom: 138       //numeric value (as pixels) for position from bottom
+            });
+        });
+    </script>
+
+	
+
+</body>
+</html>

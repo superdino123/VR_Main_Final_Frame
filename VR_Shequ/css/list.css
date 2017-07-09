@@ -1,0 +1,90 @@
+@CHARSET "UTF-8";
+
+body{
+	font-family:"微软雅黑";
+	background:#eee;
+}
+.row{padding:0;margin:0;}
+.container{width:1190px;margin:0 auto;padding: 0px;}
+
+
+/* 导航路径符号 */
+.breadcrumb > li + li:before {
+  content: ">\00a0";
+}
+.breadcrumb{background:#eee;font-size:16px;}
+.road{margin-top:20px;background:#eee;}
+.road a:hover{text-decoration:none;color:red;}
+.dingyue{padding-right:16px;margin-top:10px;}
+
+/* 头部解说 */
+.top2{background-color:#fff;height:120px;margin-left:0;margin-right:0;}
+.top2 span{line-height:80px;opacity:0.6;font-size:16px;}
+.zhixian{height:10px;border-bottom:solid #ddd 1px;margin-left:10px;margin-right:10px;}
+
+/* 列表开始 */
+.liebiao{background:#fff;margin-top:20px;}
+.liebiao .biaoti{padding-top:20px;padding-left:10px;}
+.liebiao .biaoti a{margin-left:15px;height:20px;line-height:20px;color:#777;}
+.liebiao .biaoti a:hover{text-decoration:none;color:red;}
+
+.pinlun1{margin-top:30px;}
+.pinlun1 span{opacity:0.5;margin-left:10px;margin-top:3px;}
+.pinlun1 h4{color:red;}
+.pinlun1 .shuzi{color:#F4C600;}
+.pinlun1 img{height:70px;width:70px;margin-left:-10px;}
+.pinlun1 .more{background-color:#F2F2F2;text-align:center;margin-left:15px;margin-right:15px;}
+
+.pinlun2 h4{color:#333;}
+.pinlun2 .fenye{width:80%;margin:0 auto;}
+
+
+
+
+
+/*右侧  */
+
+.youce{margin-left: 25px;}
+/* 签到 */
+.youce .qiandao{background:#fff;padding-bottom:5px;}
+.youce .qiandao .list-group-item{height:60px;}
+.youce .qiandao img{width:40px;height:50px;}
+.youce .qiandao span{font-size:18px;color:#fff;}
+
+.youce .active1:hover{opacity:0.7;}
+.youce .active2:hover{opacity:0.7;}
+.youce .active2{margin-top:20px;}
+
+/* 排行榜 */
+.youce .list-group-item {
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+.youce .list-group-item:first-child {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+.youce .list-group-item:last-child {
+  margin-bottom: 0;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.youce .list-group-item.active,
+.youce .list-group-item.active:hover,
+.youce .list-group-item.active:focus {
+  z-index: 2;
+  color: #fff;
+  background-color: red;
+  border-color: #ccc;
+}
+
+
+
+
+
+
+
+

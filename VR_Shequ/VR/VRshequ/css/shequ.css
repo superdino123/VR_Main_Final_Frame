@@ -1,0 +1,70 @@
+@CHARSET "UTF-8";
+
+body{
+	font-family:"微软雅黑";
+	background-color:#eee;
+}
+.row{padding:0;margin:0;}
+.container{width:1200px;margin:0 auto;}
+
+/* 最新主题  */
+.list-group-item {
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+.list-group-item:first-child {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+.list-group-item:last-child {
+  margin-bottom: 0;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.list-group-item.active,
+.list-group-item.active:hover,
+.list-group-item.active:focus {
+  z-index: 2;
+  color: #fff;
+  background-color: red;
+  border-color: #ccc;
+}
+
+
+
+/* 发帖数统计 */
+.tongji{margin-top:20px;height:80px;background:#fff;}
+.tongji img{height:60px;width:60px;}
+.tongji span{line-height:80px;font-size:16px;margin-left:10px;}
+
+
+/*  论坛分类*/
+.zonghequ{margin-top:20px;background-color:#fff;padding-bottom:20px;padding-top:10px;}
+.zonghequ h3{margin-left:20px;}
+.zonghequ h4 a{font-size:16px;}
+.zonghequ img{height:70px;width:80px;}
+.zonghequ a:hover{text-decoration:none;color:red;}
+
+.shebeiqu a{color:green;}
+.shebeiqu img{height:60px;width:80px;}
+
+.ziyuanqu img{height:60px;width:70px;}
+
+/* 友情链接部分 */
+.lianjie{background:#fff;margin-top:20px;height:60px;margin-bottom:30px;}
+.lianjie a{line-height:60px;font-size:14px;margin-left:40px;color:#aaa;}
+.lianjie a:hover{color:red;text-decoration:none;}
+
+
+
+
+
+
+
+
+
+
+

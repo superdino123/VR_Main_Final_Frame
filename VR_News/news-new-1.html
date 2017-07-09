@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <!--编码格式-->
+    <meta http-equiv="Content-Type" content="text/html"  charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--s-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--SEO抓取-->
+    <meta name="keywords" content="虚拟现实,VR,VR技术,资源">
+    <meta name="description" content="国内最大的虚拟现实平台,VR技术交流，资源分享">
+    <!--标题-->
+    <title>VR虚拟社区</title>
+    <!-- 导入js文件-->
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="Bootstrap/js/bootstrap.js"></script>
+    <script src="js/stickUp.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <!--<script src="js/bootstrap-hover-dropdown.min.js"></script>-->
+    <!--导入css文件-->
+    <link href="Bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/share.css">
+    <link type="text/css" rel="stylesheet" href="css/star.css">
+    <!--新加-->
+    <link href="css/stickup.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="templates/images/style.css" />
+    <link rel="stylesheet" type="text/css" href="templates/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <!-- 发表评论与评论显示 -->
+    <link  rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/sinaFaceAndEffec.css" />
+    <link rel="stylesheet" type="text/css" href="css/news-new.css">
+    <!-- 固定在顶部插件JS引入 -->
+    <script type="text/javascript">
+        //initiating jQuery
+        jQuery(function($) {
+            $(document).ready( function() {
+                //enabling stickUp on the '.navbar-wrapper' class
+                $('.navbar-wrapper').stickUp();
+            });
+        });
+    </script>
+    <script type="text/javascript">
+    $(function(){
+        $(".pay_item").click(function(){
+            $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+            var dataid=$(this).attr('data-id');
+            $(".shang_payimg img").attr("src","img/"+dataid+"img.jpg");
+            $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
+        });
+    });
+    function dashangToggle(){
+        $(".hide_box").fadeToggle();
+        $(".shang_box").fadeToggle();
+    }
+    </script>
+  	 <script type="text/javascript">
+        $(function(){
+
+            $("#searchSelected").click(function(){
+                $("#searchTab").show();
+                $(this).addClass("searchOpen");
+            });
+
+            $("#searchTab li").hover(function(){
+                $(this).addClass("selected");
+            },function(){
+                $(this).removeClass("selected");
+            });
+
+            $("#searchTab li").click(function(){
+                $("#searchSelected").html($(this).html());
+                $("#searchTab").hide();
+                $("#searchSelected").removeClass("searchOpen");
+            });
+
+        });
+    </script>
+</head>
+<body>
+     <!--最顶部导航-->
+    <div class="row"style="margin: 0px;padding:0px;">
+        <div class="col-md-12"style="margin: 0px;padding:0px;">
+            <div class="header" id="header_top" style=" display: block; background-color: rgb(34, 34, 34);">
+                <div class="header-main clearfix"style="width: 1170px; margin:0 auto;padding-right: 0px;">
+                    <ul class="header-left  clearfix" >
+                        <li>
+                            <a href="" class="sel" style="font-size:12px;">VR虚拟社区，因为专注所以专业</a>
+                        </li>
+                        <li class="hidden-xs">
+                            <a href="#" title="新手入门" target="_blank" style="font-size:12px;">新手入门</a>
+                        </li>
+                        <li style="position:relative" class="app-hover hidden-xs">
+                            <a href="#" class="" target="_blank" title="VR社区" style="font-size:12px;">VR社区</a>
+                            <!-- hover出现的div -->
+                            <div class="hover-content"><i></i>
+                                <img class="logo-img" src="images/icon.png" alt="logo">
+                                <h1>VR社区</h1>
+                                <p>未来科技等你来</p>
+                                <img class="erweima" src="images/erweima.png" alt="二维码">
+                                <p class="is">-Android客户端- </p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!--登录注册-->
+                    <!--<div id="header-right" class="" style="border:  #ff0000 solid 1px;">-->
+                    <div class="common">
+                        <div class="login fr" style="margin-top: -32px;">
+                            <div class="loginmenu">
+                                <a title="登录或注册"></a>
+                            </div>
+                            <ul>
+                                <li class="openlogin">
+                                    <a href="#" onclick="return false;">登录</a>
+                                </li>
+                                <li class="reg">
+                                    <a href="#" onclick="return false;">注册</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <!--</div>-->
+                    <div class="clear"></div>
+                    <div class="loginmask"></div>
+                    <div id="loginalert">
+                        <div class="pd20 loginpd"style="padding-bottom: 10px;">
+                            <h3> <i class="closealert fr"></i>
+                                <div class="clear"></div>
+                            </h3>
+                            <div class="loginwrap">
+                                <div class="loginh">
+                                    <div class="fl">会员登录</div>
+                                    <div class="fr">
+                                        还没有账号
+                                        <a id="sigup_now" href="#" onclick="return false;">立即注册</a>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <h3>
+                                    <span>邮箱登录</span>
+                                    <span class="login_warning">用户名或密码错误</span>
+                                    <div class="clear"></div>
+                                </h3>
+                                <div class="clear"></div>
+                                <form action="" method="post" id="login_form">
+                                    <div class="logininput">
+                                        <input type="text" name="username" id="username" class="loginusername"required oninvalid="setCustomValidity('用户名不能为空');" oninput="setCustomValidity('');"   placeholder="邮箱/用户名" />
+                                        <input type="text" class="loginuserpasswordt" value="密码" />
+                                        <input type="password" name="password" class="loginuserpasswordp " id="password" required oninvalid="setCustomValidity('密码不能为空');"oninput="setCustomValidity('');" placeholder="密码"  style="display:none" />
+                                    </div>
+                                    <div class="loginbtn">
+                                        <div class="loginsubmit fl">
+                                            <input type="submit" value="登录" onclick="login();" />
+                                            <div class="loginsubmiting">
+                                                <div class="loginsubmiting_inner"></div>
+                                            </div>
+                                        </div>
+                                        <div class="logcheckbox fl">
+                                            <input id="bcdl" type="checkbox" checked="true" />
+                                            保持登录
+                                        </div>
+                                        <div class="fr">
+                                            <a href="#">忘记密码?</a>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="thirdlogin">
+                            <div class="pd50">
+                                <h4>用第三方帐号直接登录</h4>
+                                <ul>
+                                    <li id="sinal">
+                                        <a href="#">微博账号登录</a>
+                                    </li>
+                                    <li id="qql">
+                                        <a href="#">QQ账号登录</a>
+                                    </li>
+                                    <div class="clear"></div>
+                                </ul>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="reg_setp">
+                        <div class="back_setp">返回</div>
+                        <div class="blogo"></div>
+                        <div id="setp_quicklogin" style="z-index: 100;">
+                            <div class="content2">
+                                <!-- 头部文字 -->
+                                <h2>欢迎注册</h2>
+                                <form style="border: #ff0000 solid;margin-bottom: 30px;height: 400px;">
+                                    <!-- 注册使用的几个输入框和注册按钮 -->
+                                    <input type="text" name="userid" value="用户名" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '用户名';}">
+                                    <input type="tel" name="usrtel" value="电话" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '电话';}">
+                                    <input type="email" name="email" value="电子邮件" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '电子邮件';}">
+                                    <input type="password" name="psw" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value ='password' ;}">
+                                    <input type="password" name="psw" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'password';}">
+                                    <input type="submit" class="register" value="注册">
+                                </form>
+                            </div>
+                            <ul class="quicklogin_socical">
+                                <li class="quicklogin_socical_weibo">
+                                    <a href="#">微博帐号注册</a>
+                                </li>
+                                <li class="quicklogin_socical_qq">
+                                    <a href="#">QQ帐号注册</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--导航条-->
+    <div class="navbar-wrapper" style="width:100%;background-color:#fff;">
+        <div class="header-main1 " style="width: 1170px;margin:0 auto;">
+            <div class="hd_logo">
+                <h2>
+                    <a href="#" title="VR虚拟社区-最大VR技术论坛,海量VR资源,VR视频教程,vrcommu.com">
+                        <img src="images/logo2.png" alt="VR虚拟社区" border="0"  class="img-responsive" />
+                    </a>
+                </h2>
+            </div>
+            <!-- 导航 -->
+            <div class="nav1" id="hd" >
+                <ul >
+                    <li >
+                        <a href="../index.html" hidefocus="true" title="首页" style=" padding-left: 10px;width: 38px;padding: 0px;" >
+                            首页
+                            <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        </a>
+                    </li>
+                    <li class="a" >
+                        <a href="index.html" hidefocus="true" title="VR社区论坛"  >
+                            VR资讯
+                        </a>
+                    </li>
+
+                    <li >
+                        <a href="../VR_Game/game.html" hidefocus="true"  >VR游戏</a>
+                    </li>
+
+                    <li >
+                        <a href="../VRvideo/vr-video.html" hidefocus="true"  >VR视频</a>
+                    </li>
+                    <li >
+                        <a href="../VR_Shequ/shequ.html" hidefocus="true"  >VR社区</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!--搜索框-->
+            <div class="sousuo">
+                <form method="get" name="" action="#" target="_blank" style="width:300px;height:60px;margin:0px auto 0 auto;float: right;margin-right:0;">
+                    <div id="searchTxt" class="searchTxt"  onMouseOver="this.className='searchTxt searchTxtHover';" onMouseOut="this.className='searchTxt';" style="margin-left:26px;">
+                        <div class="searchMenu" >
+                            <div class="searchSelected" id="searchSelected" >全站</div>
+
+                            <div style="display:none;margin-top: -2px;" class="searchTab" id="searchTab" >
+                                <ul>
+                                    <li class="">全站</li>
+                                    <li>资讯</li>
+                                    <li>视频</li>
+                                    <li>游戏</li>
+                                    <li>资源</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <input name="w" type="text" />
+                    </div>
+                    <div class="searchButton">
+                        <button id="searchButton" type="submit">搜索</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!--资讯详情-->
+    <div class="container main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h3>大朋VR与StepVR深度合作 共拓垂直行业市场</h3>
+                    <div class="auther">
+                        <a href="javascrpt:;">
+                            <img src="images/photo/auther-logo.gif">
+                        </a>
+                        <span>
+                            <a href="javascrpt:;" class="auther-infor">Nike</a>
+                        </span>
+                        <span>/</span>
+                        <span>
+                            3&nbsp;天前
+                        </span>
+                        <a style="float:right;" class="auther-infor">新品快报</a>
+                    </div>
+                    <div class="content-1">
+                         <div class="content-img">
+                             <img src="images/photo/content-1.jpg">
+                         </div>
+                         <div class="content-news">
+                             <p>ChinaJoy结束不久，又从大朋VR传来消息，大朋VR与国承万通（G-wearables）在5月达成初步技术合作的基础上，达成深度战略合作，双方基于大朋VR的硬件、平台和STEPVR的技术优势，在VR技术、硬件、软件及内容方面进行全方位深度合作，共同拓展B端垂直行业市场，实现合作共赢。</p>
+                             <p>今年5月12日，大朋召开“CONNECT”生态战略发布会，并在会上推出了全球首款移动VR空间定位系统。该系统包括两套解决方案：大朋自研的M-Polaris 移动VR高精度光学空间定位方案，以及与国承万通合作的大空间高精度移动VR激光定位方案。在本次ChinaJoy的eSmart展馆现场内，国承万通STEPVR展台二层推出的“STEPVR Pensieve”这一垂直行业标准化移动VR解决方案中，全部使用大朋VR一体机对外体验，充分展示了两家在合作上的紧密程度。</p>
+                             <p>从ChinaJoy展示的效果来看，这套空间定位方案的亮点突出：无需连接PC主机，没有数据线的束缚，用户在空间内自由移动，交互人数不受限制，激光所及面积都可扩展。该方案可帮助旅游、教育、展览展示等垂直行业快速、经济的实现虚拟现实技术商业化应用，是全球首款可商用的基于移动VR一体机的多人高精度的激光定位方案。</p>
+                             <p>历经近三个月时间的技术对接和充分准备，大朋与国承万通在之前合作基础上细化了合作内容：第一，技术方面，基于大朋VR的PC VR头显与移动VR一体机，与国承万通的STEPVR激光空间定位与交互技术的全面集成；第二，内容方面，特别是VR游戏方面的合作，双方互相支持，共同服务开发者，打造共赢的VR游戏生态。第三，市场方面，双方基于现有的B、C端市场渠道，在市场推广与开拓上互相支持，共同服务客户。</p>
+                             <p>大朋VR CEO陈朝阳表示，与国承万通STEPVR的合作是“Creating With 大朋”计划中的一部分。大朋相信，VR的真正价值并不在于带上一个VR眼镜或者加上一个外设来实现，而是需要通过硬件设备和空间定位技术的结合来体现其价值。VR用满足用户在大空间内自由无拘束的移动和交互，而不是受游戏手柄及数据线的束缚。大朋VR一直致力于围绕硬件、交互与内容打造VR生态，推动建立共赢、开放的VR生态。</p>
+                             <p>国承万通CEO郭成则表示，国承万通一直致力于娱乐、旅游及教育领域的VR技术研发及整体解决方案输出，自主研发并拥有大空间激光定位、全身动作捕捉、精准手势识别、大空间多人自然交互等一系列虚拟现实核心技术。在双方的设备适配方面，郭成说，大朋VR一体机无论在产品性能还是价格定位方面都具有极大的市场优势，是目前STEPVR适配的VR头显中最好的移动设备之一。STEPVR会一直深耕其在空间定位、动作捕捉、手势识别等VR输入端的技术研发，并在未来为大朋VR提供更多的核心技术支持。</p>
+                             <p>优质的VR硬件+空间定位解决方案，再加上优秀的VR内容加持，这种优势互补、强强联合的合作方式预示着国产VR未来的发展方向。</p>
+                         </div>
+                         <span class="copyright" style="margin-top:20px;margin-left:0px;float:left;">本文由VREYES原创，转载请注明来源及原文链接！</span>
+                          <!--分享按钮-->
+                       
+                    <!--<div class="judgement">
+                        <a href="javascrpt:;" style="right:2px;background-color:#f65049;">
+                            <span class="glyphicon glyphicon-heart"></span>
+                            <font>点赞</font>
+                            <span>(0)</span>
+                        </a>
+                        <span class="or">or</span>
+                        <a href="javascrpt:;" style="left:2px;background-color:#ccc;">
+                            <span class="glyphicon glyphicon-heart-empty"></span>
+                            <font>拍砖</font>
+                            <span>(0)</span>
+                        </a>
+                    </div>-->
+                     <div class="share" style="float:left;margin-right:40px;">
+                            <div class="share-platform">
+                                <div class="share-platform-l" style="margin-top:0px;margin-left:5px; height:12px">
+                                    <span class="glyphicon glyphicon-share" style="font-size:16px;margin-top:0px;"></span>
+                                </div>
+                                <div class="share-platform-r" style="float:left;">
+                                    <div class="bdsharebuttonbox bdshare-button-style1-32" data-bd-bind="1470646063501">
+                                        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                                        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                                        <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+                                        <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                                    </div>
+                                </div>
+                            </div>                      
+                        </div>
+                    </div>
+                    <div class="content" >
+                        <p>
+                            <a href="javascript:void(0)" onclick="dashangToggle()" class="dashang" title="打赏，支持一下">打赏</a>
+                        </p>
+                        <div class="hide_box"></div>
+                        <div class="shang_box">
+                            <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()" title="关闭"><img src="img/close.jpg" alt="取消" /></a>
+                            <div class="shang_tit">
+                                <p>感谢您的支持，我会继续努力的!</p>
+                            </div>
+                            <div class="shang_payimg">
+                                <img src="img/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+                            </div>
+                                <div class="pay_explain">扫码打赏，你说多少就多少</div>
+                            <div class="shang_payselect">
+                                <div class="pay_item checked" data-id="alipay">
+                                    <span class="radiobox"></span>
+                                    <span class="pay_logo"><img src="img/alipay.jpg" alt="支付宝" /></span>
+                                </div>
+                                <div class="pay_item" data-id="weipay">
+                                    <span class="radiobox"></span>
+                                    <span class="pay_logo"><img src="img/wechat.jpg" alt="微信" /></span>
+                                </div>
+                            </div>
+                            <div class="shang_info">
+                                <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <!-- <div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei'; border:solid red 1px;">
+                    </div> -->
+                    <div class="comment" style="">
+                        <div class="content1">
+                            <div class="cont-box">
+                                <textarea class="text" placeholder="我来说两句"></textarea>
+                            </div>
+                            <div class="tools-box">
+                                <div class="operator-box-btn">
+                                    <span class="face-icon"  >☺</span>
+                                    <span class="img-icon">▧</span>
+                                    <!-- 评星级 -->
+                                    <div class="demo">
+                                        <div id="function-demo1" class="target-demo"></div>
+                                        <!-- 可以显示有星星的数值，暂时在样式中先隐藏掉了 -->
+                                        <div id="function-hint1" class="hint"></div>
+                                    </div>
+                                </div>
+                                <div class="submit-btn"><input type="button" onClick="out()"value="发表评论" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="main-right-1">
+                        <div class="auther-1">
+                            <div class="auther-1-img col-md-4">
+                                <img src="images/photo/auther-logo.gif">
+                            </div>
+                            <div class="auther-1-infor">
+                                <h4>Nike</h4>
+                                <p>VR网作者</p>
+                            </div>
+                            <div class="row auther-work">
+                                <div class="auther-left">
+                                    <div class="number">
+                                        <h4>92篇</h4>
+                                        <p>文章总数</p>
+                                    </div>
+                                </div>
+                                <div class="auther-right">
+                                    <div class="number">
+                                        <h4>92篇</h4>
+                                        <p>文章总数</p>
+                                    </div>
+                                </div>                               
+                            </div>
+                            <div class="auther-article">
+                                <div class="his-article">
+                                    <h4 style="margin-bottom:4px;">他的文章</h4>
+                                </div>
+                                <div class="article-list">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img src="images/photo/article-list-1.jpg" class="img-responsive" >
+                                        </div>
+                                        <div class="col-md-8">
+                                            <a class="title" href="http://www.varkr.com/p/4059.html">武汉光谷成立VR/AR产业联盟</a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img src="images/photo/article-list-1.jpg" class="img-responsive" >
+                                        </div>
+                                        <div class="col-md-8">
+                                            <a class="title" href="http://www.varkr.com/p/4059.html">武汉光谷成立VR/AR产业联盟</a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <img src="images/photo/article-list-1.jpg" class="img-responsive" >
+                                        </div>
+                                        <div class="col-md-8">
+                                            <a class="title" href="http://www.varkr.com/p/4059.html">武汉光谷成立VR/AR产业联盟</a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <a href="javascrpt:;" style="float:right;margin-top:5px;">更多></a>
+                                    </div>
+                                    <div class="article-more">
+                                        <a href="javascrpt:;">寻求报道</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="article-recommend row">
+                            <div class="recommend-list">
+                                <h4 style="margin-bottom:4px;">相似推荐</h4>
+                            </div>
+                            <div class="row recommend-1">
+                                <img src="images/photo/recommend-1.jpg">
+                                <div class="row recommend-1-block">
+                                    <p>武汉光谷成立VR/AR产业联盟</p>
+                                </div>
+                            </div>
+                            <div class="row recommend-1">
+                                <img src="images/photo/recommend-1.jpg">
+                                <div class="row recommend-1-block">
+                                    <p>武汉光谷成立VR/AR产业联盟</p>
+                                </div>
+                            </div>
+                            <div class="row recommend-1">
+                                <img src="images/photo/recommend-1.jpg">
+                                <div class="row recommend-1-block">
+                                    <p>武汉光谷成立VR/AR产业联盟</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="row" style="margin: 0;padding: 0;">
+        <div class="col-md-12"style="padding: 0;margin:0;">
+
+            <!--友情链接-->
+            <div class="row"style="background-color: #222;margin: 0;padding-left: 6.5%;padding-right:6.5%;">
+                <div class="link" style="height: 50px;line-height: 50px;text-align:center;">
+                    <p class="p2">
+                        友情链接：
+                        <a target="_blank"  href="http://www.vrrb.cn">VR日报</a>
+                        |
+                        <a target="_blank"  href="http://www.yaojievr.com/">妖界VR</a>
+                        |
+                        <a target="_blank"  href="http://www.591vr.com/">VR应用</a>
+                        |
+                        <a target="_blank"  href="http://www.vrwanjia.cn/">VR玩家网</a>
+                        |
+                        <a target="_blank"  href="http://www.vr.cn/">VR虚拟现实</a>
+                        |
+                        <a target="_blank"  href="http://vrtoutiao.com">VR头条</a>
+                        |
+                        <a target="_blank"  href="http://www.cnvrnews.com">中文VR资讯网</a>
+                        |
+                        <a target="_blank"  href="http://www.utovr.com/">VR视频</a>
+                        |
+                        <a target="_blank"  href="http://www.17ivr.com/">一起爱VR</a>
+                        |
+                        <a target="_blank"  href="http://www.vrdaren.com/">VR达人网</a>
+                        |
+                        <a target="_blank"  href="http://vr.sina.com.cn/">新浪VR</a>
+                        |
+                        <a target="_blank"  href="http://ivr.baidu.com/">百度VR</a>
+                        |
+                        <a target="_blank"  href="http://vr.baike.com/">虚拟现实</a>
+                        |
+                        <a target="_blank"  href="http://www.vryxw.com/">VR游戏网</a>
+                        |
+                        <a target="_blank"  href="http://vrguancha.net/">VR观察网</a>
+                        |
+                        <a target="_blank"  href="http://vrguancha.net/">申请友链请联系QQ12345678</a>
+                        |
+                    </p>
+                </div>
+            </div>
+            <div class="footer">
+                <a href="#" target="_blank">客户端</a>
+                <a href="#" target="_blank">媒体报道</a>
+                <a href="#" target="_blank">合作推广</a>
+                <a href="#" target="_blank">关于我们</a>
+                <a href="#" target="_blank">加入我们</a>
+                <a href="#" target="_blank">团队blog</a>
+                <a href="#" target="_blank">VR社区名人堂</a>
+                <a href="#">更多友情链接</a>
+                <br/>
+                <a>Copyright &copy; 2016 VR虚拟社区 All Rights Reserved</a>
+                <br/>
+                <a>VR虚拟社区 版权所有 鄂ICP备16001230号</a>
+            </div>
+        </div>
+    </div>
+    <!--返回顶部-->
+    <a class="to-top" style="cursor: pointer;"><img src="images/top.gif" /></a>
+    <script src="js/jquery.toTop.min.js"></script>
+<script>
+        jQuery(function($){
+            // Plugin activation (basic)
+            // $('.to-top').toTop();
+
+            // Plugin activation with options
+            $('.to-top').toTop({
+                //options with default values
+                autohide: true,  //boolean 'true' or 'false'
+                offset: 420,     //numeric value (as pixels) for scrolling length from top to hide automatically
+                speed: 500,      //numeric value (as mili-seconds) for duration
+                right: 30,      //numeric value (as pixels) for position from right
+                bottom: 88       //numeric value (as pixels) for position from bottom
+            });
+        });
+    </script>
+</body>
+</html>

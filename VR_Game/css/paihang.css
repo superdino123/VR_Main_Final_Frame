@@ -1,0 +1,183 @@
+.gamedown { 
+    width:1170px;
+    height:;
+    float:left;
+    background-color:#FFF;
+    margin:20px auto 0 auto;
+}
+.gamePHone {
+    width:280px;
+    height:auto;
+    float:left;
+    padding-bottom:30px;
+    margin-right:16px;
+}
+.gamedown .gamePHone .gamePHli a:hover{
+  text-decoration: none;
+}
+.gamePHone.mrnone {
+    margin-right:0px;
+}
+.gamePHtop {
+    width:230px;
+    height:48px;
+    line-height:48px;
+    float:left;
+    padding-left:50px;
+    color:#333333;
+    font-size:18px;
+    overflow:hidden;
+    border-bottom:1px solid #f0f0f0;
+}
+.phbg1 {
+    background:url(../Images/phbg1.png) no-repeat 13px center;
+}
+.phbg2 {
+    background:url(../Images/phbg2.png) no-repeat 13px center;
+}
+.phbg3 {
+    background:url(../Images/phbg3.png) no-repeat 13px center;
+}
+.phbg4 {
+    background:url(../Images/phbg4.png) no-repeat 13px center;
+}
+.gamePHbot {
+    width:280px;
+    height:659px;
+    float:left;
+    overflow:hidden;
+}
+.gamePHli {
+    width:280px;
+    height:auto;
+    float:left;
+}
+.gamePHliname {
+    width:280px;
+    height:46px;
+    float:left;
+    border-bottom:1px dashed #dcdcdc;
+}
+.gamePHliname.borbnone {
+    border-bottom:1px solid #FFFFFF;
+}
+.gamephlinum {
+    width:16px;
+    height:16px;
+    line-height:16px;
+    text-align:center;
+    float:left;
+    margin-top:15px;
+    margin-left:15px;
+    margin-right:15px;
+    background-color:#f03232;
+    color:#FFF;
+    font-size:12px;
+}
+.gamephlinum2 {
+    width:16px;
+    height:16px;
+    line-height:16px;
+    text-align:center;
+    float:left;
+    margin-top:15px;
+    margin-left:15px;
+    margin-right:15px;
+    background-color:#dddddd;
+    color:#666;
+    font-size:12px;
+}
+.gamephlinum3 {
+    width:16px;
+    height:16px;
+    line-height:16px;
+    text-align:center;
+    float:left;
+    margin-top:15px;
+    margin-left:15px;
+    margin-right:15px;
+    background-color:#1eb43c;
+    color:#FFF;
+    font-size:12px;
+}
+.gamephlinum4 {
+    width:16px;
+    height:16px;
+    line-height:16px;
+    text-align:center;
+    float:left;
+    margin-top:15px;
+    margin-left:15px;
+    margin-right:15px;
+    background-color:#5091ff;
+    color:#FFF;
+    font-size:12px;
+}
+.gamephlinum5 {
+    width:16px;
+    height:16px;
+    line-height:16px;
+    text-align:center;
+    float:left;
+    margin-top:15px;
+    margin-left:15px;
+    margin-right:15px;
+    background-color:#ffa921;
+    color:#FFF;
+    font-size:12px;
+}
+.gamePHliname a {
+    width:219px;
+    height:46px;
+    float:left;
+    line-height:46px;
+    font-size:14px;
+    color:#646464;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+    padding-right:15px;
+}
+.gamePHliimg {
+    width:250px;
+    height:154px;
+    float:left;
+    padding-left:15px;
+    padding-right:15px;
+    display:none;
+}
+.gamePHmore {
+    width:248px;
+    height:28px;
+    line-height:28px;
+    text-align:center;
+    float:left;
+    border:1px solid #dddddd;
+    font-size:12px;
+    color:#969696;
+    margin-left:15px;
+    margin-top:5px;
+}
+.gamePHli:hover .gamePHliname {
+    border-bottom:1px solid #FFF;
+}
+.PHmo1:hover {
+    background-color:#f03232;
+    color:#FFF;
+    border: 1px #f03232 solid;
+}
+.PHmo2:hover {
+    background-color:#1eb43c;
+    color:#FFF;
+    border: 1px #1eb43c solid;
+}
+.PHmo3:hover {
+    background-color:#5091ff;
+    color:#FFF;
+    border: 1px #5091ff solid;
+}
+.PHmo4:hover {
+    background-color:#ffa921;
+    color:#FFF;
+    border: 1px #ffa921 solid;
+}

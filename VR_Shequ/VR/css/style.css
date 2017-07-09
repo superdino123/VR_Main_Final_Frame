@@ -1,0 +1,459 @@
+
+/*设body背景*/
+body{
+    background-color: #F1F1F1;
+}
+
+/*最顶部导航样式开始*/
+.header{
+    width: 100%;
+    height: 32px;
+    background-color: #222;
+    font-family: "微软雅黑";
+    font-size: 12px;
+}
+.header-main{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header-left li{
+    float: left;
+    line-height: 28px;
+    height: 28px;
+    list-style: none;
+}
+.header-left li a{
+    display: inline-block;
+    padding: 0 12px;
+    color: #d5d5d5;
+}
+.header-left li a:hover,.header-right li a:hover,.header a.sel{
+    color: #FFF;
+    text-decoration: none;
+}
+/*鼠标划过出现二维码样式开始*/
+.hover-content{
+    width: 200px;
+    background: #fff;
+    position: absolute;
+    left: -70px;
+    z-index: 1000;
+    text-align: center;
+    font-family:"微软雅黑";
+    display: none;
+}
+.hover-content h1{
+    font-family: 微软雅黑;
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom:-2px;
+}
+.hover-content .is{
+    font-smoothing: antialiased;
+    padding: 0 0 21px;
+}
+.hover-content .logo{
+    width: 50px;
+    margin-top: 31px;
+}
+.hover-content .erweima{
+    width: 105px;
+    margin-top: 18px;
+}
+/*i标签制作小三角样式*/
+.hover-content i {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 50%;
+    margin-left: -5px;
+    top: -3px;}
+.app-hover:hover .hover-content{
+    display: block;
+}
+/*鼠标划过出现二维码样式结束*/
+
+.header-left li .header-msg:before{
+    display:block;
+    width:0;
+    height:0;
+    position:absolute;
+    right: 100%;
+    top: 50%;
+    margin-top: -4px;
+    border-style: solid;
+    border-width: 4px 6px 4px 0;
+    border-color: transparent;
+    border-right-color: #e74c3c;
+}
+/*最顶部导航样式结束*/
+
+/*导航栏：随滚动条滚动固定在顶部样式开始*/
+.navbar-brand {
+font-family: "微软雅黑";
+color: #000;
+font-weight: 800;
+height: 50px;
+padding: 15px 20px 15px 0px;
+font-size: 34px;
+line-height: 20px;
+}
+.navbar-nav > li > a {
+    font-weight: 800;
+}
+.navbar-wrapper {
+    margin-top:0px;
+    padding: 0;
+    position: relative;
+    z-index: 15;
+}
+.navbar.navbar-inverse.navbar-static-top {
+    background: #f8f8f8;
+    border-color: #d5d5d5;
+}
+.navbar.navbar-inverse.navbar-static-top a{
+    color: #444;
+    font-size: 16px;
+}
+.navbar.navbar-inverse.navbar-static-top a:hover{
+    color: #3fa8ff;
+
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus{
+    background:#cccccc;
+    font-weight:700;
+}
+.navbar-inverse .navbar-nav > .open > a:focus {
+    color: #fff;
+    background-color: #cccccc;
+}
+.navbar-inverse .navbar-nav>.active>a:hover {
+    background: #cccccc;
+    color: #3fa8ff;
+    font-weight:700;
+}
+.collapse ul li:hover{
+    display: block;
+}
+.dropdown ul li{
+    display: block;
+}
+.dropdown ul li a{
+    font-family: 微软雅黑;
+    font-weight: 400;
+}
+.dropdown ul li a:hover{
+    background: #ccc;
+}
+.dropdown-menu{
+    min-width: 80px;
+    width: 150%;
+    margin-left: 0px;
+    text-align: center;
+}
+
+/*.menuItem a:link{*/
+    /*color: #0A64A4;*/
+/*}*/
+/*.navwrapper .container .navbar-collapse .navbar-nav a:visited{*/
+    /*color: #333;*/
+    /*background: #ccc;*/
+/*}*/
+.navbar-wrapper > li:hover .dropdown-menu {display: block;}
+/*导航栏2：随滚动条滚动固定在顶部样式结束*/
+    
+/*banner轮播样式*/
+.first .carousel-caption {
+    background-color: rgba(32,32,32,0.4);
+    position: absolute;
+    right: 36%;
+    bottom: 75%;
+    left: 33%;
+}
+.second .carousel-caption {
+    background-color: rgba(32,32,32,0.3);
+    position: absolute;
+    right: 45%;
+    bottom: 16%;
+    left: 25%;
+}
+.first .carousel-caption h1,.second .carousel-caption h1{
+    font-weight: 600;
+    font-size: 34px;
+    margin:0 20px;
+    font-family: 微软雅黑;
+}
+.first a,.second a{
+    text-align: left;
+    color: #ffffff;
+    text-decoration: none;
+}
+.first a:hover,.second a:hover{
+    cursor: pointer;
+}
+.first a p{
+    font-weight: 400;
+    font-size: 20px;
+    margin:0 22px;
+}
+.second a p{
+    font-weight: 400;
+    font-size: 20px;
+    margin:auto 20px;
+}
+/*banner轮播样式结束*/
+
+
+/*左边主体部分样式开始*/
+ .col-md-7{
+    padding: 0;
+    margin:0 0 40px 0;
+}
+ .col-md-7 h1{
+     margin-top: 5px;
+     font-weight: 900;
+     font-family: 微软雅黑;
+     font-size: 24px;
+ }
+.col-md-7 a{
+     text-decoration: none;
+     color: #000;
+    cursor: pointer;
+ }
+ .content{
+     margin-bottom: 20px;
+ }
+.header_top a{
+    color: #000;
+}
+/*微博关注样式*/
+.contact a :hover{
+    cursor: pointer;
+}
+
+.comment{
+    margin-top: 20px;
+    height: 100px;
+    width: 95%;
+}
+.comment a{
+    text-decoration: none;
+    color: #444;
+}
+.comment a:hover{
+    color: #000;
+}
+.comment p{
+    display:block;
+    overflow: hidden;
+    /*text-indent: 2em;*/
+    font-size: 14px;
+    line-height: 20px;
+}
+.share{
+    margin-top:10px;
+    margin-bottom: 30px;
+    color: #666;
+    font-weight: 600;
+}
+.share-icon{
+    padding-right: 12px;
+    margin-right: 1%;
+    float: right;
+}
+.classify{
+    float: left;
+}
+.contact{
+    margin-top: -32px;
+    margin-right: 10px;
+    float: right;
+}
+
+/*右边以及链接内容用样式*/
+.post-right-title{
+    font-size: 16px;
+    color: #393939;
+    border-left: 4px solid #2689FF;
+    margin-left: -22px;
+    margin-bottom: 15px;
+    padding: 5px 0 5px 18px;
+    text-align: left;
+}
+.post-right-item h4{
+    font-size: 24px;
+    font-weight: 800;
+    color: #000;
+}
+.post-right-item h4 a{
+    margin-left: 40%;
+    font-size: 18px;
+    font-weight: 400;
+    color: #000;
+}
+.post-right-title a{
+    color: #666;
+    text-decoration: none;
+}
+.post-right-title a:hover{
+    color: #333;
+}
+.tags{
+    margin-left: -8px;
+    margin-top: -8px;
+}
+.tags a{
+    margin-left: 8px;
+    margin-top: 8px;
+    display: inline-block;
+    vertical-align: top;height: 26px;
+    line-height: 26px;
+    padding: 0 12px;
+    background-color: #F1F1F1;color: #000;
+    border-radius: 2px;
+    font-size: 12px;
+    font-family: Helvetica,Arial,sans-serif;
+    text-decoration: none;
+}
+.tags a:hover{
+    background-color: #3498DB;
+    color: #FFF;
+}
+.tags .sel{
+    background-color: #3498DB;
+    color: #FFF;
+}
+
+.active-list li{
+    margin-top: 20px;
+    list-style: none;
+}
+.active-list li a{
+    display: block;
+}
+.active-list li a img{
+    width: 100%;
+}
+.active-list a:hover{
+    opacity: 0.9;
+}
+.active-list li a img{
+    padding-right: 20px;
+}
+
+.service-list{
+    margin-top: -10px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.service-list a{
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 2px;
+    width: 180px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin-top: 15px;
+    background-color: #3498DB;
+    color: #FFF;
+}
+.service-list a:hover{
+    opacity: .8;
+}
+
+
+.com li{
+    list-style: none;
+    line-height: 24px;
+}
+.com li a{
+    font-size: 14px;
+    text-decoration: none;
+    color: #444;
+}
+.com li a :hover{
+    font-size: 16px;
+    color: #000;
+}
+
+
+
+/*footer样式*/
+.footer{
+    background-color: #222;
+    color: #ccc;
+    font-size: 12px;
+    font-family: Helvetica,Arial,sans-serif;
+    text-align: center;
+    padding: 35px 0;
+}
+.footer a{
+    color: #ccc;
+    font-size: 12px;
+    font-family: Helvetica,Arial,sans-serif;
+    margin-right: 10px;
+}
+.footer a:hover{
+    color: #fff;
+    text-decoration: underline;
+}
+.footer a:last-child{
+    margin-right: 0;
+}
+.footer .tip{
+    margin-top: 10px;
+    color: #ccc;
+}
+/*foot样式结束*/
+
+
+/*关注我们CSS样式*/
+.follow-title{
+    text-align: center;
+    font-size: 14px;
+}
+.follow-list{
+    text-align: center;
+    margin-left: -16px;
+    margin-top: 0px;
+    padding-bottom: 30px;
+}
+.follow-list a{
+    display: inline-block;
+    width: 50px;
+    height: 41px;
+    margin-top: 16px;
+    margin-left: 16px;
+    color: #333;
+    text-decoration: none;
+}
+.follow-list a:hover{
+    opacity: 0.8;
+}
+.follow-about{
+    text-align: center;
+    position: relative;
+
+}
+
+/*图片缩放效果*/
+.col-md-5 .left_pic{
+    width: 250px;
+    height: 180px;
+    /*border: #000 solid 1px;*/
+    overflow: hidden;
+}
+.col-md-5 .left_pic a img{
+    cursor: pointer;
+    transition: all 0.6s;
+}
+.col-md-5 .left_pic a img:hover{
+    transform: scale(1.1);
+}

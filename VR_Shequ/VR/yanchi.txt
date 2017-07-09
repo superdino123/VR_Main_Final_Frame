@@ -1,0 +1,13 @@
+HTML
+shequ.html:VR社区首页
+list.html:评论列表
+xiangqing.html:帖子详情评论页
+
+CSS
+bootstrap.css:bootstrap框架样式
+shequ.html:VR社区首页样式
+list.html:评论列表样式
+xiangqing.html:帖子详情评论页样式
+
+
+JS

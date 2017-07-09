@@ -1,0 +1,511 @@
+/* 网页初始化 */
+body,div,img,ol,ul,li,a{
+	border:0;
+	padding:0;
+	margin:0;
+	font-family:"微软雅黑";
+	font-size:14px;
+	color:#000;
+}
+a:hover{
+	text-decoration: none;
+}
+/*head部分***********************************************************************/
+/* 重写的样式 */
+/* 清除底部边距 */
+/* .navbar {
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 20px;
+  border: 1px solid transparent; 
+  margin-bottom:0;
+}
+.navbar-default {
+  background-color: #f8f8f8;
+  border-color: #e7e7e7;
+}
+@media (min-width: 768px) {
+  .navbar-header {
+    float: left;
+  }
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.dropdown {
+  position: relative;
+}
+设置下拉菜单最小宽度
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, .15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+
+  min-width:80px;
+}
+下拉菜单间隔线的外边距缩小
+.dropdown-menu .divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+  margin:2px 0;
+}
+设置目录的宽度
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  padding:0;
+  width:1170px;
+}
+减小题头的字体大小
+.navbar-brand {
+  float: left;
+  height: 50px;
+  padding: 15px 15px;
+  font-size: 18px;
+  line-height: 20px;
+  font-size:14px!important;
+}
+补充的样式
+下拉菜单鼠标滑动可显示
+.dropdown-hover>a:hover+.dropdown-menu{
+	display: block;
+}
+.dropdown-hover>ul:hover{
+	display: block;
+} */
+/*head部分////////////////////////////////////////////////////////////////////////////
+
+/*二级菜单部分***********************************************************************/
+.bg-meau-second{
+	background-color: rgba(0,0,0,0.8);
+	position:absolute;	
+	width:100%;
+	bottom: 0;
+}
+.meau-second{
+	width:1170px;
+	padding:0;
+	margin:0 auto;
+}
+.meau-second>.col-md-12>a{
+	display: inline-block;
+	padding:10px 0;
+	margin:0 40px;
+	color:#fff;
+	font-size:16px;
+	border:solid 6px transparent;
+}
+.meau-second>.col-md-12>a:hover{
+	border-bottom: solid #fff 6px;
+}
+/*二级菜单部分////////////////////////////////////////////////////////////////////////
+
+/*轮播部分***************************************************************************/
+/* 补充的样式 ------------引入的jquer插件中的css*/
+.banner {
+    position: relative;
+    background-color: #f8f8f8;
+    height:462px;
+    padding: 30px 0 0;
+    text-align: center;
+}
+
+.dg-container {
+    position: relative;
+    width: 1170px;
+    height: 350px;
+    margin: 0 auto;
+}
+
+.dg-wrapper {
+    width: 750px;
+    height: 350px;
+    margin: 0 auto;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+
+.dg-wrapper a {
+    width: 750px;
+    height: 350px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.dg-wrapper a:first-child {
+    z-index: 2;
+}
+
+.dg-wrapper a img {
+    display: block;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.20);
+    border-radius: 4px;
+    width: 100%;
+    height: 350px;
+    background: #fff;
+}
+
+.dg-wrapper a.dg-transition {
+    transition: all 0.5s ease-in-out;
+}
+
+.dg-wrapper a.dg-transition-fast {
+    transition: all 0.2s ease-in-out;
+}
+
+.dg-wrapper a:hover{
+	-webkit-box-shadow:0 0 10px rgba(0, 0, 0, .5);  
+	-moz-box-shadow:0 0 10px rgba(0, 0, 0, .5);  
+	box-shadow:0 0 10px rgba(0, 0, 0, .5);  
+}
+
+.dg-container nav {
+    display: none;
+}
+
+.dg-container nav span:hover {
+    opacity: 1;
+}
+
+.dg-container nav span.dg-next {
+    background-position: top right;
+    margin-left: 10px;
+}
+
+.dg-container #lightButton2 {
+    bottom: 20px;
+}
+
+.dg-container .button {
+     position: relative;
+     z-index: 5;
+ }
+
+.dg-container .button li {
+    cursor: pointer;
+    display: none;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-right: 5px;
+    background: rgba(255, 255, 255, 0.30);
+    border: 1px solid rgba(0, 0, 0, 0.20);
+}
+
+.dg-container .button .light {
+    background: #01BDFF;
+}
+/* 重写的样式 */
+
+/*轮播部分////////////////////////////////////////////////////////////////////////////
+
+
+
+/* 首页视频框的动画效果 ************************************************************************************/
+.caselist {
+    width:100%;
+    height:150px;
+    margin:0;
+    padding:0;
+    display: block;
+}
+.caselist>li {
+    width:100%;
+    height:100%;
+    float:left;
+    margin:0 ;
+    position:relative;
+    overflow:hidden;
+}
+.tagImg1 {
+    width:100%;
+    height:auto;
+    display:block;
+    position:absolute;
+    left:0px;
+    top:0px;
+}
+.tagImg1 img{
+    width:100%;
+}
+.tagDiv1 {
+    width:100%;
+    height:150px;
+    position:absolute;
+    left:0px;
+    top:150px;
+    z-index:2;
+}
+.tagDiv1 a{
+    display: block;
+    width:100%;
+    height:100%;
+}
+/* 首页视频框的动画效果//////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+/*视频模块样式***********************************************************************/
+/* 重写的样式 */
+/* 清除单位视频块底部的内边距 */
+.item-video .col-md-6{
+	position: relative;
+	min-height: 1px;
+	/* padding-right: 15px;
+	padding-left: 15px; */
+	padding:0;
+}
+/* 补充的样式 */
+/* 设置视频模块的高度 */
+.video-block{
+	width: 1170px;
+	margin-top: 20px;
+	background-color: #fff;
+	padding:10px 0 20px;
+}
+.video-block:last-child{
+	margin-bottom: 30px;
+}
+.video-block>.col-md-9,.video-block>.col-md-9>.col-md-12:nth-child(2){
+	padding:0;
+}
+/* 设置视频模块小标题以及更多的样式 */
+.video-title>span{
+	font-size: 18px;
+	display: inline-block;
+	height:22px;
+	margin:14px 0;
+	color:red;
+	padding-left:15px;
+	border-left:solid red 2px;
+}
+/* .video-title>span:before{
+	content:"";
+	display: inline-block;
+	width:0px;
+	height:0px;
+	border:15px solid transparent;
+	border-left-color:#ccc;
+	border-radius: 10px;
+	vertical-align: middle;
+} */
+.video-title>a{
+	display: block;
+	height:30px;
+	width:80px;
+	line-height: 30px;
+	margin:10px 0;
+	text-align: center;
+	float: right;
+}
+.video-title>a:hover{
+	color:red;
+}
+/* 单位视频块的样式 */
+.item-video{
+	position: relative;
+	height:210px;
+}
+/* .item-video>a>img{
+	height:auto;
+	width:100%;
+} */
+.item-video-title a{
+	color:#666;
+	font-size: 16px;
+	line-height: 30px;
+}
+.item-video-title a:hover{
+	color:red;
+}
+/* 底部隐藏框 */
+.item-video-foot{
+	position:absolute;
+	height: 25px;
+	background-color: #fff;
+}
+.item-video-foot>span{
+	font-size: 12px;
+	line-height: 25px;
+	color:#666;
+	margin-right: 5px;
+}
+/* .item-video>a:hover>span:nth-child(2){
+	color:red;
+} */
+/* .item-video>a:hover>.item-foot-describe{
+	display: block;
+} */
+/* 隐藏描述框 */
+/* .item-foot-describe{ */
+/* 	width:300px;
+height:140px;
+overflow: hidden;
+background-color: #fff;
+padding: 5px 10px;
+border:solid #ccc 1px;
+font-size: 12px;
+position:absolute;
+top:-150px;
+display: none;
+z-index: 10; */
+/* } */
+/* 隐藏框中的作者与日期 */
+.describe-title>.breadcrumb {
+	padding: 8px 15px;
+	/* margin-bottom: 20px; */
+	list-style: none;
+	background-color: #f5f5f5;
+	border-radius: 4px;
+
+	margin:0;
+}
+.describe-title>.breadcrumb>li{
+	font-size: 12px;
+}
+.describe-text>span{
+	color:#666;
+	font-size: 12px;
+	background-color: #fff;
+}
+/* 排行模块 */
+.video-block>.col-md-3{
+	padding-left: 0;
+}
+/* 排行标题的样式 */
+.item-paihang .paihang-title{
+	font-size:18px;
+	line-height: 50px;
+	height:50px;
+	color:red;
+}
+/* 标题栏下拉菜单的样式 */
+/* .item-paihang .paihang-title select{
+	float: right;
+	font-size: 14px;
+	display: block;
+	line-height: 30px;
+	border-radius: 10px;
+	height:30px;
+	margin:10px 0;
+	padding:0 0 0 20px ;
+} */
+/* 排行榜的样式 */
+.item-paihang>.col-md-12{
+	padding-right: 0;
+}
+.item-paihang .list-group {
+	padding: 0;
+	/* min-width: 345px; */
+	/* margin-bottom: 20px; */
+	margin-bottom:0;
+	min-width: 0px;
+	clear:both;
+}
+.item-paihang .list-group-item {
+	position: relative;
+	display: block;
+	/* padding: 10px 15px; */
+	margin-bottom: -1px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	
+
+	padding:10px 15px;
+	white-space:nowrap; 
+	overflow:hidden; 
+	text-overflow:ellipsis;
+}
+.item-paihang .list-group-item a{
+	padding:0;
+}
+.item-paihang .list-group-item a:hover{
+	color:red;
+}
+/* 排行列表中前面的图标数值 */
+.item-paihang .paihang-1:before{
+	content: "1";
+	background-color:#F25D8E;
+}
+.item-paihang .paihang-2:before{
+	content: "2";
+	background-color:#F25D8E;
+}
+.item-paihang .paihang-3:before{
+	content: "3";
+	background-color:#F25D8E;
+}
+.item-paihang .paihang-4:before{
+	content: "4";
+	background-color: #ccc;
+}
+.item-paihang .paihang-5:before{
+	content: "5";
+	background-color: #ccc;
+}
+.item-paihang .paihang-6:before{
+	content: "6";
+	background-color: #ccc;
+}
+.item-paihang .paihang-7:before{
+	content: "7";
+	background-color: #ccc;
+}
+.item-paihang .paihang-8:before{
+	content: "8";
+	background-color: #ccc;
+}
+.item-paihang .paihang-9:before{
+	content: "9";
+	background-color: #ccc;
+}
+.item-paihang .paihang-10:before{
+	content: "10";
+	background-color: #ccc;
+}
+/* 排行列表中前面的图标样式 */
+.item-paihang .list-group-item:before{
+	
+	display: inline-block;
+	width:20px;
+	height:20px;
+	border-radius: 3px;
+	margin-right:10px;
+	color:#fff;
+	font-weight: bold;
+	text-align: center;
+}
+/*视频模块样式////////////////////////////////////////////////////////////////////////

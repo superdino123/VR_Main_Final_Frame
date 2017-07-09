@@ -1,0 +1,61 @@
+@CHARSET "UTF-8";
+
+body{
+	font-family:"微软雅黑";
+	background-color:#ddd;
+	height:1500px;
+}
+.row{margin:0;padding:0;}
+
+.container{background:#fff;}
+
+/* 导航路径符号 */
+.breadcrumb > li + li:before {
+  content: ">\00a0";
+}
+.breadcrumb{background:#fff;font-size:16px;}
+.road{margin-top:20px;background:#fff;}
+.road a:hover{text-decoration:none;color:red;}
+.dingyue{padding-right:16px;margin-top:10px;}
+
+
+/* 左侧头像 介绍*/
+.yonghu img{width:50%;margin:0 auto;}
+.yonghu h3{color:#000;text-align:center;}
+.xiaoxi{text-align: center;margin-top:20px;color:red;}
+
+
+
+/*右侧文章  */
+.xiangqing{padding-left:30px;border-left:solid #ccc 1px;border-bottom:solid #ccc 1px;padding-bottom:15px;}
+h3{color:#2EA7D2;}
+.articles{margin-top:50px;}
+p{font-size:16px;
+	line-height:40px;
+	text-indent:2em;
+}
+.articles img{width:50%;margin-left:10%;}
+
+/* 点赞评论等选择 */
+.xuanze a{color:#aaa;margin-left:20px;}
+.xuanze a:hover{color:red;text-decoration:none;}
+
+
+
+/*  下方评论*/
+/*左侧用户  */
+.yonghu1{border-top:solid #ccc 1px;padding-top:20px;}
+
+
+/*右侧评论  */
+.pinlun{padding-top:20px;}
+.pinlun p{opacity:0.7;font-size:14px;margin-bottom:200px;margin-top:20px;}
+
+
+
+/* 分页 */
+.fenye{float:right;}
+
+
+
+

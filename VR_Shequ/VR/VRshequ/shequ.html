@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		 <meta charset="utf-8">
+		 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		 <meta name="viewport" content="width=device-width, initial-scale=1">
+		 <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+		 
+		<!--SEO抓取-->
+	    <meta name="keywords" content="虚拟现实,VR,VR技术,资源">
+	    <meta name="description" content="国内最大的虚拟现实平台,VR技术交流，资源分享">
+	    <!--标题-->
+	    <title>VR虚拟社区</title>
+	    
+		
+		<!-- 导入js文件 导入jquery文件  且必须在bootstrap.js文件之前,且版本必须匹配 -->
+		<script src="../js/jquery-3.1.0.min.js"></script>
+		<script src="../bootstrap/js/bootstrap.js"></script> 
+	    <script src="js/stickUp.js"></script>
+	    <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+	    <script type="text/javascript" src="js/custom.js"></script>
+	
+	
+	    <!--导入css文件-->
+		<link href="../Bootstrap/css/bootstrap.css" rel="stylesheet">
+	    <link href="css/stickup.css" rel="stylesheet" type="text/css">
+	    <link href="css/style.css" rel="stylesheet" type="text/css">
+	    <link href="css/shequ.css" rel="stylesheet" type="text/css">
+	    <link rel="stylesheet" type="text/css" href="templates/images/style.css" />
+	    <link rel="stylesheet" type="text/css" href="templates/css/style.css" />
+	    <!--<link rel="stylesheet" type="text/css" href="templates/images/ue_grid.css" />-->
+	
+	    <!-- 固定在顶部插件JS引入 -->
+	    <script type="text/javascript">
+	        //initiating jQuery
+	        jQuery(function($) {
+	            $(document).ready( function() {
+	                //enabling stickUp on the '.navbar-wrapper' class
+	                $('.navbar-wrapper').stickUp();
+	            });
+	        });
+	
+	    </script>
+	    <script type="text/javascript">
+	        $(function(){
+	
+	            $("#searchSelected").click(function(){
+	                $("#searchTab").show();
+	                $(this).addClass("searchOpen");
+	            });
+	
+	            $("#searchTab li").hover(function(){
+	                $(this).addClass("selected");
+	            },function(){
+	                $(this).removeClass("selected");
+	            });
+	
+	            $("#searchTab li").click(function(){
+	                $("#searchSelected").html($(this).html());
+	                $("#searchTab").hide();
+	                $("#searchSelected").removeClass("searchOpen");
+	            });
+	
+	        });
+	    </script>
+	
+	</head>
+	<body>
+	    <!--最顶部导航-->
+	    <div class="row" style="margin: 0px;padding:0px;background: #222222;">
+		        <div class="col-md-12"style="margin: 0px;padding:0px;">
+		            <div class="header" id="header_top" style=" display: block; background-color: rgb(34, 34, 34);">
+		                <div class="header-main clearfix" style="width:1170px; margin:0 auto;padding-right: 0px;;">
+		                    <ul class="header-left  clearfix" >
+		                        <li>
+		                            <a href="" class="sel">VR虚拟社区，因为专注所以专业</a>
+		                        </li>
+		                        <li class="hidden-xs">
+		                            <a href="#" title="新手入门" target="_blank">新手入门</a>
+		                        </li>
+		                        <li style="position:relative" class="app-hover hidden-xs">
+		                            <a href="#" class="" target="_blank" title="VR社区">VR社区</a>
+		                            <!-- hover出现的div -->
+		                            <div class="hover-content"><i></i>
+		                                <img class="logo-img" src="images/icon.png" alt="logo">
+		                                <h1>VR社区</h1>
+		                                <p>未来科技等你来</p>
+		                                <img class="erweima" src="images/erweima.png" alt="二维码">
+		                                <p class="is">-Android客户端- </p>
+		                            </div>
+		                        </li>
+		                    </ul>
+		
+		                    <!--登录注册-->
+		                    <!--<div id="header-right" class="" style="border:  #ff0000 solid 1px;">-->
+		                    <div class="common hidden-xs">
+		                        <div class="login fr" style="margin-left: 88%;margin-top: -32px;padding-right: 20px;">
+		                            <div class="loginmenu">
+		                                <a title="登录或注册"></a>
+		                            </div>
+		                            <ul>
+		                                <li class="openlogin">
+		                                    <a href="#" onclick="return false;">登录</a>
+		                                </li>
+		                                <li class="reg">
+		                                    <a href="#" onclick="return false;">注册</a>
+		                                </li>
+		                            </ul>
+		                        </div>
+		                        <div class="clear"></div>
+		                    </div>
+		                    <!--</div>-->
+		                    <div class="clear"></div>
+		                    <div class="loginmask"></div>
+		                    <div id="loginalert">
+		                        <div class="pd20 loginpd">
+		                            <h3> <i class="closealert fr"></i>
+		                                <div class="clear"></div>
+		                            </h3>
+		                            <div class="loginwrap">
+		                                <div class="loginh">
+		                                    <div class="fl">会员登录</div>
+		                                    <div class="fr">
+		                                        还没有账号
+		                                        <a id="sigup_now" href="http://sc.chinaz.com/" onclick="return false;">立即注册</a>
+		                                    </div>
+		                                    <div class="clear"></div>
+		                                </div>
+		                                <h3>
+		                                    <span>邮箱登录</span>
+		                                    <span class="login_warning">用户名或密码错误</span>
+		                                    <div class="clear"></div>
+		                                </h3>
+		                                <div class="clear"></div>
+		                                <form action="" method="post" id="login_form">
+		                                    <div class="logininput">
+		                                        <input type="text" name="username" id="username" class="loginusername"required oninvalid="setCustomValidity('用户名不能为空');" oninput="setCustomValidity('');"   placeholder="邮箱/用户名" />
+		                                        <input type="text" class="loginuserpasswordt" value="密码" />
+		                                        <input type="password" name="password" class="loginuserpasswordp " id="password" required oninvalid="setCustomValidity('密码不能为空');"oninput="setCustomValidity('');" placeholder="密码"  style="display:none" />
+		                                    </div>
+		                                    <div class="loginbtn">
+		                                        <div class="loginsubmit fl">
+		                                            <input type="submit" value="登录" onclick="login();" />
+		                                            <div class="loginsubmiting">
+		                                                <div class="loginsubmiting_inner"></div>
+		                                            </div>
+		                                        </div>
+		                                        <div class="logcheckbox fl">
+		                                            <input id="bcdl" type="checkbox" checked="true" />
+		                                            保持登录
+		                                        </div>
+		                                        <div class="fr">
+		                                            <a href="http://sc.chinaz.com/">忘记密码?</a>
+		                                        </div>
+		                                        <div class="clear"></div>
+		                                    </div>
+		                                </form>
+		                            </div>
+		                        </div>
+		                        <div class="thirdlogin">
+		                            <div class="pd50">
+		                                <h4>用第三方帐号直接登录</h4>
+		                                <ul>
+		                                    <li id="sinal">
+		                                        <a href="#">微博账号登录</a>
+		                                    </li>
+		                                    <li id="qql">
+		                                        <a href="#">QQ账号登录</a>
+		                                    </li>
+		                                    <div class="clear"></div>
+		                                </ul>
+		                                <div class="clear"></div>
+		                            </div>
+		                        </div>
+		                    </div>
+		                    <div id="reg_setp">
+		                        <div class="back_setp">返回</div>
+		                        <div class="blogo"></div>
+		                        <div id="setp_quicklogin">
+		                            <ul class="quicklogin_socical">
+		                                <li class="quicklogin_socical_weibo">
+		                                    <a href="http://sc.chinaz.com/">微博帐号注册</a>
+		                                </li>
+		                                <li class="quicklogin_socical_qq">
+		                                    <a href="http://sc.chinaz.com/">QQ帐号注册</a>
+		                                </li>
+		                            </ul>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		    </div><!--最顶部导航结束  -->
+	    <!-- ******************************************************************* -->
+	    
+	    <!--导航条-->
+	    <div class="navbar-wrapper" style="width:100%;background:#fff;">
+			    <div class="header-main1" style="width:1350px;margin:0 auto;min-width: 900px;">
+			        <div class="hd_logo">
+			            <h2>
+			                <a href="#" title="VR虚拟社区-最大VR技术论坛,海量VR资源,VR视频教程,vrcommu.com">
+			                    <img src="images/logo2.png" alt="VR虚拟社区" border="0"  class="img-responsive" />
+			                </a>
+			            </h2>
+			        </div>
+			        <!-- 导航 -->
+			        <div class="nav1" id="hd" >
+			            <ul >
+			                <li>
+			                    <a href="index.html" hidefocus="true" title="Portal" style=" padding-left: 10px;width: 38px;padding: 0px;" >
+			                        首页
+			                        <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+			                    </a>
+			                </li>
+			                <li >
+			                    <a href="" hidefocus="true" title="VR社区论坛"  >
+			                        VR资讯
+			                    </a>
+			                </li>
+			
+			                <li >
+			                    <a href="#" hidefocus="true"  >VR游戏</a>
+			                </li>
+			
+			                <li >
+			                    <a href="#" hidefocus="true"  >VR视频</a>
+			                </li>
+			
+			                <li >
+			                    <a href="" hidefocus="true"  >VR资源</a>
+			                </li>
+			                <li class="a">
+			                    <a href="shequ.html" hidefocus="true"  >VR社区</a>
+			                </li>
+			            </ul>
+			        </div><!-- 导航结束 -->
+			
+			        <!--搜索框-->
+			        <div class="sousuo hidden-xs hidden-md hidden-sm">
+			            <form method="get" name="" action="#" target="_blank" style="width:300px;height:60px;margin:0px auto 0 auto;float: right;margin-right: 2.5%;">
+			                <div id="searchTxt" class="searchTxt" onMouseOver="this.className='searchTxt searchTxtHover';" onMouseOut="this.className='searchTxt';" >
+			                    <div class="searchMenu">
+			                        <div class="searchSelected" id="searchSelected" >全站</div>
+			
+			                        <div style="display:none;margin-top: -2px; " class="searchTab" id="searchTab" >
+			                            <ul>
+			                                <li class="">全站</li>
+			                                <li>资讯</li>
+			                                <li>视频</li>
+			                                <li>游戏</li>
+			                                <li>资源</li>
+			                            </ul>
+			                        </div>
+			                    </div>
+			                    <input name="w" type="text" />
+			                </div>
+			                <button class="btn btn-default btn-sm " type="button" style="margin-top: 15px;border-radius: 1px;">
+			                    搜索
+			                </button>
+			            </form>
+			        </div><!-- 搜索框结束 -->
+			        
+			  </div>
+		</div><!-- 导航条结束-->
+	    <!--**************************************************************************  -->
+
+		
+		<!-- 主体container -->
+		<div class="container">
+			<div class="row" style="margin-top:20px;background: #fff;">
+				<div class="col-md-4">
+					<!-- banner图片轮播-->	
+					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="height:300px;margin-top:10px;" >
+					  <!-- Indicators -->
+					  <ol class="carousel-indicators">
+					    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+					    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+					    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+					  </ol>
+					
+					  <!-- Wrapper for slides -->
+					  <div class="carousel-inner" role="listbox" >
+					    <div class="item active">
+					      <img src="images/shequ/banner1.jpg" alt="虚拟社区"  style=";height:300px;">
+					      <div class="carousel-caption"><!--capation:标题字幕  -->
+					           <p>虚拟社区</p>
+					      </div>
+					    </div>
+					    <div class="item">
+					      <img src="images/shequ/banner2.jpg" alt="虚拟社区" style="height:300px;">
+					      <div class="carousel-caption">
+					        <p>虚拟社区</p>
+					      </div>
+					    </div>
+					    <div class="item">
+					      <img src="images/shequ/banner3.jpg" alt="虚拟社区" style="height:300px;">
+					      <div class="carousel-caption">
+					        <p>虚拟社区</p>
+					      </div>
+					    </div>
+					  </div>
+					</div><!-- banner图轮播结束 -->
+					
+				</div><!-- col—md-4结束 -->
+				
+				<div class="col-md-4" style="background:#fff;padding-top:10px;">
+					<div class="list-group">
+						  <a href="#" class="list-group-item active">
+						   最新主题
+						  </a>
+						  <a href="xiangqing.html" class="list-group-item">探秘浪漫空中花园VR视频下载 446... </a>
+						  <a href="xiangqing.html" class="list-group-item">时空走廊卫城展馆 VR图片下载 园林展馆... </a>
+						  <a href="xiangqing.html" class="list-group-item">希腊迈锡尼遗址 VR图片下载 历史遗迹... </a>
+						  <a href="xiangqing.html" class="list-group-item">从天度软件徐素文侵犯商业秘密案...</a>
+						  <a href="xiangqing.html" class="list-group-item">蓝白相间圣托里尼 VR图片下载 高空航...</a>
+						  <a href="xiangqing.html" class="list-group-item">希腊迈锡尼遗址 VR图片下载 历史遗迹...</a>
+						  <a href="xiangqing.html" class="list-group-item">更多>></a>
+					</div>
+				
+				</div>
+				
+				<div class="col-md-4" style="background:#fff;padding-top:10px;">
+					<div class="list-group">
+						  <a href="#" class="list-group-item active">
+						   热贴
+						  </a>
+						  <a href="xiangqing.html" class="list-group-item">探秘浪漫空中花园VR视频下载 446MB ... </a>
+						  <a href="xiangqing.html" class="list-group-item">时空走廊卫城展馆 VR图片下载 园... </a>
+						  <a href="xiangqing.html" class="list-group-item">希腊迈锡尼遗址 VR图片下载 历史... </a>
+						  <a href="xiangqing.html" class="list-group-item">时空走廊卫城展馆 VR图片下载 园林展馆...</a>
+						  <a href="xiangqing.html" class="list-group-item">蓝白相间圣托里尼 VR图片下载 高空航...</a>
+						  <a href="xiangqing.html" class="list-group-item">希腊迈锡尼遗址 VR图片下载 历史遗...</a>
+						  <a href="xiangqing.html" class="list-group-item">更多>></a>
+					</div>	
+				</div>
+				
+			</div><!--row结束  -->
+			<!-- ********************************************************* -->
+			
+			
+			<!--发帖数统计  -->
+			<div class="row tongji">
+				<div class="col-md-3">
+					<img src="images/shequ/1.png">
+					<span>今日贴数：502</span>
+				</div>
+				<div class="col-md-3">
+					<img src="images/shequ/2.png">
+					<span>昨日贴数：1003</span>
+				</div>
+				<div class="col-md-3">
+					<img src="images/shequ/3.png">
+					<span>总贴数：100005</span>
+				</div>
+				<div class="col-md-3">
+					<img src="images/shequ/4.png">
+					<span>贴会员数：520</span>
+				</div>
+			</div>
+			<!--********************************************************  -->
+			
+			
+			
+			<!-- 论坛分类 -->
+			<div class="row zonghequ" >
+				<h3>VR综合评论区</h3>
+				<div class="col-md-4" style="margin-top:10px;">
+					<div class="col-md-4" style="margin-left:-10px;">
+						<img src="images/shequ/5.png" >
+					</div>
+					<div class="col-md-8" >
+						<h4><a href="list.html">综合评论 （5000）</a></h4>
+						<span style="opacity:0.5;">主题 351，贴数 1万</span>
+					</div>	
+				</div>
+				
+				<div class="col-md-4" style="margin-top:10px;">
+					<div class="col-md-4" style="margin-left:-10px;">
+						<img src="images/shequ/6.png" >
+					</div>
+					<div class="col-md-8" >
+						<h4><a href="list.html">活动专区（5000）</a></h4>
+						<span style="opacity:0.5;">主题 351，贴数 1万</span>
+					</div>	
+				</div>
+				
+				<div class="col-md-4" style="margin-top:10px;">
+					<div class="col-md-4" style="margin-left:-10px;">
+						<img src="images/shequ/7.png" >
+					</div>
+					<div class="col-md-8" >
+						<h4><a href="list.html">游戏资源分享（5000）</a></h4>
+						<span style="opacity:0.5;">主题 351，贴数 1万</span>
+					</div>	
+				</div>	
+			</div><!--综合区结束  -->
+			<!-- ********************************* -->
+			
+			<!--  VR设备专区-->
+			<div class="zonghequ shebeiqu" >
+				<h3>VR设备专区</h3>
+				<div class="row">
+					<div class="col-md-4" style="margin-top:10px;">
+						<div class="col-md-4" style="margin-left:-10px;">
+							<img src="images/shequ/13.png" >
+						</div>
+						<div class="col-md-8" >
+							<h4><a href="list.html">综合评论 （5000）</a></h4>
+							<span style="opacity:0.5;">主题 351，贴数 1万</span>
+						</div>	
+					</div>
+					
+					<div class="col-md-4" style="margin-top:10px;">
+						<div class="col-md-4" style="margin-left:-10px;">
+							<img src="images/shequ/8.png" >
+						</div>
+						<div class="col-md-8" >
+							<h4><a href="list.html">Oculus专区（5000）</a></h4>
+							<span style="opacity:0.5;">主题 351，贴数 1万</span>
+						</div>	
+					</div>
+					
+					<div class="col-md-4" style="margin-top:10px;">
+						<div class="col-md-4" style="margin-left:-10px;">
+							<img src="images/shequ/9.png" >
+						</div>
+						<div class="col-md-8" >
+							<h4><a href="list.html">PSVR专区（5000）</a></h4>
+							<span style="opacity:0.5;">主题 351，贴数 1万</span>
+						</div>	
+					</div>
+				</div><!--设备前三列结束  -->
+					
+				<div class="row" style="margin-top:20px;">
+					<div class="col-md-4" style="margin-top:10px;">
+						<div class="col-md-4" style="margin-left:-10px;">
+							<img src="images/shequ/10.png" >
+						</div>
+						<div class="col-md-8" >
+							<h4><a href="list.html">VIVE专区（5000）</a></h4>
+							<span style="opacity:0.5;">主题 351，贴数 1万</span>
+						</div>	
+					</div>	
+					
+					<div class="col-md-4" style="margin-top:10px;">
+						<div class="col-md-4" style="margin-left:-10px;">
+							<img src="images/shequ/11.png" >
+						</div>
+						<div class="col-md-8" >
+							<h4><a href="list.html">GEAR专区（5000）</a></h4>
+							<span style="opacity:0.5;">主题 351，贴数 1万</span>
+						</div>	
+					</div>	
+					
+					<div class="col-md-4" style="margin-top:10px;">
+						<div class="col-md-4" style="margin-left:-10px;">
+							<img src="images/shequ/12.png" >
+						</div>
+						<div class="col-md-8" >
+							<h4><a href="list.html">3Glasses专区（5000）</a></h4>
+							<span style="opacity:0.5;">主题 351，贴数 1万</span>
+						</div>	
+					</div>
+				</div><!-- 设备后三列结束 -->	
+				
+			</div><!--设备专区结束  -->
+			<!-- ********************************* -->
+			
+			<!--  VR资源专区-->
+			<div class="zonghequ ziyuanqu" >
+				<h3>VR资源专区</h3>
+				<div class="row">
+					<div class="col-md-4" style="margin-top:10px;">
+						<div class="col-md-4" style="margin-left:-10px;">
+							<img src="images/shequ/14.png" >
+						</div>
+						<div class="col-md-8" >
+							<h4><a href="list.html">VR游戏下载（5000）</a></h4>
+							<span style="opacity:0.5;">主题 351，贴数 1万</span>
+						</div>	
+					</div>
+					
+					<div class="col-md-4" style="margin-top:10px;">
+						<div class="col-md-4" style="margin-left:-10px;">
+							<img src="images/shequ/15.png" >
+						</div>
+						<div class="col-md-8" >
+							<h4><a href="list.html">VR必备软件（5000）</a></h4>
+							<span style="opacity:0.5;">主题 351，贴数 1万</span>
+						</div>	
+					</div>
+					
+					<div class="col-md-4" style="margin-top:10px;">
+						<div class="col-md-4" style="margin-left:-10px;">
+							<img src="images/shequ/16.png" >
+						</div>
+						<div class="col-md-8" >
+							<h4><a href="list.html">VR全景视频（5000）</a></h4>
+							<span style="opacity:0.5;">主题 351，贴数 1万</span>
+						</div>	
+					</div>
+				</div><!--设备前三列结束  -->
+					
+				<div class="row" style="margin-top:20px;">
+					<div class="col-md-4" style="margin-top:10px;">
+						<div class="col-md-4" style="margin-left:-10px;">
+							<img src="images/shequ/17.png" >
+						</div>
+						<div class="col-md-8" >
+							<h4><a href="list.html">VR虚拟现实（5000）</a></h4>
+							<span style="opacity:0.5;">主题 351，贴数 1万</span>
+						</div>	
+					</div>	
+					
+					<div class="col-md-4" style="margin-top:10px;">
+						<div class="col-md-4" style="margin-left:-10px;">
+							<img src="images/shequ/18.png" >
+						</div>
+						<div class="col-md-8" >
+							<h4><a href="list.html">VR全景图片（5000）</a></h4>
+							<span style="opacity:0.5;">主题 351，贴数 1万</span>
+						</div>	
+					</div>	
+					
+					<div class="col-md-4" style="margin-top:10px;">
+						<div class="col-md-4" style="margin-left:-10px;">
+							<img src="images/shequ/19.png" >
+						</div>
+						<div class="col-md-8" >
+							<h4><a href="list.html">更多资源分享（5000）</a></h4>
+							<span style="opacity:0.5;">主题 351，贴数 1万</span>
+						</div>	
+					</div>
+				</div><!-- 设备后三列结束 -->	
+				
+			</div><!--资源专区结束  -->
+			<!-- ********************************* -->
+			
+			
+			
+			<!--友情链接部分  -->
+			<div class="lianjie">
+				<a href="#">vr资源论坛</a>
+				<a href="#">vr资源网</a>
+				<a href="#">vr视频</a>
+				<a href="#">vr游戏</a>
+				<a href="#">vr直播</a>
+				<a href="#">vr设备</a>
+			
+			</div>
+		</div><!-- container结束 -->
+		<!-- ************************************* -->
+		
+		
+		<!-- footer -->
+	    <div class="row" style="margin: 0;padding: 0;">
+	        <div class="col-md-12" style="padding: 0;margin: 0;">
+	
+	            <!--友情链接-->
+	            <div class="row"style="background-color: #222;margin: 0;padding-left: 6.5%;padding-right:6.5%;">
+	                <div class="link" style="height: 50px;line-height: 50px;">
+	                    <p class="p2">
+	                        友情链接：
+	                        <a target="_blank"  href="http://www.vrrb.cn">VR日报</a>
+	                        |
+	                        <a target="_blank"  href="http://www.yaojievr.com/">妖界VR</a>
+	                        |
+	                        <a target="_blank"  href="http://www.591vr.com/">VR应用</a>
+	                        |
+	                        <a target="_blank"  href="http://www.vrwanjia.cn/">VR玩家网</a>
+	                        |
+	                        <a target="_blank"  href="http://www.vr.cn/">VR虚拟现实</a>
+	                        |
+	                        <a target="_blank"  href="http://vrtoutiao.com">VR头条</a>
+	                        |
+	                        <a target="_blank"  href="http://www.cnvrnews.com">中文VR资讯网</a>
+	                        |
+	                        <a target="_blank"  href="http://www.utovr.com/">VR视频</a>
+	                        |
+	                        <a target="_blank"  href="http://www.17ivr.com/">一起爱VR</a>
+	                        |
+	                        <a target="_blank"  href="http://www.vrdaren.com/">VR达人网</a>
+	                        |
+	                        <a target="_blank"  href="http://vr.sina.com.cn/">新浪VR</a>
+	                        |
+	                        <a target="_blank"  href="http://ivr.baidu.com/">百度VR</a>
+	                        |
+	                        <a target="_blank"  href="http://vr.baike.com/">虚拟现实</a>
+	                        |
+	                        <a target="_blank"  href="http://www.vryxw.com/">VR游戏网</a>
+	                        |
+	                        <a target="_blank"  href="http://vrguancha.net/">VR观察网</a>
+	                        |
+	                        <a target="_blank"  href="http://vrguancha.net/">申请友链请联系QQ12345678</a>
+	                        |
+	                    </p>
+	                </div>
+	            </div>
+	            <div class="footer">
+	                <a href="#" target="_blank">客户端</a>
+	                <a href="#" target="_blank">媒体报道</a>
+	                <a href="#" target="_blank">合作推广</a>
+	                <a href="#" target="_blank">关于我们</a>
+	                <a href="#" target="_blank">加入我们</a>
+	                <a href="#" target="_blank">团队blog</a>
+	                <a href="#" target="_blank">VR社区名人堂</a>
+	                <a href="#">更多友情链接</a>
+	                <br/>
+	                <a>Copyright &copy; 2016 VR虚拟社区 All Rights Reserved</a>
+	                <br/>
+	                <a>VR虚拟社区 版权所有 鄂ICP备16001230号</a>
+	            </div>
+	        </div>
+	    </div><!--footer结束  -->
+	
+	
+	    <!--返回顶部-->
+	    <a class="to-top" style="cursor: pointer;"><img src="images/top.gif" /></a>
+	    <script src="js/jquery.toTop.min.js"></script>
+	<script>
+	        jQuery(function($){
+	            // Plugin activation (basic)
+	            // $('.to-top').toTop();
+	
+	            // Plugin activation with options
+	            $('.to-top').toTop({
+	                //options with default values
+	                autohide: true,  //boolean 'true' or 'false'
+	                offset: 420,     //numeric value (as pixels) for scrolling length from top to hide automatically
+	                speed: 500,      //numeric value (as mili-seconds) for duration
+	                right: 30,      //numeric value (as pixels) for position from right
+	                bottom: 138       //numeric value (as pixels) for position from bottom
+	            });
+	        });
+	    </script>
+		
+		
+
+	
+	</body>
+</html>

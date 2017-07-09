@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <!--编码格式-->
+    <meta http-equiv="Content-Type" content="text/html"  charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--s-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--SEO抓取-->
+    <meta name="keywords" content="虚拟现实,VR,VR技术,资源">
+    <meta name="description" content="国内最大的虚拟现实平台,VR技术交流，资源分享">
+    <!--标题-->
+    <title>极限刺激 ——视频专区</title>
+
+    <!-- 导入js文件-->
+    <script src="../js/jquery-3.1.0.min.js"></script>
+    <script src="../Bootstrap/js/bootstrap.js"></script>
+    <!--<script src="js/bootstrap-hover-dropdown.min.js"></script>-->
+
+    <!-- 首页框架引入 -->
+    <script src="../js/stickUp.js"></script>
+    <script type="text/javascript" src="../js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="../js/custom.js"></script>
+   	<!-- 固定在顶部插件JS引入 -->
+    <script type="text/javascript">
+        //initiating jQuery
+        jQuery(function($) {
+            $(document).ready( function() {
+                //enabling stickUp on the '.navbar-wrapper' class
+                $('.navbar-wrapper').stickUp();
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(function(){
+
+            $("#searchSelected").click(function(){
+                $("#searchTab").show();
+                $(this).addClass("searchOpen");
+            });
+
+            $("#searchTab li").hover(function(){
+                $(this).addClass("selected");
+            },function(){
+                $(this).removeClass("selected");
+            });
+
+            $("#searchTab li").click(function(){
+                $("#searchSelected").html($(this).html());
+                $("#searchTab").hide();
+                $("#searchSelected").removeClass("searchOpen");
+            });
+
+        });
+    </script>
+
+    <!--导入css文件-->
+    <link href="../Bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+
+    <!-- 首页框架引入 -->
+    <link href="../css/stickup.css" rel="stylesheet" type="text/css">
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../templates/images/style.css" />
+    <link rel="stylesheet" type="text/css" href="../templates/css/style.css" />
+
+	<!-- 全局css样式 **************************************************-->
+    <link href="css/layout-kind.css" rel="stylesheet" type="text/css">
+   	<!-- 全局css样式 //////////////////////////////////////////////////-->
+</head>
+<body>
+    <!-- head部分 *********************************************************************************-->
+<!--     <nav class="navbar navbar-default">
+    <div class="container-fluid">
+        Brand and toggle get grouped for better mobile display
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">VR视频</a>
+        </div>
+
+        Collect the nav links, forms, and other content for toggling
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="#">首页</a></li>
+                <li class=" dropdown dropdown-hover">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">导航</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">虚拟VR</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">极限</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">美女</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">惊悚</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">创意</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">原创</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">搜索</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">登录</a></li>
+                <li><a href="#">注册</a></li>
+                <li class="dropdown dropdown-hover">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">上传<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">上传视频</a></li>
+                        <li><a href="#">视频管理</a></li>
+                        <li><a href="#">我的空间</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>/.navbar-collapse
+    </div>/.container-fluid
+</nav> -->
+        <!--最顶部导航-->
+    <div class="row" style="margin: 0px;padding:0px;">
+        <div class="col-md-12" style="margin: 0px;padding:0px;">
+            <div class="header" id="header_top" style=" display: block; background-color: rgb(34, 34, 34);">
+                <div class="header-main clearfix" style="width: 1170px; margin:0 auto;padding-right: 0px;">
+                    <ul class="header-left  clearfix" >
+                        <li>
+                            <a href="" class="sel" style="font-size:12px;">VR虚拟社区，因为专注所以专业</a>
+                        </li>
+                        <li class="hidden-xs">
+                            <a href="#" title="新手入门" target="_blank" style="font-size:12px;">新手入门</a>
+                        </li>
+                        <li style="position:relative" class="app-hover hidden-xs">
+                            <a href="#" class="" target="_blank" title="VR社区" style="font-size:12px;">VR社区</a>
+                            <!-- hover出现的div -->
+                            <div class="hover-content"><i></i>
+                                <img class="logo-img" src="../images/icon.png" alt="logo">
+                                <h1>VR社区</h1>
+                                <p>未来科技等你来</p>
+                                <img class="erweima" src="../images/erweima.png" alt="二维码">
+                                <p class="is">-Android客户端- </p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!--登录注册-->
+                    <!--<div id="header-right" class="" style="border:  #ff0000 solid 1px;">-->
+                    <div class="common">
+                        <div class="login fr" style="margin-top: -32px;">
+                            <div class="loginmenu">
+                                <a title="登录或注册"></a>
+                            </div>
+                            <ul>
+                                <li class="openlogin">
+                                    <a href="#" onclick="return false;">登录</a>
+                                </li>
+                                <li class="reg">
+                                    <a href="#" onclick="return false;">注册</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <!--</div>-->
+                    <div class="clear"></div>
+                    <div class="loginmask"></div>
+                    <div id="loginalert">
+                        <div class="pd20 loginpd"style="padding-bottom: 10px;">
+                            <h3> <i class="closealert fr"></i>
+                                <div class="clear"></div>
+                            </h3>
+                            <div class="loginwrap">
+                                <div class="loginh">
+                                    <div class="fl">会员登录</div>
+                                    <div class="fr">
+                                        还没有账号
+                                        <a id="sigup_now" href="#" onclick="return false;">立即注册</a>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <h3>
+                                    <span>邮箱登录</span>
+                                    <span class="login_warning">用户名或密码错误</span>
+                                    <div class="clear"></div>
+                                </h3>
+                                <div class="clear"></div>
+                                <form action="" method="post" id="login_form">
+                                    <div class="logininput">
+                                        <input type="text" name="username" id="username" class="loginusername"required oninvalid="setCustomValidity('用户名不能为空');" oninput="setCustomValidity('');"   placeholder="邮箱/用户名" />
+                                        <input type="text" class="loginuserpasswordt" value="密码" />
+                                        <input type="password" name="password" class="loginuserpasswordp " id="password" required oninvalid="setCustomValidity('密码不能为空');"oninput="setCustomValidity('');" placeholder="密码"  style="display:none" />
+                                    </div>
+                                    <div class="loginbtn">
+                                        <div class="loginsubmit fl">
+                                            <input type="submit" value="登录" onclick="login();" />
+                                            <div class="loginsubmiting">
+                                                <div class="loginsubmiting_inner"></div>
+                                            </div>
+                                        </div>
+                                        <div class="logcheckbox fl">
+                                            <input id="bcdl" type="checkbox" checked="true" />
+                                            保持登录
+                                        </div>
+                                        <div class="fr">
+                                            <a href="#">忘记密码?</a>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="thirdlogin">
+                            <div class="pd50">
+                                <h4>用第三方帐号直接登录</h4>
+                                <ul>
+                                    <li id="sinal">
+                                        <a href="#">微博账号登录</a>
+                                    </li>
+                                    <li id="qql">
+                                        <a href="#">QQ账号登录</a>
+                                    </li>
+                                    <div class="clear"></div>
+                                </ul>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="reg_setp">
+                        <div class="back_setp">返回</div>
+                        <div class="blogo"></div>
+                        <div id="setp_quicklogin" style="z-index: 100;">
+                            <div class="content2">
+                                <!-- 头部文字 -->
+                                <h2>欢迎注册</h2>
+                                <form style="border: #ff0000 solid;margin-bottom: 30px;height: 400px;">
+                                    <!-- 注册使用的几个输入框和注册按钮 -->
+                                    <input type="text" name="userid" value="用户名" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '用户名';}">
+                                    <input type="tel" name="usrtel" value="电话" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '电话';}">
+                                    <input type="email" name="email" value="电子邮件" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '电子邮件';}">
+                                    <input type="password" name="psw" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value ='password' ;}">
+                                    <input type="password" name="psw" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'password';}">
+                                    <input type="submit" class="register" value="注册">
+                                </form>
+                            </div>
+                            <ul class="quicklogin_socical">
+                                <li class="quicklogin_socical_weibo">
+                                    <a href="#">微博帐号注册</a>
+                                </li>
+                                <li class="quicklogin_socical_qq">
+                                    <a href="#">QQ帐号注册</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--导航条-->
+    <div class="navbar-wrapper" style="width:100%;background-color:#fff;">
+        <div class="header-main1 " style="width: 1170px;margin:0 auto;">
+            <div class="hd_logo">
+                <h2>
+                    <a href="#" title="VR虚拟社区-最大VR技术论坛,海量VR资源,VR视频教程,vrcommu.com">
+                        <img src="../images/logo2.png" alt="VR虚拟社区" border="0"  class="img-responsive" />
+                    </a>
+                </h2>
+            </div>
+            <!-- 导航 -->
+            <div class="nav1" id="hd" >
+                <ul >
+                    <li  >
+                        <a href="../index.html" hidefocus="true" title="首页" style=" padding-left: 10px;width: 38px;padding: 0px;" >
+                            首页
+                            <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        </a>
+                    </li>
+                    <li >
+                        <a href="../VR_news/index.html" hidefocus="true" title="VR社区论坛"  >
+                            VR资讯
+                        </a>
+                    </li>
+
+                    <li >
+                        <a href="../VR_Game/game.html" hidefocus="true"  >VR游戏</a>
+                    </li>
+
+                    <li class="a">
+                        <a href="../VRvideo/vr-video.html" hidefocus="true"  >VR视频</a>
+                    </li>
+                    <li >
+                        <a href="../VR_Shequ/shequ.html" hidefocus="true"  >VR社区</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!--搜索框-->
+            <div class="sousuo">
+                <form method="get" name="" action="#" target="_blank" style="width:300px;height:60px;margin:0px auto 0 auto;float: right;margin-right:0;">
+                    <div id="searchTxt" class="searchTxt"  onMouseOver="this.className='searchTxt searchTxtHover';" onMouseOut="this.className='searchTxt';" style="margin-left:26px;">
+                        <div class="searchMenu" >
+                            <div class="searchSelected" id="searchSelected" >视频</div>
+
+                            <div style="display:none;margin-top: -2px;" class="searchTab" id="searchTab" >
+                                <ul>
+                                    <li class="">全站</li>
+                                    <li>资讯</li>
+                                    <li>视频</li>
+                                    <li>游戏</li>
+                                    <li>资源</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <input name="w" type="text" />
+                    </div>
+                    <div class="searchButton">
+                        <button id="searchButton" type="submit">搜索</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+	
+
+
+    <!-- 路径导航 *********************************************************************************-->
+    <div class="container">
+        <div class="row">
+            <ol class="breadcrumb">
+                <li><a href="../index.html">VR首页</a></li>
+                <li><a href="vr-video.html">VR视频</a></li>
+                <li class="active">极限刺激</li>
+            </ol>
+        </div>
+    </div>
+    <!-- 路径导航 /////////////////////////////////////////////////////////////////////////////////-->
+
+
+    <!-- 视频存储区 *******************************************************************************-->
+    <div class="container bg-kind-video">
+        <div class="row kind-video">
+            <div class="col-md-3">
+                <!-- 视频块 -->
+                <div class="col-md-12 item-kind-video">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <a href="">
+                                <div class="con">
+                                    <img src="images/jixian/jixian7.jpg"/>
+                                    <div class="txt">
+                                        <img src="images/play/play.png" alt="">
+                                        <h3>1029</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="panel-footer">
+                            <a href="" title="Renjo Pass Thame村训练（5350米） ">
+                                Renjo Pass Thame村训练（5350米）   
+                            </a>
+                            <div class="col-md-6">
+                                <a href="">
+                                    <img src="images/user/user1.jpg" alt="" class="img-circle">
+                                    <span>赵岩</span>
+                                </a>
+                            </div>
+                            <div class="col-md-6">2016-08-04</div>
+                        </div>
+                    </div>
+                </div><!-- 视频块 -->
+                <div class="col-md-12 item-kind-video">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <a href="">
+                                <div class="con">
+                                    <img src="images/jixian/jixian1.jpg"/>
+                                    <div class="txt">
+                                        <img src="images/play/play.png" alt="">
+                                        <h3>849</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="panel-footer">
+                            <a href="" title="高空跳伞 ">
+                                高空跳伞   
+                            </a>
+                            <div class="col-md-6">
+                                <a href="">
+                                    <img src="images/user/user2.jpg" alt="" class="img-circle">
+                                    <span>曾科</span>
+                                </a>
+                            </div>
+                            <div class="col-md-6">2016-08-03</div>
+                        </div>
+                    </div>
+                </div><!-- 视频块 -->
+                <div class="col-md-12 item-kind-video">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <a href="">
+                                <div class="con">
+                                    <img src="images/jixian/jixian2.jpg"/>
+                                    <div class="txt">
+                                        <img src="images/play/play.png" alt="">
+                                        <h3>1348</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="panel-footer">
+                            <a href="" title="挑战滑雪高度 ">
+                                挑战滑雪高度  
+                            </a>
+                            <div class="col-md-6">
+                                <a href="">
+                                    <img src="images/user/user3.jpg" alt="" class="img-circle">
+                                    <span>李林泽</span>
+                                </a>
+                            </div>
+                            <div class="col-md-6">2016-08-01</div>
+                        </div>
+                    </div>
+                </div><!-- 视频块 -->
+                <div class="col-md-12 item-kind-video">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <a href="">
+                                <div class="con">
+                                    <img src="images/jixian/jixian3.jpg"/>
+                                    <div class="txt">
+                                        <img src="images/play/play.png" alt="">
+                                        <h3>1495</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="panel-footer">
+                            <a href="" title="摩托骑士">
+                                摩托骑士
+                            </a>
+                            <div class="col-md-6">
+                                <a href="">
+                                    <img src="images/user/user4.jpg" alt="" class="img-circle">
+                                    <span>戚薇</span>
+                                </a>
+                            </div>
+                            <div class="col-md-6">2016-07-31</div>
+                        </div>
+                    </div>
+                </div><!-- 视频块 -->
+            </div>
+            <div class="col-md-3">
+                <div class="col-md-12 item-kind-video">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <a href="">
+                                <div class="con">
+                                    <img src="images/jixian/jixian4.jpg"/>
+                                    <div class="txt">
+                                        <img src="images/play/play.png" alt="">
+                                        <h3>1574</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="panel-footer">
+                            <a href="" title="滑翔之翼">
+                                滑翔之翼  
+                            </a>
+                            <div class="col-md-6">
+                                <a href="">
+                                    <img src="images/user/user5.jpg" alt="" class="img-circle">
+                                    <span>韩峰凯</span>
+                                </a>
+                            </div>
+                            <div class="col-md-6">2016-08-04</div>
+                        </div>
+                    </div>
+                </div><!-- 视频块 -->
+                <div class="col-md-12 item-kind-video">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <a href="">
+                                <div class="con">
+                                    <img src="images/jixian/jixian5.jpg"/>
+                                    <div class="txt">
+                                        <img src="images/play/play.png" alt="">
+                                        <h3>1724</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="panel-footer">
+                            <a href="" title="飞跃世界之巅">
+                                飞跃世界之巅  
+                            </a>
+                            <div class="col-md-6">
+                                <a href="">
+                                    <img src="images/user/user6.jpg" alt="" class="img-circle">
+                                    <span>冯绍峰</span>
+                                </a>
+                            </div>
+                            <div class="col-md-6">2016-08-03</div>
+                        </div>
+                    </div>
+                </div><!-- 视频块 -->              
+                <div class="col-md-12 item-kind-video">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <a href="">
+                                <div class="con">
+                                    <img src="images/jixian/jixian6.jpg"/>
+                                    <div class="txt">
+                                        <img src="images/play/play.png" alt="">
+                                        <h3>1947</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="panel-footer">
+                            <a href="" title="像鸟儿一样">
+                                像鸟儿一样   
+                            </a>
+                            <div class="col-md-6">
+                                <a href="">
+                                    <img src="images/user/user7.jpg" alt="" class="img-circle">
+                                    <span>林志祥</span>
+                                </a>
+                            </div>
+                            <div class="col-md-6">2016-08-01</div>
+                        </div>
+                    </div>
+                </div><!-- 视频块 -->
+                <!-- 视频块 -->
+                <div class="col-md-12 item-kind-video">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <a href="">
+                                <div class="con">
+                                    <img src="images/jixian/jixian8.jpg"/>
+                                    <div class="txt">
+                                        <img src="images/play/play.png" alt="">
+                                        <h3>2018</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="panel-footer">
+                            <a href="" title="欢迎攀登世界第二高峰-K2">
+                                欢迎攀登世界第二高峰-K2   
+                            </a>
+                            <div class="col-md-6">
+                                <a href="">
+                                    <img src="images/user/user8.jpg" alt="" class="img-circle">
+                                    <span>洛湘</span>
+                                </a>
+                            </div>
+                            <div class="col-md-6">2016-07-31</div>
+                        </div>
+                    </div>
+                </div><!-- 视频块 -->  
+            </div>
+            <div class="col-md-3"> 
+                <div class="col-md-12 item-kind-video">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <a href="">
+                                <div class="con">
+                                    <img src="images/jixian/jixian9.jpg"/>
+                                    <div class="txt">
+                                        <img src="images/play/play.png" alt="">
+                                        <h3>2208</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="panel-footer">
+                            <a href="" title="出发前训练-Nunthala村">
+                                出发前训练-Nunthala村
+                            </a>
+                            <div class="col-md-6">
+                                <a href="">
+                                    <img src="images/user/user9.jpg" alt="" class="img-circle">
+                                    <span>刘诗诗</span>
+                                </a>
+                            </div>
+                            <div class="col-md-6">2016-08-04</div>
+                        </div>
+                    </div>
+                </div><!-- 视频块 -->
+                <div class="col-md-12 item-kind-video">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <a href="">
+                                <div class="con">
+                                    <img src="images/jixian/jixian10.jpg"/>
+                                    <div class="txt">
+                                        <img src="images/play/play.png" alt="">
+                                        <h3>2348</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="panel-footer">
+                            <a href="" title="夏日扬帆起航">
+                                夏日扬帆起航   
+                            </a>
+                            <div class="col-md-6">
+                                <a href="">
+                                    <img src="images/user/user10.jpg" alt="" class="img-circle">
+                                    <span>范冰冰</span>
+                                </a>
+                            </div>
+                            <div class="col-md-6">2016-08-02</div>
+                        </div>
+                    </div>
+                </div><!-- 视频块 -->
+                <div class="col-md-12 item-kind-video">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <a href="">
+                                <div class="con">
+                                    <img src="images/jixian/jixian11.jpg"/>
+                                    <div class="txt">
+                                        <img src="images/play/play.png" alt="">
+                                        <h3>2461</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="panel-footer">
+                            <a href="" title="当VR遇上跆拳道">
+                                当VR遇上跆拳道   
+                            </a>
+                            <div class="col-md-6">
+                                <a href="">
+                                    <img src="images/user/user11.jpg" alt="" class="img-circle">
+                                    <span>汪东城</span>
+                                </a>
+                            </div>
+                            <div class="col-md-6">2016-08-01</div>
+                        </div>
+                    </div>
+                </div><!-- 视频块 -->            
+            </div>
+            <div class="col-md-3">
+                <!-- 视频块 -->
+                <div class="col-md-12 item-kind-video">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <a href="">
+                                <div class="con">
+                                    <img src="images/jixian/jixian12.jpg"/>
+                                    <div class="txt">
+                                        <img src="images/play/play.png" alt="">
+                                        <h3>2476</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="panel-footer">
+                            <a href="" title="白色跳跃">
+                                白色跳跃  
+                            </a>
+                            <div class="col-md-6">
+                                <a href="">
+                                    <img src="images/user/user12.jpg" alt="" class="img-circle">
+                                    <span>郭富城</span>
+                                </a>
+                            </div>
+                            <div class="col-md-6">2016-08-03</div>
+                        </div>
+                    </div>
+                </div><!-- 视频块 -->  
+                <div class="col-md-12 item-kind-video">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <a href="">
+                                <div class="con">
+                                    <img src="images/jixian/jixian13.jpg"/>
+                                    <div class="txt">
+                                        <img src="images/play/play.png" alt="">
+                                        <h3>2546</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="panel-footer">
+                            <a href="" title="靠近Renjo Pass（4850米）">
+                                靠近Renjo Pass（4850米）   
+                            </a>
+                            <div class="col-md-6">
+                                <a href="">
+                                    <img src="images/user/user13.jpg" alt="" class="img-circle">
+                                    <span>金城武</span>
+                                </a>
+                            </div>
+                            <div class="col-md-6">2016-08-01</div>
+                        </div>
+                    </div>
+                </div><!-- 视频块 -->
+             	<div class="col-md-12 item-kind-video">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <a href="">
+                                <div class="con">
+                                    <img src="images/jixian/jixian14.jpg"/>
+                                    <div class="txt">
+                                        <img src="images/play/play.png" alt="">
+                                        <h3>2546</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="panel-footer">
+                            <a href="" title="驻扎南崎巴札（3434米）">
+                                驻扎南崎巴札（3434米）   
+                            </a>
+                            <div class="col-md-6">
+                                <a href="">
+                                    <img src="images/user/user14.jpg" alt="" class="img-circle">
+                                    <span>秋瓷炫</span>
+                                </a>
+                            </div>
+                            <div class="col-md-6">2016-08-01</div>
+                        </div>
+                    </div>
+                </div><!-- 视频块 -->
+            </div>
+        </div>
+    </div>
+    <!-- 视频存储区 //////////////////////////////////////////////////////////////////////////////////////-->
+
+
+
+	<!-- foot区域 -->
+    <div class="row" style="margin: 0;padding: 0;">
+        <div class="col-md-12"style="padding: 0;margin: 0;">
+
+            <!--友情链接-->
+            <div class="row"style="background-color: #222;margin: 0;padding-left: 90px;padding-right:90px;height: 50px;line-height: 50px;overflow: hidden;">
+                <div class="link">
+                    <p class="p2">
+                        友情链接：
+                        <a target="_blank"  href="http://www.vrrb.cn">VR日报</a>
+                        |
+                        <a target="_blank"  href="http://www.yaojievr.com/">妖界VR</a>
+                        |
+                        <a target="_blank"  href="http://www.591vr.com/">VR应用</a>
+                        |
+                        <a target="_blank"  href="http://www.vrwanjia.cn/">VR玩家网</a>
+                        |
+                        <a target="_blank"  href="http://www.vr.cn/">VR虚拟现实</a>
+                        |
+                        <a target="_blank"  href="http://vrtoutiao.com">VR头条</a>
+                        |
+                        <a target="_blank"  href="http://www.cnvrnews.com">中文VR资讯网</a>
+                        |
+                        <a target="_blank"  href="http://www.utovr.com/">VR视频</a>
+                        |
+                        <a target="_blank"  href="http://www.17ivr.com/">一起爱VR</a>
+                        |
+                        <a target="_blank"  href="http://www.vrdaren.com/">VR达人网</a>
+                        |
+                        <a target="_blank"  href="http://vr.sina.com.cn/">新浪VR</a>
+                        |
+                        <a target="_blank"  href="http://ivr.baidu.com/">百度VR</a>
+                        |
+                        <a target="_blank"  href="http://vr.baike.com/">虚拟现实</a>
+                        |
+                        <a target="_blank"  href="http://www.vryxw.com/">VR游戏网</a>
+                        |
+                        <a target="_blank"  href="http://vrguancha.net/">VR观察网</a>
+                        |
+                        <a target="_blank"  href="http://vrguancha.net/">申请友链请联系QQ12345678</a>
+                        |
+                    </p>
+                </div>
+            </div>
+            <div class="footer">
+                <a href="#" target="_blank">客户端</a>
+                <a href="#" target="_blank">媒体报道</a>
+                <a href="#" target="_blank">合作推广</a>
+                <a href="#" target="_blank">关于我们</a>
+                <a href="#" target="_blank">加入我们</a>
+                <a href="#" target="_blank">团队blog</a>
+                <a href="#" target="_blank">VR社区名人堂</a>
+                <a href="#">更多友情链接</a>
+                <br/>
+                <a>Copyright &copy; 2016 VR虚拟社区 All Rights Reserved</a>
+                <br/>
+                <a>VR虚拟社区 版权所有 鄂ICP备16001230号</a>
+            </div>
+        </div>
+    </div>
+    <!-- foot区域 -->
+
+
+
+	<!--返回顶部-->
+    <a class="to-top" style="cursor: pointer;"><img src="../images/top.gif" /></a>
+
+
+
+    <!-- <div style="height: 300px;background-color: #ccc;color:red;font-size: 30px;line-height: 300px;text-align: center;">footer区域</div> -->
+
+
+
+	<!-- js代码区域 ***************************************************************************************-->
+	<!-- 视频播放器的导入样式 *******************************-->
+	<script src="js/fz-video.js"></script>
+	<script>
+	 	var FZ_VIDEO = new createVideo(
+	 		"testBox",	//容器的id
+	 		{
+				//url         : 'http://171.15.197.89/xdispatch/o8t28neoq.bkt.clouddn.com/test.mp4',  //视频地址
+	 			url 		: 'video/atongmu.mp4', 	//视频地址
+	 			autoplay	: true			//是否自动播放
+	 		}
+	 	);
+	</script>
+	<!-- 视频播放器的导入样式 ///////////////////////////////-->
+
+
+	<!-- 视频分享 *************************************************************-->
+	<script>
+		window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"分享到新浪微博","bdMini":"1","bdMiniList":["bdxc","tqf","douban","bdhome","sqq","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","fbook","twi","linkedin","h163","evernotecn","copy","print"],"bdPic":"","bdStyle":"1","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+	</script>
+	<script src="js/ZeroClipboard.js"></script>
+	<script>
+		var g_url = window.location.href;
+		$('.share-copy-c input').val(g_url);
+		var clip = new ZeroClipboard( document.getElementById("btnCopy"));
+	</script>
+	<!-- 视频分享 /////////////////////////////////////////////////////////////////////////-->
+
+
+	<!-- 评论部分 *************************************************************************-->
+	<!-- 评星级 -->
+	<script type="text/javascript" src="js/jquery.raty.min.js"></script>
+	<script type="text/javascript">
+	    $(function() {
+	      $.fn.raty.defaults.path = 'images/star1'; 
+		  
+		  $('#function-demo1').raty({
+		  	number: 5,//多少个星星设置
+			score: 0,//初始值是设置
+			targetType: 'number',//类型选择，number是数字值，hint，是设置的数组值
+	        path      : 'images/star',
+	        cancelOff : 'cancel-off-big.png',
+	        cancelOn  : 'cancel-on-big.png',
+	        size      : 24,
+	        starHalf  : 'star-half-big.png',
+	        starOff   : 'star-off-big.png',
+	        starOn    : 'star-on-big.png',
+	        target    : '#function-hint1',
+	        cancel    : false,
+	        targetKeep: true,
+	        precision : false,//是否包含小数
+	        /*click: function(score, evt) {
+	          alert('ID: ' + $(this).attr('id') + "\nscore: " + score + "\nevent: " + evt.type);
+	        }*/
+	      });    
+	    });
+	</script>
+
+	<!-- 发表评论与评论展示 -->
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/sinaFaceAndEffec.js"></script>
+	<script type="text/javascript">
+		// 绑定表情
+		$('.face-icon').SinaEmotion($('.text'));
+		// 测试本地解析
+		function out() {
+			var inputText = $('.text').val();
+			$('#info-show ul').append(reply(AnalyticEmotion(inputText)));
+		}
+		
+		var html;
+		function reply(content){
+			html  = '<li>';
+			html += '<div class="head-face">';
+			html += '<a href=""><img src="images/pinglun/1.jpg" / ></a>';
+			html += '</div>';
+			html += '<div class="reply-cont">';
+			html += '<a href=""><p class="username">紫罗兰</p></a>';
+			html += '<p class="comment-body">'+content+'</p>';
+			html += '<p class="comment-footer">2016年10月5日　回复　点赞0　转发0</p>';
+			html += '</div>';
+			html += '</li>';
+			return html; 
+		}
+	</script>
+	<!-- 评论部分 ///////////////////////////////////////////////////////////////////////////////////////////-->
+    
+
+
+    <!-- 返回顶部 -->
+    <script src="../js/jquery.toTop.min.js"></script>
+    <script>
+        jQuery(function($){
+            // Plugin activation (basic)
+            // $('.to-top').toTop();
+
+            // Plugin activation with options
+            $('.to-top').toTop({
+                //options with default values
+                autohide: true,  //boolean 'true' or 'false'
+                offset: 420,     //numeric value (as pixels) for scrolling length from top to hide automatically
+                speed: 500,      //numeric value (as mili-seconds) for duration
+                right: 30,      //numeric value (as pixels) for position from right
+                bottom: 138       //numeric value (as pixels) for position from bottom
+            });
+        });
+    </script>
+
+
+    <!-- 图片hover黑色透明图层浮动效果 -->
+    <script type="text/javascript">
+        $(".con").hover(function(){
+            $(this).find(".txt").stop().animate({height:"175px"},400);
+            $(this).find(".txt h3").stop().animate({paddingTop:"0px"},400);
+        },function(){
+            $(this).find(".txt").stop().animate({height:"0px"},400);
+            $(this).find(".txt h3").stop().animate({paddingTop:"0px"},400);
+        })
+    </script>
+
+
+
+</body>
+</html>

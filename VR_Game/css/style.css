@@ -1,0 +1,779 @@
+
+/*设body背景*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #F1F1F1;
+}
+
+
+/*最顶部导航样式开始*/
+.header-top{
+    width: 100%;
+    height: 32px;
+    background-color: #222;
+    font-family: "微软雅黑";
+    font-size: 12px;
+}
+.header-main{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header-left li{
+    float: left;
+    line-height: 30px;
+    height: 30px;
+    list-style: none;
+}
+.header-left li a{
+    display: inline-block;
+    padding: 0 12px;
+    color: #d5d5d5;
+}
+.header-left li a:hover,.header-right li a:hover,.header a.sel{
+    color: #FFF;
+    text-decoration: none;
+}
+/*鼠标划过出现二维码样式开始*/
+.hover-content{
+    width: 200px;
+    background: #fff;
+    position: absolute;
+    left: -70px;
+    z-index: 1000;
+    text-align: center;
+    font-family:"微软雅黑";
+    display: none;
+}
+.hover-content h1{
+    font-family: 微软雅黑;
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom:-2px;
+}
+.hover-content .is{
+    font-smoothing: antialiased;
+    padding: 0 0 21px;
+}
+.hover-content .logo-img{
+    width: 50px;
+    margin-top: 31px;
+}
+.hover-content .erweima{
+    width: 105px;
+    margin-top: 18px;
+}
+/*i标签制作小三角样式*/
+.hover-content i {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 50%;
+    margin-left: -5px;
+    top: -3px;}
+.app-hover:hover .hover-content{
+    display: block;
+}
+/*鼠标划过出现二维码样式结束*/
+
+.header-left li .header-msg:before{
+    display:block;
+    width:0;
+    height:0;
+    position:absolute;
+    right: 100%;
+    top: 50%;
+    margin-top: -4px;
+    border-style: solid;
+    border-width: 4px 6px 4px 0;
+    border-color: transparent;
+    border-right-color: #e74c3c;
+}
+/*最顶部导航样式结束*/
+
+/*注册页面样式*/
+/*#setp_quicklogin .content2 input[type="text"] {*/
+    /*padding:10px 40px 10px 10px;*/
+    /*width:70%;*/
+    /*border:1px solid white;*/
+    /*color:#fff;*/
+    /*text-align:left;*/
+    /*font-size:18px;*/
+    /*margin-top:5%;*/
+    /*font-weight: 300;*/
+    /*font-family:"微软雅黑";*/
+    /*border-radius: 4px;*/
+/*}*/
+/*#setp_quicklogin .content2 input[type="tel"] {*/
+    /*padding:10px 40px 10px 10px;*/
+    /*width:70%;*/
+    /*border:1px solid white;*/
+    /*color:#fff;*/
+    /*text-align:left;*/
+    /*font-size:18px;*/
+    /*margin-top:4%;*/
+    /*font-weight: 300;*/
+    /*font-family:"微软雅黑";*/
+    /*border-radius: 4px;*/
+/*}*/
+/*#setp_quicklogin .content2 input[type="email"] {*/
+    /*padding:10px 40px 10px 10px;*/
+    /*width:70%;*/
+    /*border:1px solid white;*/
+    /*color:#fff;*/
+    /*text-align:left;*/
+    /*font-size:18px;*/
+    /*margin-top:4%;*/
+    /*font-family:"微软雅黑";*/
+    /*border-radius: 4px;*/
+/*}*/
+/*#setp_quicklogin .content2 input[type="password"] {*/
+    /*padding:10px 40px 10px 10px;*/
+    /*width:70%;*/
+    /*border:1px solid white;*/
+    /*color:#fff;*/
+    /*text-align:left;*/
+    /*font-size:18px;*/
+    /*margin-top:4%;*/
+    /*font-weight: 300;*/
+    /*font-family:"微软雅黑";*/
+    /*border-radius: 4px;*/
+/*}*/
+/*结束设置登录div中各个input框的样式*/
+
+/*设置注册按钮样式*/
+#setp_quicklogin .content2 .register {
+    padding:10px;
+    background-color:#4C9A39;
+    width:81%;
+    border:none;
+    cursor:pointer;
+    color:#fff;
+    font-weight: 300;
+    font-family:"微软雅黑";
+    font-size:20px;
+    margin-top:7%;
+    text-transform:uppercase;
+    border-radius:4px;
+}
+
+.register:hover {
+    background-color:#376D29;
+    color:white;
+}
+
+/*导航*/
+.header-main1{
+    height: 60px;
+    background-color: #ffffff;
+}
+.hd_logo {
+    margin-left: 0px;
+    margin-right: 0px;
+    width:162px;
+    height:60px;
+    display:block;
+    float:left;
+
+    /*overflow:hidden;*/
+    background:none
+}
+.hd_logo a{
+    text-decoration: none;
+}
+.hd_logo img {
+    height:40px;
+    margin: -10px 0 0 0;
+}
+.hd_logo h2 {
+    font-size:1em;
+}
+#hd ul li,.xl li {
+    list-style:none;
+}
+
+.nav1 {
+    float: left;
+    max-width: 650px;
+    height: 60px;
+    padding: 0;
+    margin: 0;
+    margin-left: 20px;
+    overflow: hidden;
+}
+button, select, textarea {
+    font: 12px/1.5 'Microsoft Yahei','微软雅黑';
+    color: #272727;
+}
+.nav1 li {
+    max-width: 108px;
+    display: block;
+    float: left;
+    height: 60px;
+}
+.nav1 li.a a {
+    height: 60px;
+    font-weight: 700;
+    color: #ff1e0d !important;
+    border-bottom: 4px solid #ff1e0d;
+    background: none;
+}
+.nav1 li a {
+    float: left;
+    text-decoration: none;
+    font-weight:400 ;
+    display: inline-block;
+    font-size: 18px !important;
+    height: 60px;
+    line-height: 60px;
+    color: #3f3f3f;
+    position: relative;
+    padding: 0 3px;
+    margin: 0 15px;
+    font-family: "Microsoft Yahei",Arial;
+    border-right: 0;
+    transition: all 0s ease 0s;
+}
+.nav1 li a:hover{
+    color: red;
+    border-bottom:red solid 4px; ;
+}
+
+.navbar-wrapper {
+    margin-top:0px;
+    position: relative;
+    z-index: 15;
+
+}
+
+/*搜索框*/
+.searchBtn button,.searchTxt .searchMenu .searchSelected{
+    background-image:url(../images/searchbg.png);
+    background-repeat:no-repeat;
+}
+.searchTxt {
+    float:left;
+    width:200px;
+    height:30px;
+    margin-top: 15px;
+    border:2px solid #d3d3d3;
+    border-right:0;
+    position:relative;
+    z-index:20;
+    background:#fff;
+}
+.searchTxt .radius {
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    background:#f4f4f4;
+    position:absolute;
+    top:-2px;
+    left:-2px;
+}
+.searchTxtHover {
+    float:left;
+    width:200px;
+    height:30px;
+    border:2px solid #3297d8;
+    border-right: solid #3297d8 2px;
+    position:relative;
+    z-index:20;
+    background:#fff;
+}
+.searchTxtHover .radius {
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    background:#cce5f5;
+    position:absolute;
+    top:-2px;
+    left:-2px;
+}
+.searchTxt .searchMenu {
+    float:left;
+}
+.searchTxt .searchMenu .searchSelected {
+    color: #3f3f3f;
+    font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+    cursor:pointer;
+    font-size:14px;
+    font-weight:500;
+    height:26px;
+    line-height:30px;
+    padding:0 10px;
+    width:60px;
+    background-position:0px -54px;
+}
+.searchTxt .searchMenu .searchOpen {
+    background-position:0px -104px;
+}
+.searchTxt .searchMenu .searchTab {
+    display:none;
+    position:absolute;
+    top:30px;
+    left:-2px;
+    width:62px;
+    border:2px solid #3297d8;
+    border-top:0;
+    background:#fff;
+    height:143px;
+    z-index:20;
+}
+.searchTxt .searchMenu .searchTab li {
+    list-style: none;
+    width:58px;
+    height:28px;
+    font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+    line-height:28px;
+    color: #3f3f3f;
+    font-size:14px;
+    font-weight:500;
+    text-indent:10px;
+    cursor:pointer;
+}
+.searchTxt .searchMenu .searchTab li.selected {
+    background:#edf3fc;
+    color:#6994c1;
+}
+.searchTxt input {
+    float:left;
+    border:0;
+    background:#fff;
+    color:#3f3f3f;
+    font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+    width:100px;
+    height:26px;
+    margin:0;
+    outline:medium none;
+    padding:4px;
+}
+.sousuo .searchButton button,.searchTxt .searchMenu .searchSelected{
+    background-image:url(../images/searchbg.png);
+    background-repeat:no-repeat;
+}
+.searchButton{
+    float:right;
+}
+.searchButton button{
+    margin-top: 15px;
+    background-position:-5px -2px;
+    border:0;
+    color:#fff;
+    cursor:pointer;
+    float:right;
+    font-size:16px;
+    height:30px;
+    text-indent:-9999px;
+    width:74px;
+}
+
+/*.btn-default:hover{*/
+    /*background-color: #3297d8;*/
+    /*border-color: #3297d8;*/
+/*}*/
+
+/*banner轮播*/
+.container .row .banner_left{
+    height: 420px;
+    min-width: 680px;
+}
+
+
+.flexslider {
+    margin: 0px auto 20px;
+    position: relative;
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.flexslider .slides li {
+    width: 100%;
+    height: 100%;
+}
+
+.flex-direction-nav a {
+    width: 70px;
+    height: 70px;
+    line-height: 99em;
+    overflow: hidden;
+    margin: -35px 0 0;
+    display: block;
+    background: url(../images/ad_ctr.png) no-repeat;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: all .3s ease;
+    border-radius: 35px;
+}
+
+.flex-direction-nav .flex-next {
+    background-position: 0 -70px;
+    right: 0;
+}
+
+.flex-direction-nav .flex-prev {
+    left: 0;
+}
+
+.flexslider:hover .flex-next {
+    opacity: 0.8;
+    filter: alpha(opacity=25);
+}
+
+.flexslider:hover .flex-prev {
+    opacity: 0.8;
+    filter: alpha(opacity=25);
+}
+
+.flexslider:hover .flex-next:hover,
+.flexslider:hover .flex-prev:hover {
+    opacity: 1;
+    filter: alpha(opacity=50);
+}
+
+.flex-control-nav {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+}
+
+.flex-control-nav li {
+    margin: 0 2px;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+}
+
+.flex-control-paging li a {
+    background: url(../images/dot.png) no-repeat 0 -16px;
+    display: block;
+    height: 16px;
+    overflow: hidden;
+    text-indent: -99em;
+    width: 16px;
+    cursor: pointer;
+}
+
+.flex-control-paging li a.flex-active,
+.flex-control-paging li.active a {
+    background-position: 0 0;
+}
+
+.flexslider .slides a img {
+    width: 100%;
+    height: 420px;
+    display: block;
+}
+/*banner轮播样式结束*/
+
+
+/*游戏头条*/
+.container .row .banner_right{
+    height: 420px;
+    min-width: 360px;
+    overflow: hidden;
+}
+.banner_right .game_news{
+    background-color:#fff;
+
+    margin: 0 0 0 30px;
+}
+.list-group-item:first-child {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+.list-group-item:last-child {
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+.list-group-item {
+    border: 0px solid #ddd;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.list-group-item.active,
+.list-group-item.active:hover,
+.list-group-item.active:focus {
+    background-color: #f03232;
+    border-color: red;
+}
+.list-group a:first-child,
+.list-group a:nth-child(2),
+.list-group a:nth-child(3),
+.list-group a:nth-child(4),
+.list-group a:nth-child(5),
+.list-group a:nth-child(6),
+.list-group a:nth-child(7),
+.list-group a:nth-child(8),
+.list-group a:nth-child(9),
+.list-group a:nth-child(10){
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+
+
+/*左边游戏内容样式开始*/
+.commen-wrap {
+    background-color: #FFFFFF;
+    width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.relative {
+    position: relative;
+}
+.overflow {
+    overflow: hidden;
+}
+.index-h2Tit {
+     height: 40px;
+     border-bottom:2px #ebebeb solid;
+     padding: 0 10px 0 0;
+ }
+.index-h2Tit a{
+    color: #393939;
+    text-decoration: none;
+}
+.index-h2 {
+    border-bottom:2px #f03232 solid;
+    width: 104px;
+    margin-top: 0px;
+    margin-left: 30px;
+}
+.index-h2_noL,.index-h2 {
+    font-size: 20px;
+    line-height: 37px;
+    color:#323232;
+}
+.index-more {
+    text-decoration: none;
+    font: 12px/30px "微软雅黑";
+    color:#999;
+    position: absolute;
+    bottom: 5px;
+    right:40px;
+}
+.down-tab {
+    margin-bottom: 0px;
+    text-decoration: none;
+    position: absolute;
+    font-size: 0;
+    right: 660px;
+    bottom:0px;
+}
+.down-tab a {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    font:14px/20px "微软雅黑";
+    color: #272727;
+    padding:5px 15px;
+
+}
+.down-tab .active,.down-tab a:hover {
+    color:#fff;
+    background-color: #f03232;
+}
+.down-container {
+    height:738px;
+    overflow:hidden;
+    position:relative;
+    width:1170px;
+}
+.swiper-wrapper {
+    width:100%;
+    position:relative;
+    transform:translate3d(0px,0px,0px);
+    transition-duration:0s;
+    transition-property:transform,left,top;
+    transition-timing-function:ease;
+}
+.swiper-slide {
+    float:left;
+    position:relative;
+}
+.down-slide ul {
+    padding-top: 10px;
+    position: relative;
+    margin-left:15px;
+    overflow: hidden;
+}
+.down-slide li {
+    float: left;
+    display: inline;
+    width: 270px;
+    height: 216px;
+    margin: 20px 0 0 10px;
+    position: relative;
+}
+.down-slide a,.game-name,.game-memory {
+    display: block;
+}
+.down-slide a {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-align:center;
+}
+.down-slide a:hover .game-infoWrap {
+    top:3px;
+    -webkit-transition:all .2s ease-in;
+    -o-transition:all .2s ease-in;
+    transition:all .2s ease-in;
+}
+.game-img {
+    max-width: 264px;
+    max-height: 166px;
+    border:1px #e6e6e6 solid;
+    padding:2px;
+}
+.game-name {
+    text-decoration: none;
+    color: #272727;
+    display:block;
+    font:14px/18px "微软雅黑";
+    height:26px;
+    overflow:hidden;
+    padding-top:6px;
+    text-align:center;
+}
+.game-memory {
+    text-decoration: none;
+    font:12px/14px "微软雅黑";
+    color:#999;
+    text-align: center;
+}
+.game-infoWrap {
+    position:absolute;
+    top:-169px;
+    left:3px;
+    width:264px;
+    height:166px;
+    z-index:1;
+    -webkit-transition:all .2s ease-out;
+    -o-transition:all .2s ease-out;
+    transition:all .2s ease-out;
+}
+.opacity {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:#000;
+    opacity:.7;
+    filter:alpha(opacity=70);
+    z-index:2;
+    left:0;
+    bottom:0;
+}
+.game-info {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+.game-tit {
+    height: 34px;
+    font:12px/34px "微软雅黑";
+    position: relative;
+    color:#fff;
+}
+.pc-tit {
+    background-color: #f03232;
+}
+.ios-tit {
+    background-color: #f03232;
+}
+.android-tit {
+    background-color:  #f03232;
+}
+.pcType,.mobileType {
+    position: absolute;
+    left: 15px;
+    top:0;
+}
+.pcType {
+    padding-left: 26px;
+    background-position: 0 -228px;
+}
+.mobileType {
+    padding-left: 20px;
+    background-position: 0 -262px;
+}
+.game-class {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    letter-spacing: 1px
+}
+.game-des {
+    padding: 15px 15px 0;
+    font: 13px/25px "微软雅黑";
+    height: 112px;
+    overflow: hidden;
+    color:#fff;
+}
+#allgameli li a{
+    text-decoration: none;
+}
+.swiper-slide ul li a{
+    text-decoration: none;
+}
+
+
+
+/*友情链接*/
+.link{
+    overflow: hidden;
+}
+.link p a,.link p{
+
+    text-decoration: none;
+    font-size: 12px;
+    color: #cccccc;
+    font-family: Helvetica,Arial,sans-serif;
+}
+.link p a:hover{
+    color: #ffffff;
+}
+
+
+/*footer样式*/
+.footer{
+    background-color: #333;
+    color: #ccc;
+    font-size: 12px;
+    font-family: Helvetica,Arial,sans-serif;
+    text-align: center;
+    padding: 18px 0;
+}
+.footer a{
+    text-decoration: none;
+    color: #ccc;
+    font-size: 12px;
+    font-family: Helvetica,Arial,sans-serif;
+    margin-right: 10px;
+}
+.footer a:hover{
+    color: #fff;
+}
+
+/*foot样式结束*/
+
+

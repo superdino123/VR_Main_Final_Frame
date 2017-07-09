@@ -1,0 +1,546 @@
+
+/*设body背景*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #F1F1F1;
+}
+
+
+/*最顶部导航样式开始*/
+.header-top{
+    width: 100%;
+    height: 32px;
+    background-color: #222;
+    font-family: "微软雅黑";
+    font-size: 12px;
+}
+.header-main{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header-left li{
+    float: left;
+    line-height: 30px;
+    height: 30px;
+    list-style: none;
+}
+.header-left li a{
+    display: inline-block;
+    padding: 0 12px;
+    color: #d5d5d5;
+}
+.header-left li a:hover,.header-right li a:hover,.header a.sel{
+    color: #FFF;
+    text-decoration: none;
+}
+/*鼠标划过出现二维码样式开始*/
+.hover-content{
+    width: 200px;
+    background: #fff;
+    position: absolute;
+    left: -70px;
+    z-index: 1000;
+    text-align: center;
+    font-family:"微软雅黑";
+    display: none;
+}
+.hover-content h1{
+    font-family: 微软雅黑;
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom:-2px;
+}
+.hover-content .is{
+    font-smoothing: antialiased;
+    padding: 0 0 21px;
+}
+.hover-content .logo-img{
+    width: 50px;
+    margin-top: 31px;
+}
+.hover-content .erweima{
+    width: 105px;
+    margin-top: 18px;
+}
+/*i标签制作小三角样式*/
+.hover-content i {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 50%;
+    margin-left: -5px;
+    top: -3px;}
+.app-hover:hover .hover-content{
+    display: block;
+}
+/*鼠标划过出现二维码样式结束*/
+
+.header-left li .header-msg:before{
+    display:block;
+    width:0;
+    height:0;
+    position:absolute;
+    right: 100%;
+    top: 50%;
+    margin-top: -4px;
+    border-style: solid;
+    border-width: 4px 6px 4px 0;
+    border-color: transparent;
+    border-right-color: #e74c3c;
+}
+/*最顶部导航样式结束*/
+
+
+/*导航*/
+.header-main1{
+    height: 60px;
+    background-color: #ffffff;
+}
+.hd_logo {
+    margin-left: 90px;
+    margin-right: 0px;
+    width:162px;
+    height:60px;
+    display:block;
+    float:left;
+
+    /*overflow:hidden;*/
+    background:none
+}
+.hd_logo a{
+    text-decoration: none;
+}
+.hd_logo img {
+    height:40px;
+    margin: -10px 0 0 0;
+}
+.hd_logo h2 {
+    font-size:1em;
+}
+#hd ul li,.xl li {
+    list-style:none;
+}
+
+.nav1 {
+    float: left;
+    max-width: 650px;
+    height: 60px;
+    padding: 0;
+    margin: 0;
+    margin-left: 20px;
+    overflow: hidden;
+}
+button, select, textarea {
+    font: 12px/1.5 'Microsoft Yahei','Simsun';
+    color: #272727;
+}
+.nav1 li {
+    max-width: 108px;
+    display: block;
+    float: left;
+    height: 60px;
+}
+.nav1 li.a a {
+    height: 60px;
+    font-weight: 700;
+    color: #ff1e0d !important;
+    border-bottom: 4px solid #ff1e0d;
+    background: none;
+}
+.nav1 li a {
+    float: left;
+    text-decoration: none;
+    font-weight:400 ;
+    display: inline-block;
+    font-size: 18px !important;
+    height: 60px;
+    line-height: 60px;
+    color: #3f3f3f;
+    position: relative;
+    padding: 0 3px;
+    margin: 0 15px;
+    font-family: "Microsoft Yahei",Arial;
+    border-right: 0;
+    transition: all 0s ease 0s;
+}
+.nav1 li a:hover{
+    color: red;
+    border-bottom:red solid 4px; ;
+}
+
+.navbar-wrapper {
+    margin-top:0px;
+    position: relative;
+    z-index: 15;
+
+}
+
+/*搜索框*/
+.searchBtn button,.searchTxt .searchMenu .searchSelected{
+    background-image:url(../images/searchbg.png);
+    background-repeat:no-repeat;
+}
+.searchTxt {
+    float:left;
+    width:200px;
+    height:30px;
+    margin-top: 15px;
+    border:2px solid #d3d3d3;
+    border-right:0;
+    position:relative;
+    z-index:20;
+    background:#fff;
+}
+.searchTxt .radius {
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    background:#f4f4f4;
+    position:absolute;
+    top:-2px;
+    left:-2px;
+}
+.searchTxtHover {
+    float:left;
+    width:200px;
+    height:30px;
+    border:2px solid #3297d8;
+    border-right: solid #3297d8 2px;
+    position:relative;
+    z-index:20;
+    background:#fff;
+}
+.searchTxtHover .radius {
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    background:#cce5f5;
+    position:absolute;
+    top:-2px;
+    left:-2px;
+}
+.searchTxt .searchMenu {
+    float:left;
+}
+.searchTxt .searchMenu .searchSelected {
+    color: #3f3f3f;
+    font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+    cursor:pointer;
+    font-size:14px;
+    font-weight:500;
+    height:26px;
+    line-height:30px;
+    padding:0 10px;
+    width:60px;
+    background-position:0px -54px;
+}
+.searchTxt .searchMenu .searchOpen {
+    background-position:0px -104px;
+}
+.searchTxt .searchMenu .searchTab {
+    display:none;
+    position:absolute;
+    top:30px;
+    left:-2px;
+    width:62px;
+    border:2px solid #3297d8;
+    border-top:0;
+    background:#fff;
+    height:143px;
+    z-index:20;
+}
+.searchTxt .searchMenu .searchTab li {
+    list-style: none;
+    width:58px;
+    height:28px;
+    font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+    line-height:28px;
+    color: #3f3f3f;
+    font-size:14px;
+    font-weight:500;
+    text-indent:10px;
+    cursor:pointer;
+}
+.searchTxt .searchMenu .searchTab li.selected {
+    background:#edf3fc;
+    color:#6994c1;
+}
+.searchTxt input {
+    float:left;
+    border:0;
+    background:#fff;
+    color:#3f3f3f;
+    font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+    width:100px;
+    height:26px;
+    margin:0;
+    outline:medium none;
+    padding:4px;
+}
+.btn-default:hover{
+    background-color: #3297d8;
+    border-color: #3297d8;
+}
+
+
+
+
+/*banner轮播样式*/
+/*.first .carousel-caption {*/
+    /*background-color: rgba(32,32,32,0.4);*/
+    /*position: absolute;*/
+    /*right: 36%;*/
+    /*bottom: 75%;*/
+    /*left: 33%;*/
+/*}*/
+/*.second .carousel-caption {*/
+    /*background-color: rgba(32,32,32,0.3);*/
+    /*position: absolute;*/
+    /*right: 45%;*/
+    /*bottom: 16%;*/
+    /*left: 25%;*/
+/*}*/
+/*.first .carousel-caption h1,.second .carousel-caption h1{*/
+    /*font-weight: 600;*/
+    /*font-size: 34px;*/
+    /*margin:0 20px;*/
+    /*font-family: 微软雅黑;*/
+/*}*/
+/*.first a,.second a{*/
+    /*text-align: left;*/
+    /*color: #ffffff;*/
+    /*text-decoration: none;*/
+/*}*/
+/*.first a:hover,.second a:hover{*/
+    /*cursor: pointer;*/
+/*}*/
+/*.first a p{*/
+    /*font-weight: 400;*/
+    /*font-size: 20px;*/
+    /*margin:0 22px;*/
+/*}*/
+/*.second a p{*/
+    /*font-weight: 400;*/
+    /*font-size: 20px;*/
+    /*margin:auto 20px;*/
+/*}*/
+/*banner轮播样式结束*/
+
+
+/*左边主体部分样式开始*/
+#content_part .col-md-8{
+    padding: 0;
+    margin:0 0 40px 0;
+}
+#content_part .col-md-8 h1{
+     margin-top: 5px;
+     font-weight: 900;
+     font-family: 微软雅黑;
+     font-size: 24px;
+ }
+#content_part.col-md-8 a{
+     text-decoration: none;
+     color: #000;
+    cursor: pointer;
+ }
+
+
+/*右边以及链接内容用样式*/
+.post-right-title{
+    font-size: 16px;
+    color: #393939;
+    border-left: 4px solid #ff0000;
+    margin-left: -22px;
+    margin-bottom: 15px;
+    padding: 5px 0 5px 18px;
+    text-align: left;
+}
+.post-right-item h4{
+    font-size: 24px;
+    font-weight: 800;
+    color: #000;
+}
+.post-right-item h4 a{
+    margin-left: 40%;
+    font-size: 18px;
+    font-weight: 400;
+    color: #000;
+}
+.post-right-title a{
+    color: #666;
+    text-decoration: none;
+}
+.post-right-title a:hover{
+    color: #333;
+}
+.tags{
+    margin-left: -8px;
+    margin-top: -8px;
+}
+.tags a{
+    margin-left: 8px;
+    margin-top: 8px;
+    display: inline-block;
+    vertical-align: top;height: 26px;
+    line-height: 26px;
+    padding: 0 12px;
+    background-color: #F1F1F1;color: #000;
+    border-radius: 2px;
+    font-size: 12px;
+    font-family: Helvetica,Arial,sans-serif;
+    text-decoration: none;
+}
+.tags a:hover{
+    background-color: #ff0000;
+    color: #FFF;
+}
+.tags .sel{
+    background-color:#ff0000;
+    color: #FFF;
+}
+
+.active-list li{
+    margin-top: 20px;
+    list-style: none;
+}
+.active-list li a{
+    display: block;
+}
+.active-list li a img{
+    width: 100%;
+}
+.active-list a:hover{
+    opacity: 0.9;
+}
+.active-list li a img{
+    padding-right: 20px;
+}
+
+.service-list{
+    margin-top: -10px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.service-list a{
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 2px;
+    width: 180px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin-top: 15px;
+    background-color: #3498DB;
+    color: #FFF;
+}
+.service-list a:hover{
+    opacity: .8;
+}
+/*关注我们CSS样式*/
+.follow-title{
+    text-align: center;
+    font-size: 14px;
+}
+.follow-list{
+    text-align: center;
+    margin-left: -16px;
+    margin-top: 0px;
+    padding-bottom: 30px;
+}
+.follow-list a{
+    display: inline-block;
+    width: 50px;
+    height: 41px;
+    margin-top: 16px;
+    margin-left: 16px;
+    color: #333;
+    text-decoration: none;
+}
+.follow-list a:hover{
+    opacity: 0.8;
+}
+.follow-about{
+    text-align: center;
+    position: relative;
+
+}
+
+
+
+.com li{
+    list-style: none;
+    line-height: 24px;
+}
+.com li a{
+    font-size: 14px;
+    text-decoration: none;
+    color: #444;
+}
+.com li a :hover{
+    font-size: 16px;
+    color: #000;
+}
+
+/*友情链接*/
+.link{
+    overflow: hidden;
+}
+.link p a,.link p{
+
+    text-decoration: none;
+    font-size: 12px;
+    color: #cccccc;
+    font-family: Helvetica,Arial,sans-serif;
+}
+.link p a:hover{
+    color: #ffffff;
+}
+
+
+/*footer样式*/
+.footer{
+    background-color: #333;
+    color: #ccc;
+    font-size: 12px;
+    font-family: Helvetica,Arial,sans-serif;
+    text-align: center;
+    padding: 18px 0;
+}
+.footer a{
+    text-decoration: none;
+    color: #ccc;
+    font-size: 12px;
+    font-family: Helvetica,Arial,sans-serif;
+    margin-right: 10px;
+}
+.footer a:hover{
+    color: #fff;
+}
+
+/*foot样式结束*/
+
+
+
+/*图片缩放效果*/
+/*.col-md-5 .left_pic{*/
+    /*width: 250px;*/
+    /*height: 180px;*/
+    /*border: #000 solid 1px;*/
+    /*overflow: hidden;*/
+/*}*/
+/*.col-md-5 .left_pic a img{*/
+    /*cursor: pointer;*/
+    /*transition: all 0.6s;*/
+/*}*/
+/*.col-md-5 .left_pic a img:hover{*/
+    /*transform: scale(1.1);*/
+/*}*/

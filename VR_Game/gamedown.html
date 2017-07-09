@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <!--编码格式-->
+    <meta http-equiv="Content-Type" content="text/html"  charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--s-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--SEO抓取-->
+    <meta name="keywords" content="虚拟现实,VR,VR技术,资源">
+    <meta name="description" content="国内最大的虚拟现实平台,VR技术交流，资源分享">
+    <!--标题-->
+    <title>VR虚拟社区</title>
+
+    <!-- 导入js文件-->
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="Bootstrap/js/bootstrap.js"></script>
+    <script src="js/stickUp.js"></script>
+    <script src="js/slider.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/change.js"></script>
+
+
+    <!--导入css文件-->
+    <link href="Bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/stickup.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="templates/images/style.css" />
+    <link rel="stylesheet" type="text/css" href="templates/css/style.css" />
+
+
+
+    <!-- 固定在顶部插件脚本引入 -->
+    <script type="text/javascript">
+        //initiating jQuery
+        jQuery(function($) {
+            $(document).ready( function() {
+                //enabling stickUp on the '.navbar-wrapper' class
+                $('.navbar-wrapper').stickUp();
+            });
+        });
+
+    </script>
+
+   <!-- 搜索框脚本-->
+    <script type="text/javascript">
+        $(function(){
+
+            $("#searchSelected").click(function(){
+                $("#searchTab").show();
+                $(this).addClass("searchOpen");
+            });
+
+            $("#searchTab li").hover(function(){
+                $(this).addClass("selected");
+            },function(){
+                $(this).removeClass("selected");
+            });
+
+            $("#searchTab li").click(function(){
+                $("#searchSelected").html($(this).html());
+                $("#searchTab").hide();
+                $("#searchSelected").removeClass("searchOpen");
+            });
+
+        });
+    </script>
+    <!--banner轮播脚本引入-->
+    <script type="text/javascript">
+        $(function() {
+            var bannerSlider = new Slider($('#banner_tabs'), {
+                time: 5000,
+                delay: 400,
+                event: 'hover',
+                auto: true,
+                mode: 'fade',
+                controller: $('#bannerCtrl'),
+                activeControllerCls: 'active'
+            });
+            $('#banner_tabs .flex-prev').click(function() {
+                bannerSlider.prev()
+            });
+            $('#banner_tabs .flex-next').click(function() {
+                bannerSlider.next()
+            });
+        })
+    </script>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+    </style>
+
+</head>
+<body>
+    <!--最顶部导航-->
+    <div class="row"style="margin: 0px;padding:0px;">
+        <div class="col-md-12"style="margin: 0px;padding:0px;">
+            <div class="header" id="header_top" style=" display: block; background-color: rgb(34, 34, 34);">
+                <div class="header-main clearfix"style="width: 1170px; margin:0 auto;padding-right: 0px;">
+                    <ul class="header-left  clearfix" >
+                        <li>
+                            <a href="" class="sel">VR虚拟社区，因为专注所以专业</a>
+                        </li>
+                        <li class="hidden-xs">
+                            <a href="#" title="新手入门" target="_blank">新手入门</a>
+                        </li>
+                        <li style="position:relative" class="app-hover hidden-xs">
+                            <a href="#" class="" target="_blank" title="VR社区">VR社区</a>
+                            <!-- hover出现的div -->
+                            <div class="hover-content"><i></i>
+                                <img class="logo-img" src="images/icon.png" alt="logo">
+                                <h1>VR社区</h1>
+                                <p>未来科技等你来</p>
+                                <img class="erweima" src="images/erweima.png" alt="二维码">
+                                <p class="is">-Android客户端- </p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!--登录注册-->
+                    <!--<div id="header-right" class="" style="border:  #ff0000 solid 1px;">-->
+                    <div class="common">
+                        <div class="login fr" style="margin-top: -32px;">
+                            <div class="loginmenu">
+                                <a title="登录或注册"></a>
+                            </div>
+                            <ul>
+                                <li class="openlogin">
+                                    <a href="#" onclick="return false;">登录</a>
+                                </li>
+                                <li class="reg">
+                                    <a href="#" onclick="return false;">注册</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <!--</div>-->
+                    <div class="clear"></div>
+                    <div class="loginmask"></div>
+                    <div id="loginalert">
+                        <div class="pd20 loginpd"style="padding-bottom: 10px;">
+                            <h3> <i class="closealert fr"></i>
+                                <div class="clear"></div>
+                            </h3>
+                            <div class="loginwrap">
+                                <div class="loginh">
+                                    <div class="fl">会员登录</div>
+                                    <div class="fr">
+                                        还没有账号
+                                        <a id="sigup_now" href="#" onclick="return false;">立即注册</a>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <h3>
+                                    <span>邮箱登录</span>
+                                    <span class="login_warning">用户名或密码错误</span>
+                                    <div class="clear"></div>
+                                </h3>
+                                <div class="clear"></div>
+                                <form action="" method="post" id="login_form">
+                                    <div class="logininput">
+                                        <input type="text" name="username" id="username" class="loginusername"required oninvalid="setCustomValidity('用户名不能为空');" oninput="setCustomValidity('');"   placeholder="邮箱/用户名" />
+                                        <input type="text" class="loginuserpasswordt" value="密码" />
+                                        <input type="password" name="password" class="loginuserpasswordp " id="password" required oninvalid="setCustomValidity('密码不能为空');"oninput="setCustomValidity('');" placeholder="密码"  style="display:none" />
+                                    </div>
+                                    <div class="loginbtn">
+                                        <div class="loginsubmit fl">
+                                            <input type="submit" value="登录" onclick="login();" />
+                                            <div class="loginsubmiting">
+                                                <div class="loginsubmiting_inner"></div>
+                                            </div>
+                                        </div>
+                                        <div class="logcheckbox fl">
+                                            <input id="bcdl" type="checkbox" checked="true" />
+                                            保持登录
+                                        </div>
+                                        <div class="fr">
+                                            <a href="#">忘记密码?</a>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="thirdlogin">
+                            <div class="pd50">
+                                <h4>用第三方帐号直接登录</h4>
+                                <ul>
+                                    <li id="sinal">
+                                        <a href="#">微博账号登录</a>
+                                    </li>
+                                    <li id="qql">
+                                        <a href="#">QQ账号登录</a>
+                                    </li>
+                                    <div class="clear"></div>
+                                </ul>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="reg_setp">
+                        <div class="back_setp">返回</div>
+                        <div class="blogo"></div>
+                        <div id="setp_quicklogin" style="z-index: 100;">
+                            <div class="content2">
+                                <!-- 头部文字 -->
+                                <h2>欢迎注册</h2>
+                                <form style="border: #ff0000 solid;margin-bottom: 30px;height: 400px;">
+                                    <!-- 注册使用的几个输入框和注册按钮 -->
+                                    <input type="text" name="userid" value="用户名" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '用户名';}">
+                                    <input type="tel" name="usrtel" value="电话" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '电话';}">
+                                    <input type="email" name="email" value="电子邮件" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '电子邮件';}">
+                                    <input type="password" name="psw" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value ='password' ;}">
+                                    <input type="password" name="psw" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'password';}">
+                                    <input type="submit" class="register" value="注册">
+                                </form>
+                            </div>
+                            <ul class="quicklogin_socical">
+                                <li class="quicklogin_socical_weibo">
+                                    <a href="#">微博帐号注册</a>
+                                </li>
+                                <li class="quicklogin_socical_qq">
+                                    <a href="#">QQ帐号注册</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--导航条-->
+    <div class="navbar-wrapper" style="width:100%;background-color:#fff;">
+        <div class="header-main1 " style="width: 1170px;margin:0 auto;">
+            <div class="hd_logo">
+                <h2>
+                    <a href="#" title="VR虚拟社区-最大VR技术论坛,海量VR资源,VR视频教程,vrcommu.com">
+                        <img src="images/logo2.png" alt="VR虚拟社区" border="0"  class="img-responsive" />
+                    </a>
+                </h2>
+            </div>
+            <!-- 导航 -->
+            <div class="nav1" id="hd" >
+                <ul >
+                    <li  >
+                        <a href="../index.html" hidefocus="true" title="首页" style=" padding-left: 10px;width: 38px;padding: 0px;" >
+                            首页
+                            <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../VR_News/index.html" hidefocus="true" title="VR社区论坛"  >
+                            VR资讯
+                        </a>
+                    </li>
+
+                    <li class="a">
+                        <a href="game.html" hidefocus="true"  >VR游戏</a>
+                    </li>
+
+                    <li >
+                        <a href="../VRvideo/vr-video.html" hidefocus="true"  >VR视频</a>
+                    </li>
+                    <li >
+                        <a href="../VR_Shequ/shequ.html" hidefocus="true"  >VR社区</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!--搜索框-->
+            <div class="sousuo">
+                <form method="get" name="" action="#" target="_blank" style="width:300px;height:60px;margin:0px auto 0 auto;float: right;margin-right:0;">
+                    <div id="searchTxt" class="searchTxt"  onMouseOver="this.className='searchTxt searchTxtHover';" onMouseOut="this.className='searchTxt';" style="margin-left:26px;">
+                        <div class="searchMenu" >
+                            <div class="searchSelected" id="searchSelected" >全站</div>
+
+                            <div style="display:none;margin-top: -2px;" class="searchTab" id="searchTab" >
+                                <ul>
+                                    <li class="">全站</li>
+                                    <li>资讯</li>
+                                    <li>视频</li>
+                                    <li>游戏</li>
+                                    <li>资源</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <input name="w" type="text" />
+                    </div>
+                    <div class="searchButton">
+                        <button id="searchButton" type="submit">搜索</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-->
+    <!--banner轮播-->
+    <div class="container" style="height:420px;min-width:1170px;margin-top:20px;margin-bottom:20px;">
+        <div class="row">
+            <div class="col-md-12"style="padding-left: 0px;padding-right: 0px;">
+                <div class="banner_left col-md-8"style="padding: 0;">
+                    <div id="banner_tabs" class="flexslider">
+                        <ul class="slides">
+                            <li>
+                                <a title="" target="_blank" href="#">
+                                    <img  style="background: url(images/banner1.jpg) no-repeat center;" src="images/alpha.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a title="" href="#">
+                                    <img  alt="" style="background: url(images/banner2.jpg) no-repeat center;" src="images/alpha.png">
+                                </a>
+                            </li>
+                            <li>
+                                <a title="" href="#">
+                                    <img  alt="" style="background: url(images/banner3.jpg) no-repeat center;" src="images/alpha.png">
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="flex-direction-nav">
+                            <li><a class="flex-prev" href="javascript:;">Previous</a></li>
+                            <li><a class="flex-next" href="javascript:;">Next</a></li>
+                        </ul>
+                        <ol id="bannerCtrl" class="flex-control-nav flex-control-paging">
+                            <li><a>1</a></li>
+                            <li><a>2</a></li>
+                            <li><a>2</a></li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="banner_right col-md-4"style="padding-right: 0px;">
+                    <div class="game_news">
+                        <div class="game_con">
+                            <div class="list-group">
+                                <a href="#" class="list-group-item active" style="font-size: 18px;">
+                                    游戏头条
+                                </a>
+                                <a href="#" class="list-group-item"style="margin-top: 2px;">打破现实空间的限制 一款能让你玩一辈子的VR游戏</a>
+                                <a href="#" class="list-group-item">《避棺者》Rift版试玩公布 堪称最趣味VR竞速游戏</a>
+                                <a href="#" class="list-group-item">这游戏没点耐心真玩不了 《多米诺VR》上架Steam</a>
+                                <a href="#" class="list-group-item">拿着冲锋枪使劲浪《The Last Sniper VR》游戏上市</a>
+                                <a href="#" class="list-group-item">全面发展 HTC宣布自家的VR应用商店全球上线</a>
+                                <a href="#" class="list-group-item">《口袋妖怪》爆红 育碧也要进军VR市场分一杯羹</a>
+                                <a href="#" class="list-group-item">全面发展 HTC宣布自家的VR应用商店全球上线</a>
+                                <a href="#" class="list-group-item">拿着冲锋枪使劲浪《The Last Sniper VR》游戏上市</a>
+                                <a href="#" class="list-group-item">更多>></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--主体部分-->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="commen-wrap" >
+                <div class="index-h2Tit relative">
+                    <h2 class="index-h2" style="padding-left: 5px;">游戏推荐</h2>
+                    <p class="down-tab">
+                        <a class="active" href="javascript:;">全部游戏</a>
+                        <a href="javascript:;">PC游戏</a>
+                        <a href="javascript:;">iOS游戏</a>
+                        <a href="javascript:;">安卓游戏</a>
+                    </p>
+                    <a class="index-more" href="#" target="_blank">更多&gt;&gt;</a>
+                </div>
+                <div class="down-container" style="margin-bottom: 30px;">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide down-slide" >
+                            <!-- 所有游戏 -->
+                            <ul id="allgameli" >
+                                <li >
+                                    <a href="game22.html" target="_blank">
+                                        <img src="images/game/1.jpg" class="game-img" />
+                                        <span class="game-name">太空深处VR （VR Deep Space Exploration）</span>
+                                        <span class="game-memory">34.20 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit android-tit">
+                                                    <span class="pcType">Android</span>
+                                                    <span class="game-class">场景</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    太空深处VR （VR Deep Space Exploration）是一款适配入手机端的场景模拟游戏。这款游戏画面无法跟PC端的大兴场景模拟相比，但考虑到游戏只有30多MB，这款场景模拟游戏画面还是十分优秀的。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="game72.html" target="_blank">
+                                        <img src="images/game/2.jpg"  class="game-img" />
+                                        <span class="game-name">救命(HALP!)</span>
+                                        <span class="game-memory">871 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit android-tit">
+                                                    <span class="pcType">Windows</span>
+                                                    <span class="game-class">休闲</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    ​《救命(HALP!)》是一款由开发商Fun Bits制作的独立休闲VR游戏。在游戏中，玩家身处一艘搁浅在外星大海上的海盗船上，随时会遭遇太空蠕虫的袭击，玩家的任务就是帮助船长在被太空蠕虫吃掉之前修好船只。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="game21.html" target="_blank">
+                                        <img src="images/game/3.jpg" class="game-img" />
+                                        <span class="game-name">奇幻VR（VR Fantasy ）</span>
+                                        <span class="game-memory">62.97 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit android-tit">
+                                                    <span class="pcType">Android</span>
+                                                    <span class="game-class">休闲</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    奇幻VR（VR Fantasy ）是一款手机端的休闲冒险类游戏，从游戏画面来看这款游戏像极了知名游戏《塞尔达传说》游戏需要蓝牙手柄，没有手柄的玩家没办法玩这款游戏。游戏整体来说就是一个过关冒险类游戏，
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="game20.html" target="_blank">
+                                        <img src="images/game/4.jpg" class="game-img" />
+                                        <span class="game-name">粉碎VR（Smash VR）</span>
+                                        <span class="game-memory">30.51 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit android-tit">
+                                                    <span class="pcType">Android</span>
+                                                    <span class="game-class">格斗</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    粉碎VR（Smash VR）是一款手机端的格斗类游戏，游戏正如他的名字一样进入场景后你需要把怪物打碎。在怪物准备攻击的时候你要攻击他，他就会结束攻击动作。总体来说你需要你怪物跟更快的、更准确的攻击。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="game09.html" target="_blank">
+                                        <img src="images/game/5.jpg"  class="game-img" />
+                                        <span class="game-name">怪奇物语（Stranger Things）</span>
+                                        <span class="game-memory">13.56 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit android-tit">
+                                                    <span class="pcType">Android</span>
+                                                    <span class="game-class"></span>
+                                                </div>
+                                                <p class="game-des">
+                                                    《怪奇物语》VR短片时长不足两分钟，让观众仿佛身临其境，置身于电视剧紧张恐怖的氛围中。当然，观看要确保遵循VR体验中给予的任何指示，否则你将错过体验最后带给你的巨大震撼。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="game44.html" target="_blank">
+                                        <img src="images/game/6.jpg"  class="game-img" />
+                                        <span class="game-name">暗杀神 VR(Ascension VR)</span>
+                                        <span class="game-memory">100 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit android-tit">
+                                                    <span class="pcType">Windows</span>
+                                                    <span class="game-class">休闲</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    ​暗杀神 VR(Ascension VR)是一款适配HTC Vive和Oculus头显的卡牌策略游戏。游戏是由美国加州圣马特奥市的VR游戏的独立工作室Temple Gates Games开发的，《Ascension VR》在游戏中不同玩家会有不同的 3D 动画化身，玩家可以跨平台（Oculus Rift，HTC Vive 和 Gear VR）进行对战。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="game80.html" target="_blank">
+                                        <img src="images/game/7.jpg" class="game-img" />
+                                        <span class="game-name">上帝的恩赐（Deo Favente）</span>
+                                        <span class="game-memory">1457.18 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit android-tit">
+                                                    <span class="pcType">Windows</span>
+                                                    <span class="game-class">场景</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    上帝的恩赐（Deo Favente）是一款适配于Oculus的教育题材的游戏。游戏的内容主要是普及耶稣的故事。进入游戏后玩家被放置在一个大教堂中，第一层可以学习做弥撒。在地下一层和二层全部都是油画讲解耶稣的故事。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="game79.html" target="_blank">
+                                        <img src="images/game/8.jpg" class="game-img" />
+                                        <span class="game-name">晚上的书（eve book）</span>
+                                        <span class="game-memory">183.57 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit android-tit">
+                                                    <span class="pcType">Windows</span>
+                                                    <span class="game-class">场景</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    晚上的书（eve book）是一款适配于Oculus的环境模拟类休闲游戏。当你躺在床上休闲中没有别的事情想做，那么你可以带上Oculus尝试的晚上看一本书。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="game78.html" target="_blank">
+                                        <img src="images/game/9.jpg"  class="game-img" />
+                                        <span class="game-name">射击外星人（VR FPS in Space）</span>
+                                        <span class="game-memory">66.3 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit android-tit">
+                                                    <span class="pcType">iOS</span>
+                                                    <span class="game-class">射击</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    ​射击外星人（VR FPS in Space）是一款iOS射击游戏，拿起手里的武器射杀潮水般涌来的外星人，它们通过传送门传送过来的，找到它们的入口，最终摧毁传送门，来获得生机。喜欢射击游戏的玩家可以下载体验一番！
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="game57.html" target="_blank">
+                                        <img src="images/game/53.jpg"  class="game-img" />
+                                        <span class="game-name">粉碎与快跑（Crush & Run VR）</span>
+                                        <span class="game-memory">43.53 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit android-tit">
+                                                    <span class="pcType">Android</span>
+                                                    <span class="game-class">休闲</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    粉碎与快跑（Crush & Run VR）是一款手机端的休闲酷跑类游戏。游戏中有多个场景，时而在卧室中奔跑，时而在高耸的的建筑物上极限传送。忽然间又被传送到一个外太空中，到最后你会看到一只可怕的恶龙镇守城堡。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="game56.html" target="_blank">
+                                        <img src="images/game/11.jpg"  class="game-img" />
+                                        <span class="game-name">我的虚拟世界（My Virtual World）</span>
+                                        <span class="game-memory">66.47 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit android-tit">
+                                                    <span class="pcType">Windows</span>
+                                                    <span class="game-class"></span>
+                                                </div>
+                                                <p class="game-des">
+                                                    我的虚拟世界（My Virtual World）是一款适配于Oculus的音频播放工具，你的下载的音乐视频都可以加载在软件当中使用。软件场景是次时代风格，整体上模型和外部环境很有粒子感。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="game41.html" target="_blank">
+                                        <img src="images/game/10.jpg" class="game-img" />
+                                        <span class="game-name">新复古游戏厅：霓虹(New Retro Arcade: Neon)</span>
+                                        <span class="game-memory">5000 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit android-tit">
+                                                    <span class="pcType">Windows</span>
+                                                    <span class="game-class">休闲</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    ​新复古游戏厅：霓虹(New Retro Arcade: Neon)是一款适配HTC Vive 和Oculus 头显的休闲游戏。游戏中，玩家将与朋友一起通过许多游戏和活动关卡——共10个迷你游戏——包括经典的游戏机、保龄球、看电影以及在霓虹美景区玩耍。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide down-slide">
+                            <!-- PC游戏 -->
+                            <ul id="windowsli">
+                                <li>
+                                    <a href="game72.html" target="_blank">
+                                        <img src="images/game/12.jpg"  class="game-img" />
+                                        <span class="game-name">救命(HALP!)</span>
+                                        <span class="game-memory">871 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit pc-tit">
+                                                    <span class="pcType">Windows</span>
+                                                    <span class="game-class">休闲</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    ​《救命(HALP!)》是一款由开发商Fun Bits制作的独立休闲VR游戏。在游戏中，玩家身处一艘搁浅在外星大海上的海盗船上，随时会遭遇太空蠕虫的袭击，玩家的任务就是帮助船长在被太空蠕虫吃掉之前修好船只。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="game44.html" target="_blank">
+                                        <img src="images/game/13.jpg"  class="game-img" />
+                                        <span class="game-name">暗杀神 VR(Ascension VR)</span>
+                                        <span class="game-memory">100 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit pc-tit">
+                                                    <span class="pcType">Windows</span>
+                                                    <span class="game-class">休闲</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    ​暗杀神 VR(Ascension VR)是一款适配HTC Vive和Oculus头显的卡牌策略游戏。游戏是由美国加州圣马特奥市的VR游戏的独立工作室Temple Gates Games开发的，《Ascension VR》在游戏中不同玩家会有不同的 3D 动画化身，玩家可以跨平台（Oculus Rift，HTC Vive 和 Gear VR）进行对战。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="game80.html" target="_blank">
+                                        <img src="images/game/14.jpg"  class="game-img" />
+                                        <span class="game-name">上帝的恩赐（Deo Favente）</span>
+                                        <span class="game-memory">1457.18 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit pc-tit">
+                                                    <span class="pcType">Windows</span>
+                                                    <span class="game-class">场景</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    上帝的恩赐（Deo Favente）是一款适配于Oculus的教育题材的游戏。游戏的内容主要是普及耶稣的故事。进入游戏后玩家被放置在一个大教堂中，第一层可以学习做弥撒。在地下一层和二层全部都是油画讲解耶稣的故事。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="game79.html" target="_blank">
+                                        <img src="images/game/15.jpg" class="game-img" />
+                                        <span class="game-name">晚上的书（eve book）</span>
+                                        <span class="game-memory">183.57 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit pc-tit">
+                                                    <span class="pcType">Windows</span>
+                                                    <span class="game-class">场景</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    晚上的书（eve book）是一款适配于Oculus的环境模拟类休闲游戏。当你躺在床上休闲中没有别的事情想做，那么你可以带上Oculus尝试的晚上看一本书。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="game56.html" target="_blank">
+                                        <img src="images/game/16.jpg" class="game-img" />
+                                        <span class="game-name">我的虚拟世界（My Virtual World）</span>
+                                        <span class="game-memory">66.47 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit pc-tit">
+                                                    <span class="pcType">Windows</span>
+                                                    <span class="game-class"></span>
+                                                </div>
+                                                <p class="game-des">
+                                                    我的虚拟世界（My Virtual World）是一款适配于Oculus的音频播放工具，你的下载的音乐视频都可以加载在软件当中使用。软件场景是次时代风格，整体上模型和外部环境很有粒子感。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="game41.html" target="_blank">
+                                        <img src="images/game/17.jpg" class="game-img" />
+                                        <span class="game-name">新复古游戏厅：霓虹(New Retro Arcade: Neon)</span>
+                                        <span class="game-memory">5000 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit pc-tit">
+                                                    <span class="pcType">Windows</span>
+                                                    <span class="game-class">休闲</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    ​新复古游戏厅：霓虹(New Retro Arcade: Neon)是一款适配HTC Vive 和Oculus 头显的休闲游戏。游戏中，玩家将与朋友一起通过许多游戏和活动关卡——共10个迷你游戏——包括经典的游戏机、保龄球、看电影以及在霓虹美景区玩耍。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="game22.html" target="_blank">
+                                        <img src="images/game/18.jpg"class="game-img" />
+                                        <span class="game-name">黑帽合作社（Black Hat Cooperative）</span>
+                                        <span class="game-memory">3000 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit pc-tit">
+                                                    <span class="pcType">Windows</span>
+                                                    <span class="game-class">冒险</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    ​《黑帽合作社》是一款多人合作游戏，在游戏中玩家必须和自己的搭档合作来对抗追捕他们的智能守卫。一名玩家要在虚拟现实(VR)环境中逃离守卫，收集宝物、钥匙和密码。与此同时另一名玩家在一台标准的监视器前观察着地图上的一切来帮助指引他的搭档摆脱追兵逃离迷宫。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="game23.html" target="_blank">
+                                        <img src="images/game/19.jpg" class="game-img" />
+                                        <span class="game-name">谷歌分析虚拟现实（Google Analytics in VR）</span>
+                                        <span class="game-memory">14.27 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit pc-tit">
+                                                    <span class="pcType">Windows</span>
+                                                    <span class="game-class"></span>
+                                                </div>
+                                                <p class="game-des">
+                                                    谷歌分析虚拟现实（Google Analytics in VR）是一款适配于Oculus的应用工具，现实中很多人都会利用《谷歌分析》来分析工作内容和一些大数据。这款VR版本的分析工具可以使得一些数据模型化、量化的数据形象的出现在你视野中，你可以根据你的需求进行调试和应用。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="game21.html" target="_blank">
+                                        <img src="images/game/20.jpg"  class="game-img" />
+                                        <span class="game-name">阿米达拉（Amigdala）</span>
+                                        <span class="game-memory">458.02 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit pc-tit">
+                                                    <span class="pcType">Windows</span>
+                                                    <span class="game-class">恐怖</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    阿米达拉（Amigdala）是一款适配于Oculus的恐怖题材游戏。游戏采用的是虚幻4游戏引擎，整体画面精致且饱满真实。虽然只是测试版本的游戏但是整体来说游戏体验是十分不错的。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="game05.html" target="_blank">
+                                        <img src="images/game/21.jpg"class="game-img" />
+                                        <span class="game-name">Super Kaiju</span>
+                                        <span class="game-memory">8000 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit pc-tit">
+                                                    <span class="pcType">Windows</span>
+                                                    <span class="game-class">冒险</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    《Super Kaiju》是由开发商Directive Games Limited开发第一款动作游戏，适配HTC Vive头显，未来也会匹配Oculus头显。这款游戏被誉为“史上最赞最值得被期待的闯关游戏”！
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://d.87870.com/xiazainr-12685.html" target="_blank">
+                                        <img src="images/game/22.jpg" class="game-img" />
+                                        <span class="game-name">导弹司令部（Missile Command）</span>
+                                        <span class="game-memory">12.09 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit pc-tit">
+                                                    <span class="pcType">Windows</span>
+                                                    <span class="game-class">射击</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    导弹司令部（Missile Command）是一款适配入Oculus的休闲射击游戏。游戏中你将控制一个导弹发射台对于敌方目标进行射击，游戏在射击中需要考虑经度纬度才能准确的攻击到敌方目标。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://d.87870.com/xiazainr-12684.html" target="_blank">
+                                        <img src="images/game/23.jpg" class="game-img" />
+                                        <span class="game-name">冒险健身（A Fitness Adventure）</span>
+                                        <span class="game-memory">31.27 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit pc-tit">
+                                                    <span class="pcType">Windows</span>
+                                                    <span class="game-class">体育</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    冒险健身（A Fitness Adventure）是一款适配于Oculus的休闲运动健身游戏，游戏是使用手柄进行操作。进入游戏场景玩家需要控制一颗球撞到迷宫中所有障碍物，值得一提的是球的速度和力度是受到玩家运动控制的，玩家需要重复的蹲起才能增加球的力量。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide down-slide">
+                            <!-- ios游戏 -->
+                            <ul id="iosli">
+                                <li>
+                                    <a href="game78.html" target="_blank">
+                                        <img src="images/game/24.jpg"  class="game-img" />
+                                        <span class="game-name">射击外星人（VR FPS in Space）</span>
+                                        <span class="game-memory">66.3 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit ios-tit">
+                                                    <span class="mobileType">iOS</span>
+                                                    <span class="game-class">射击</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    ​射击外星人（VR FPS in Space）是一款iOS射击游戏，拿起手里的武器射杀潮水般涌来的外星人，它们通过传送门传送过来的，找到它们的入口，最终摧毁传送门，来获得生机。喜欢射击游戏的玩家可以下载体验一番！
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://d.87870.com/xiazainr-12513.html" target="_blank">
+                                        <img src="images/game/25.jpg"  class="game-img" />
+                                        <span class="game-name">VR 穿越管道（VR Tunnel Race Free）</span>
+                                        <span class="game-memory">102 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit ios-tit">
+                                                    <span class="mobileType">iOS</span>
+                                                    <span class="game-class">休闲</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    VR 穿越管道（VR Tunnel Race Free）是一款适配iOS手机的休闲游戏。这是一款科幻题材的游戏，背景设定为一个神秘的管道之中，在这个神奇的管道之中玩家会不停的前进并且遇到各种各样的障碍，喜欢此类游戏的玩家快快下载体验吧！
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://d.87870.com/xiazainr-12111.html" target="_blank">
+                                        <img src="images/game/26.jpg"class="game-img" />
+                                        <span class="game-name">VR推土机</span>
+                                        <span class="game-memory">125 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit ios-tit">
+                                                    <span class="mobileType">iOS</span>
+                                                    <span class="game-class">休闲</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    也许这一辈子都不可能接触到推土机这种大型的工作车，而现在你可以通过这款游戏像建筑工人那样，驾驭着推土机肆无忌惮的破坏着。游戏的玩法简单，通过手机陀螺仪控制方向来完成指定的任务目标，喜欢这款游戏的玩家快快下载体验吧！
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://d.87870.com/xiazainr-12179.html" target="_blank">
+                                        <img src="images/game/27.jpg"  class="game-img" />
+                                        <span class="game-name">VR武装直升机（自由空战）</span>
+                                        <span class="game-memory">74.4 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit ios-tit">
+                                                    <span class="mobileType">iOS</span>
+                                                    <span class="game-class">格斗</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    ​VR武装直升机（自由空战）是一款适配苹果手机的射击游戏。玩家驾驶一架武装直升机在进行恐怖份子打击行动，你除了要击杀多有的敌人外还要保护平民，喜欢当英雄的玩家可以下载这款游戏体验一番！
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://d.87870.com/xiazainr-11896.html" target="_blank">
+                                        <img src="images/game/28.jpg"  class="game-img" />
+                                        <span class="game-name">口袋妖怪Go（Pokémon GO iOS）</span>
+                                        <span class="game-memory">110 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit ios-tit">
+                                                    <span class="mobileType">iOS</span>
+                                                    <span class="game-class">格斗</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    ​《口袋妖怪GO》是由任天堂联合谷歌旗下的Niantic Labs公司共同开发的一款大型多人互动增强现实游戏，作为“口袋妖怪系列”又一力作，任天堂表示一定要让大家感受到它与我们所处的世界紧密相连，而不是把它当成一个虚拟的世界，因为它的开发本身就是基于真实场景的加强，在增强现实的过程中，摄像头起到了很重要的作用。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://d.87870.com/xiazainr-11825.html" target="_blank">
+                                        <img src="images/game/22.jpg" class="game-img" />
+                                        <span class="game-name">BesTV</span>
+                                        <span class="game-memory">74.6 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit ios-tit">
+                                                    <span class="mobileType">iOS</span>
+                                                    <span class="game-class"></span>
+                                                </div>
+                                                <p class="game-des">
+                                                    BesTV影院VR是由百视通最新推出的VR全景影院，支持360°视频内容播放，支持陀螺仪控制；旨在为您打造最高逼格、最炫酷的虚拟现实影院；
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://d.87870.com/xiazainr-11740.html" target="_blank">
+                                        <img src="images/game/30.jpg" class="game-img" />
+                                        <span class="game-name">激战Z VR（BattleZ VR IOS）</span>
+                                        <span class="game-memory">94.2 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit ios-tit">
+                                                    <span class="mobileType">iOS</span>
+                                                    <span class="game-class">冒险</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    激战Z VR（BattleZ VR）是第一个多人游戏第一人称虚拟现实射击游戏。在这个游戏中，玩家与他们的朋友们在一个被僵尸占领的世界里战斗，你们需要保卫自己的家园，玩家也可以互相支持，以获得额外的力量。你们是否能坚持到最后的胜利呢？
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://d.87870.com/xiazainr-11687.html" target="_blank">
+                                        <img src="images/game/31.jpg"  class="game-img" />
+                                        <span class="game-name">恐怖地牢（VR Haunted Dungeon House Simulator 3D Free）</span>
+                                        <span class="game-memory">114 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit ios-tit">
+                                                    <span class="mobileType">iOS</span>
+                                                    <span class="game-class">恐怖</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    访问一个恐怖地牢，那里有很多可怕的生物，食尸鬼、食人魔、恶魔、不死生物、恶魔等！这些恐怖的生物在地牢里来回晃悠，它们渴望鲜血和鲜肉，你是去送死的吗？虽然是一款恐怖游戏，不过并没有太多的惊吓，如果你喜欢欧美风格的恐怖题材的话那就不要错过这款游戏哟！
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://d.87870.com/xiazainr-11490.html" target="_blank">
+                                        <img src="images/game/32.jpg" class="game-img" />
+                                        <span class="game-name">VR 大炮台 （IOS版）</span>
+                                        <span class="game-memory">119 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit ios-tit">
+                                                    <span class="mobileType">iOS</span>
+                                                    <span class="game-class">射击</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    ​是否厌倦了传统的射击游戏呢？《VR 大炮台（VR Crazy Fire）》将会带给你最真实的射击游戏体验。游戏中，玩家将在烽火连天的战场上击杀一波又一波的敌人，最终挑战BOSS。这是一款适配手机端的VR射击游戏，游戏中玩家会面临着各种困难绝境，看你能否坚持到最后击败BOSS赢得胜利呢？
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://d.87870.com/xiazainr-11358.html" target="_blank">
+                                        <img src="images/game/33.jpg" class="game-img" />
+                                        <span class="game-name">VR射箭（VR Archery ）</span>
+                                        <span class="game-memory">43.8 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit ios-tit">
+                                                    <span class="mobileType">IOS</span>
+                                                    <span class="game-class">射击</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    ​VR射箭（VR Archery ）是一款适配iOS的虚拟现实射击游戏，玩法简单，通过纸壳眼镜的磁铁按钮来控制射箭的力度和箭矢的拾取。玩家利用手机陀螺仪控制射箭的准心，切记一定要运用好“地心引力”这个物理学。喜欢射箭的童鞋不妨下载体验一番！
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="game.html" target="_blank">
+                                        <img src="images/game/34.jpg"  class="game-img" />
+                                        <span class="game-name">战争行动（VR Army Camp War Action Free）</span>
+                                        <span class="game-memory">114 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit ios-tit">
+                                                    <span class="mobileType">IOS</span>
+                                                    <span class="game-class">射击</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    《战争行动》是一款适配iOS系统的手机VR射击游戏。化身飞虎队成员，对恐怖分子进行毁灭打击。拿起手里的武器，看见敌人杀无赦！你需要拥有非常好的枪法的同时还要具备很好的反映能力，你对待敌人必须开准狠，不然当你给了敌人机会，你将死无葬身之地（虽然说的很夸张，不过游戏里确实如此的惊险刺激！）
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="game.html" target="_blank">
+                                        <img src="images/game/35.jpg" class="game-img" />
+                                        <span class="game-name">疯狂儿童车（VR Crazy Kids Car Driving Free）</span>
+                                        <span class="game-memory">79.7 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit ios-tit">
+                                                    <span class="mobileType">IOS</span>
+                                                    <span class="game-class">休闲</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    疯狂儿童车（VR Crazy Kids Car Driving Free）是一款适配iOS的虚拟现实休闲运动游戏。相比大家都玩过游乐园的蹦蹦车，是不是让人热血沸腾呢？这款手机小游戏，可以让玩家体验儿童车的乐趣，在市区里驾驶着儿童车横冲直撞，各种碾压过往车辆及建筑！
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide down-slide">
+                            <!-- ios游戏 -->
+                            <ul id="androidsli">
+                                <li>
+                                    <a href="game.html" target="_blank">
+                                        <img src="images/game/1.jpg" class="game-img" />
+                                        <span class="game-name">太空深处VR （VR Deep Space Exploration）</span>
+                                        <span class="game-memory">34.20 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit android-tit">
+                                                    <span class="pcType">Android</span>
+                                                    <span class="game-class">场景</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    太空深处VR （VR Deep Space Exploration）是一款适配入手机端的场景模拟游戏。这款游戏画面无法跟PC端的大兴场景模拟相比，但考虑到游戏只有30多MB，这款场景模拟游戏画面还是十分优秀的。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="game.html" target="_blank">
+                                        <img src="images/game/4.jpg" class="game-img" />
+                                        <span class="game-name">奇幻VR（VR Fantasy ）</span>
+                                        <span class="game-memory">62.97 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit android-tit">
+                                                    <span class="pcType">Android</span>
+                                                    <span class="game-class">休闲</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    奇幻VR（VR Fantasy ）是一款手机端的休闲冒险类游戏，从游戏画面来看这款游戏像极了知名游戏《塞尔达传说》游戏需要蓝牙手柄，没有手柄的玩家没办法玩这款游戏。游戏整体来说就是一个过关冒险类游戏，
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="game.html" target="_blank">
+                                        <img src="images/game/9.jpg"  class="game-img" />
+                                        <span class="game-name">粉碎VR（Smash VR）</span>
+                                        <span class="game-memory">30.51 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit android-tit">
+                                                    <span class="pcType">Android</span>
+                                                    <span class="game-class">格斗</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    粉碎VR（Smash VR）是一款手机端的格斗类游戏，游戏正如他的名字一样进入场景后你需要把怪物打碎。在怪物准备攻击的时候你要攻击他，他就会结束攻击动作。总体来说你需要你怪物跟更快的、更准确的攻击。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="game.html" target="_blank">
+                                        <img src="images/game/2.jpg"  class="game-img" />
+                                        <span class="game-name">怪奇物语（Stranger Things）</span>
+                                        <span class="game-memory">13.56 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit android-tit">
+                                                    <span class="pcType">Android</span>
+                                                    <span class="game-class"></span>
+                                                </div>
+                                                <p class="game-des">
+                                                    《怪奇物语》VR短片时长不足两分钟，让观众仿佛身临其境，置身于电视剧紧张恐怖的氛围中。当然，观看要确保遵循VR体验中给予的任何指示，否则你将错过体验最后带给你的巨大震撼。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="game.html" target="_blank">
+                                        <img src="images/game/3.jpg"  class="game-img" />
+                                        <span class="game-name">粉碎与快跑（Crush & Run VR）</span>
+                                        <span class="game-memory">43.53 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit android-tit">
+                                                    <span class="pcType">Android</span>
+                                                    <span class="game-class">休闲</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    粉碎与快跑（Crush & Run VR）是一款手机端的休闲酷跑类游戏。游戏中有多个场景，时而在卧室中奔跑，时而在高耸的的建筑物上极限传送。忽然间又被传送到一个外太空中，到最后你会看到一只可怕的恶龙镇守城堡。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="game.html" target="_blank">
+                                        <img src="images/game/6.jpg" class="game-img" />
+                                        <span class="game-name">黑客星球（Hack The Planet VR）</span>
+                                        <span class="game-memory">54.66 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit android-tit">
+                                                    <span class="pcType">Android</span>
+                                                    <span class="game-class">场景</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    黑客星球（Hack The Planet VR）是一款特别的虚拟现实游戏。在这款游戏中一切都是虚拟的，都是靠玩家创造出来的。玩家在游戏中扮演一个黑客，制造出网络的虚拟内容，整个游戏场景全部都是有玩家自己创造，在构造出来的场所找出不和谐的地方从而通关。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="game.html" target="_blank">
+                                        <img src="images/game/16.jpg"  class="game-img" />
+                                        <span class="game-name">入侵（Ingress）</span>
+                                        <span class="game-memory">31.35 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit android-tit">
+                                                    <span class="pcType">Android</span>
+                                                    <span class="game-class">角色</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    入侵《Ingress》是一款Google发布的基于移动端的免费侵入式虚拟现实互动游戏。Ingress让玩家走进了一个真实的虚拟世界中，玩家可以通过收集能量，去世界各地执行任务，并和世界上的其他玩家一起互相帮助，或是相互对抗。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="game.html" target="_blank">
+                                        <img src="images/game/15.jpg" class="game-img" />
+                                        <span class="game-name">睡前故事(Bed Time Story )</span>
+                                        <span class="game-memory">33.53 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit android-tit">
+                                                    <span class="pcType">Android</span>
+                                                    <span class="game-class">恐怖</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    睡前故事VR（Bed Time Story VR）是一款画风有点惊悚恐怖的利用虚拟按键进行对决的射击类手游，游戏中你将拿起你的武器与外星人展开激烈的战斗，挑起的事端外星种族已经侵入你的房间，它利用未来高科技来侵犯你的领域和权力，面对突如其来的恐怖入侵，你只有击退这群不速之客。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="game.html" target="_blank">
+                                        <img src="images/game/17.jpg" class="game-img" />
+                                        <span class="game-name">NBA本·西蒙斯（NBA Draft 360: Ben Simmons）</span>
+                                        <span class="game-memory">11.21 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit android-tit">
+                                                    <span class="pcType">Android</span>
+                                                    <span class="game-class"></span>
+                                                </div>
+                                                <p class="game-des">
+                                                    这部全景视频是讲述的2016年的NBA选秀大会的场景，2016年的NBA状元签是一个来自澳大利亚墨尔本的小伙子——本·西蒙斯，并且被NBA球队费城76人队签约。这位出生于1996年的年轻小伙子被评为全美年度最佳新人、东南区最佳新人等奖项。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="game.html" target="_blank">
+                                        <img src="images/game/18.jpg"  class="game-img" />
+                                        <span class="game-name">霍华德更衣室（Houston Rockets Locker Room Tour with Dwight Howard）</span>
+                                        <span class="game-memory">25.03 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit android-tit">
+                                                    <span class="pcType">Android</span>
+                                                    <span class="game-class"></span>
+                                                </div>
+                                                <p class="game-des">
+                                                    在前休斯敦火箭队的明星全明星中锋霍华德的带领下，来到NBA球员的更衣室，看看NBA专业的后方储备是怎样的？如果你对他们的更衣室很好奇，想要了解他们的更多更衣乐趣，不妨下载这部全景视频身临其境的进入丰田中心体验他们的生活吧！
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="game.html" target="_blank">
+                                        <img src="images/game/19.jpg"  class="game-img" />
+                                        <span class="game-name">激光训练4(VR Laser Training 4)</span>
+                                        <span class="game-memory">40.56 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit android-tit">
+                                                    <span class="pcType">Android</span>
+                                                    <span class="game-class">冒险</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    ​激光训练4(VR Laser Training 4)是一款适配安卓手机的VR游戏。进入游戏你会被传送到一个宇宙飞船里，在一个船舱中你会遇到一个教练机器人，它会向你发射激光，你的任务就是躲避这些激光来提高你的反应能力。喜欢此类游戏的玩家快快下载体验吧！
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://d.87870.com/xiazainr-12623.html" target="_blank">
+                                        <img src="images/game/20.jpg"class="game-img" />
+                                        <span class="game-name">极限飞行VR（Voxel Fly Merge VR ）</span>
+                                        <span class="game-memory">31.87 MB</span>
+                                        <div class="game-infoWrap">
+                                            <div class="opacity"></div>
+                                            <div class="game-info">
+                                                <div class="game-tit android-tit">
+                                                    <span class="pcType">Android</span>
+                                                    <span class="game-class">休闲</span>
+                                                </div>
+                                                <p class="game-des">
+                                                    极限飞行 VR 是一款手机端的VR飞行游戏。 这是一款没有尽头的游戏，击败记录在这是不可能的。躲避所有的汽车和障碍，努力比你的朋友飞得更远。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="row" style="margin: 0;padding: 0;">
+        <div class="col-md-12"style="padding: 0;margin: 0;">
+
+            <!--友情链接-->
+            <div class="row"style="background-color: #222;margin: 0;padding-left: 6.5%;padding-right:6.5%;">
+                <div class="link" style="height: 50px;line-height: 50px;">
+                    <p class="p2">
+                        友情链接：
+                        <a target="_blank"  href="http://www.vrrb.cn">VR日报</a>
+                        |
+                        <a target="_blank"  href="http://www.yaojievr.com/">妖界VR</a>
+                        |
+                        <a target="_blank"  href="http://www.591vr.com/">VR应用</a>
+                        |
+                        <a target="_blank"  href="http://www.vrwanjia.cn/">VR玩家网</a>
+                        |
+                        <a target="_blank"  href="http://www.vr.cn/">VR虚拟现实</a>
+                        |
+                        <a target="_blank"  href="http://vrtoutiao.com">VR头条</a>
+                        |
+                        <a target="_blank"  href="http://www.cnvrnews.com">中文VR资讯网</a>
+                        |
+                        <a target="_blank"  href="http://www.utovr.com/">VR视频</a>
+                        |
+                        <a target="_blank"  href="http://www.17ivr.com/">一起爱VR</a>
+                        |
+                        <a target="_blank"  href="http://www.vrdaren.com/">VR达人网</a>
+                        |
+                        <a target="_blank"  href="http://vr.sina.com.cn/">新浪VR</a>
+                        |
+                        <a target="_blank"  href="http://ivr.baidu.com/">百度VR</a>
+                        |
+                        <a target="_blank"  href="http://vr.baike.com/">虚拟现实</a>
+                        |
+                        <a target="_blank"  href="http://www.vryxw.com/">VR游戏网</a>
+                        |
+                        <a target="_blank"  href="http://vrguancha.net/">VR观察网</a>
+                        |
+                        <a target="_blank"  href="http://vrguancha.net/">申请友链请联系QQ12345678</a>
+                        |
+                    </p>
+                </div>
+            </div>
+            <div class="footer">
+                <a href="#" target="_blank">客户端</a>
+                <a href="#" target="_blank">媒体报道</a>
+                <a href="#" target="_blank">合作推广</a>
+                <a href="#" target="_blank">关于我们</a>
+                <a href="#" target="_blank">加入我们</a>
+                <a href="#" target="_blank">团队blog</a>
+                <a href="#" target="_blank">VR社区名人堂</a>
+                <a href="#">更多友情链接</a>
+                <br/>
+                <a>Copyright &copy; 2016 VR虚拟社区 All Rights Reserved</a>
+                <br/>
+                <a>VR虚拟社区 版权所有 鄂ICP备16001230号</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--返回顶部-->
+    <a class="to-top hidden-xs hidden-sm" style="cursor: pointer;"><img src="images/top.gif" /></a>
+    <script src="js/jquery.toTop.min.js"></script>
+    <script>
+        jQuery(function($){
+            // Plugin activation (basic)
+            // $('.to-top').toTop();
+
+            // Plugin activation with options
+            $('.to-top').toTop({
+                //options with default values
+                autohide: true,  //boolean 'true' or 'false'
+                offset: 420,     //numeric value (as pixels) for scrolling length from top to hide automatically
+                speed: 500,      //numeric value (as mili-seconds) for duration
+                right: 30,      //numeric value (as pixels) for position from right
+                bottom: 138       //numeric value (as pixels) for position from bottom
+            });
+        });
+    </script>
+
+
+</body>
+</html>
